@@ -1,0 +1,20 @@
+name: Build Test
+on:
+  pullrequest:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: install
+        run: npm install
+      - name: build
+        run: npm run build
