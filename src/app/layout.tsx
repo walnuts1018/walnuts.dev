@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Nunito } from 'next/font/google'
 import './globals.css'
+
+const NunitoFont = Nunito({
+  subsets: ['latin'],
+  variable: '--font-Nunito',
+})
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,7 +17,27 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${NunitoFont.variable}`}>
+        <Header />
+        {children}
+      </body>
     </html>
+  )
+}
+
+function Header() {
+  return (
+    <header>
+      <div className='flex justify-center w-full bg-white'>
+        <div className='w-10/12 flex items-center justify-left h-16 bg-white text-black font-bold font-Nunito text-2xl px-1'>
+          <a className='logo' href='#'>
+            Walnuts.dev
+          </a>
+        </div>
+      </div>
+      <div className='flex justify-center w-full bg-white'>
+        <div className='w-10/12 h-[3px] bg-gray-200 px-20'></div>
+      </div>
+    </header>
   )
 }
