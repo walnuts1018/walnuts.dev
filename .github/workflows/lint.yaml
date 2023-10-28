@@ -1,6 +1,6 @@
 name: Lint
 on:
-  pullrequest:
+  pull_request:
   workflow_dispatch:
 jobs:
   build:
