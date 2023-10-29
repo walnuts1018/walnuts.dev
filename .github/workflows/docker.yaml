@@ -37,20 +37,14 @@ jobs:
         with:
           version: latest
 
-      - name: Cache Docker layers
-        uses: actions/cache@v3
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx
-          restore-keys: |
-            ${{ runner.os }}-buildx
-
       - name: Build and push Docker images
         uses: docker/build-push-action@v4.0.0
         with:
           push: true
           context: .
           platforms: linux/amd64,linux/arm64
+          cache-from: type=registry,ref=user/app:latest
+          cache-to: type=inline
           tags: |
             ghcr.io/walnuts1018/walnuts.dev:latest
             ghcr.io/walnuts1018/walnuts.dev:${{ github.sha }}-${{ github.run_number }}
