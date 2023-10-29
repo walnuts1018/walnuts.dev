@@ -43,6 +43,7 @@ export function Profile() {
             alt='Mail'
             text='r.juglans.1018@gmail.com'
             link='mailto:r.juglans.1018@gmail.com'
+            fontSize='text-2xl'
           />
           <Icon
             src='/icons/KMClogo_trans.svg'
@@ -93,7 +94,14 @@ function Icon({
         className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize}`}
         href={link}
       >
-        <Image src={src} alt={alt} width={40} height={40} style={{ objectFit: 'contain' }} />
+        <Image
+          src={src}
+          alt={alt}
+          width={40}
+          height={40}
+          style={{ objectFit: 'contain' }}
+          className='min-w-[10%]'
+        />
         <p>{text}</p>
       </a>
     </div>
