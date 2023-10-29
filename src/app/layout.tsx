@@ -2,28 +2,49 @@ import type { Metadata } from 'next'
 import { Inter, Nunito } from 'next/font/google'
 import Head from 'next/head'
 import './globals.css'
-
 import AppleTouchIcon from '../../public/favicons/apple-touch-icon.png'
 import Favicon16 from '../../public/favicons/favicon-16x16.png'
 import Favicon32 from '../../public/favicons/favicon-32x32.png'
 import Favicon from '../../public/favicons/favicon.ico'
 
+const title = 'Walnuts.dev'
+const description = 'I am Walnuts'
+const url = 'https://walnuts.dev'
+
 const NunitoFont = Nunito({
   subsets: ['latin'],
   variable: '--font-Nunito',
 })
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Walnuts.dev',
-  description: "I'm Walnuts",
+  metadataBase: new URL(url),
+  title: {
+    default: title,
+    template: `%s - ${title}`,
+  },
+  description: description,
   icons: [
     { rel: 'icon', url: Favicon.src },
     { rel: 'apple-touch-icon', url: AppleTouchIcon.src },
     { rel: 'icon', type: 'image/png', sizes: '32x32', url: Favicon32.src },
     { rel: 'icon', type: 'image/png', sizes: '16x16', url: Favicon16.src },
   ],
+  openGraph: {
+    title: title,
+    description,
+    url,
+    siteName: title,
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: title,
+    description,
+    site: '@walnuts1018',
+    creator: '@walnuts1018',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -34,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#5bbad5' />
         <meta name='msapplication-TileColor' content='#da532c' />
         <meta name='theme-color' content='#ffffff' />
+        <meta name='twitter:image' content='https://walnuts.dev/walnuts.jpg' />
       </Head>
       <body className={`${inter.className} ${NunitoFont.variable} bg-white`}>
         <Header />
