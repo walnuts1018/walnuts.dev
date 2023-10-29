@@ -21,11 +21,6 @@ jobs:
           SLACK_MESSAGE: |
             Run number : #${{ github.run_number }}
 
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
-        with:
-          access_token: ${{ github.token }}
-
       - name: Check out
         uses: actions/checkout@v3
 
