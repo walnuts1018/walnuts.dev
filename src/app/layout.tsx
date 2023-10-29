@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en'>
+    <html lang='ja'>
       <Head>
         <link rel='manifest' href='/favicons/site.webmanifest' />
         <link rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#5bbad5' />
