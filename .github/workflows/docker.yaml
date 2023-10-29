@@ -50,7 +50,7 @@ jobs:
         with:
           push: true
           context: .
-          platforms: linux/arm64
+          platforms: linux/amd64,linux/arm64
           tags: |
             ghcr.io/walnuts1018/walnuts.dev:latest
             ghcr.io/walnuts1018/walnuts.dev:${{ github.sha }}-${{ github.run_number }}
