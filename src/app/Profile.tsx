@@ -10,7 +10,7 @@ export function Profile() {
           alt='Sample Image'
           width={500}
           height={500}
-          objectFit='contain'
+          style={{ objectFit: 'contain' }}
           className='rounded-full h-full w-full '
         />
       </div>
@@ -93,7 +93,7 @@ function Icon({
         className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize}`}
         href={link}
       >
-        <Image src={src} alt={alt} width={40} height={40} objectFit='contain' />
+        <Image src={src} alt={alt} width={40} height={40} style={{ objectFit: 'contain' }} />
         <p>{text}</p>
       </a>
     </div>
