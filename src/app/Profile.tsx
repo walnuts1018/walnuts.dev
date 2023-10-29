@@ -19,7 +19,7 @@ export function Profile() {
         <p className='text-black font-extrabold text-4xl'>Walnuts</p>
         <Heart />
         <div className='space-y-2 mt-6'>
-          <Icon src='/icons/sell_FILL0_wght400_GRAD0_opsz24.svg' alt='Name' text='Ryota Tawara' />
+          {/*<Icon src='/icons/sell_FILL0_wght400_GRAD0_opsz24.svg' alt='Name' text='Ryota Tawara' />*/}
           <Icon
             src='/icons/twitter-x-line.svg'
             alt='X(Twitter)'
