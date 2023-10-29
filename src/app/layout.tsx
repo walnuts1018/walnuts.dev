@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name='msapplication-TileColor' content='#da532c' />
         <meta name='theme-color' content='#ffffff' />
       </Head>
-      <body className={`${inter.className} ${NunitoFont.variable}`}>
+      <body className={`${inter.className} ${NunitoFont.variable} bg-white`}>
         <Header />
         {children}
       </body>
@@ -53,7 +53,7 @@ function Header() {
           </a>
         </div>
       </div>
-      <div className='flex justify-center w-full bg-white'>
+      <div className='flex justify-center w-full bg-white border-0 '>
         <div className='w-10/12 h-[3px] bg-gray-200 px-20'></div>
       </div>
     </header>
