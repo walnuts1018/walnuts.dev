@@ -100,7 +100,7 @@ function Icon({
           width={40}
           height={40}
           style={{ objectFit: 'contain' }}
-          className='min-w-[10%]'
+          className='min-w-[40px] max-w-[40px]'
         />
         <p>{text}</p>
       </a>
