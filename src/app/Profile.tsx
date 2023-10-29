@@ -3,7 +3,7 @@ import { Heart } from './Heart'
 
 export function Profile() {
   return (
-    <div className='flex flex-col items-center justify-center space-y-4 font-Nunito'>
+    <div className='flex flex-col items-center justify-center space-y-4 font-Nunito w-96'>
       <div className='rounded-full bg-gradient-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-60'>
         <Image
           src='/walnuts.jpg'
