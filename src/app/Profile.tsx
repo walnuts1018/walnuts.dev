@@ -5,14 +5,15 @@ export function Profile() {
   return (
     <div className='flex flex-col items-center justify-center space-y-4 font-Nunito w-96'>
       <div className='rounded-full bg-gradient-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-60'>
-        <Image
-          src='/walnuts.jpg'
-          alt='Sample Image'
-          width={500}
-          height={500}
-          style={{ objectFit: 'contain' }}
-          className='rounded-full h-full w-full '
-        />
+        <div className='rounded-full h-full w-full'>
+          <Image
+            src='/walnuts.jpg'
+            alt='Sample Image'
+            width={500}
+            height={500}
+            style={{ objectFit: 'contain' }}
+          />
+        </div>
       </div>
 
       <div className='flex flex-col items-center justify-center'>
