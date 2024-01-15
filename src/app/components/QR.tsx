@@ -1,13 +1,25 @@
 'use client'
 import QrCode2Icon from '@mui/icons-material/QrCode2'
 import ScreenRotationAltIcon from '@mui/icons-material/ScreenRotationAlt'
+import { clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Modal from 'react-modal'
 
 export default function QR() {
   const [isShown, setIsShown] = useState(false)
   const [isRotated, setIsRotated] = useState(false)
+
+  useEffect(() => {
+    if (isShown) {
+      disableBodyScroll(document.body)
+    } else {
+      enableBodyScroll(document.body)
+    }
+    return () => {
+      clearAllBodyScrollLocks()
+    }
+  }, [isShown])
 
   if (!isShown) {
     return (
@@ -34,8 +46,8 @@ export default function QR() {
         <Modal
           isOpen={isShown}
           onRequestClose={() => setIsShown(false)}
-          className='fixed h-screen w-screen bg-black bg-opacity-50 flex items-center flex-col justify-center overflow-hidden'
-          overlayClassName='fixed inset-0 bg-black bg-opacity-50'
+          className='fixed h-[100svh] w-screen bg-black bg-opacity-50 flex items-center flex-col justify-center overflow-hidden'
+          overlayClassName='fixed inset-0 bg-black bg-opacity-50 z-10'
         >
           <div className='fixed h-full w-full -z-10' onClick={() => setIsShown(false)}></div>
           <div
