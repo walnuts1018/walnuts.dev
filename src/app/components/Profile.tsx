@@ -1,11 +1,12 @@
 import Image from 'next/image'
-import { Heart } from './Heart'
+//import { Heart } from './Heart'
+import QR from './QR'
 
 export function Profile() {
   return (
     <div className='flex flex-col items-center justify-center space-y-4 font-Nunito w-96'>
-      <div className='rounded-full bg-gradient-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-60 w-60 overflow-hidden'>
-        <div className='rounded-full h-full w-full bg-white'>
+      <div className='rounded-full bg-gradient-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-60 w-60 relative'>
+        <div className='rounded-full h-full w-full bg-white overflow-hidden'>
           <Image
             src='/walnuts.jpg'
             alt='Sample Image'
@@ -15,11 +16,14 @@ export function Profile() {
             className='rounded-full h-full w-full'
           />
         </div>
+        <div className='absolute bottom-1 right-0'>
+          <QR />
+        </div>
       </div>
 
       <div className='flex flex-col items-center justify-center'>
         <p className='text-black font-extrabold text-4xl'>Walnuts</p>
-        <Heart />
+        {/* <Heart /> */}
         <div className='space-y-2 mt-6'>
           {/*<Icon src='/icons/sell_FILL0_wght400_GRAD0_opsz24.svg' alt='Name' text='Ryota Tawara' />*/}
           <Icon
