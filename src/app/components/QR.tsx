@@ -49,7 +49,7 @@ export default function QR() {
 
       <button
         title='rotate QR'
-        className='fixed bg-white rounded-full border-white p-4 border-4 shadow-neumorphism-button active:shadow-neumorphism-button-pressed mt-10 w-[72px] h-[72px] bottom-20'
+        className='fixed bg-white rounded-full border-white p-3 border-4 shadow-neumorphism-button active:shadow-neumorphism-button-pressed mt-10 w-[72px] h-[72px] bottom-20'
         onClick={() => setIsRotated((prev) => !prev)}
       >
         <ScreenRotationAltIcon
