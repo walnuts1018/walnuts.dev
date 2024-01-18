@@ -41,13 +41,13 @@ export default function Heart() {
   return (
     <div>
       <Link
-        className='flex items-center justify-center outline-none border-red-500 rounded-full p-0 w-12 h-12 bg-white shadow-md'
+        className='flex items-center justify-center outline-none border-red-500 rounded-full p-0 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-md'
         href='https://grafana.walnuts.dev/public-dashboards/e6b8482ee79a488f9201b190be2bafac'
         target='_blank'
         onMouseEnter={() => setShowDetail(true)}
         onMouseLeave={() => setShowDetail(false)}
       >
-        <FavoriteIcon fontSize='large' className=' text-red-500 heart' />
+        <FavoriteIcon fontSize='inherit' className=' text-red-500 heart text-3xl sm:text-4xl' />
       </Link>
       <div
         className={`absolute items-center h-full w-full top-10 flex left-0 justify-center text-2xl font-bold text-black transition-all duration-100 pointer-events-none 
