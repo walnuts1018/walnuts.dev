@@ -1,7 +1,6 @@
 import Image from 'next/image'
-//import { Heart } from './Heart'
+import Heart from './Heart'
 import ProfileImage from './ProfileImage'
-import QR from './QR'
 import './Profile.css'
 
 export function Profile() {
@@ -9,8 +8,8 @@ export function Profile() {
     <div className='flex flex-col items-center justify-center space-y-4 font-Nunito w-96'>
       <div className=' h-48 w-48 sm:h-60 sm:w-60 relative'>
         <ProfileImage />
-        <div className='absolute bottom-1 right-0'>
-          <QR />
+        <div className='absolute bottom-4 right-0'>
+          <Heart />
         </div>
       </div>
 

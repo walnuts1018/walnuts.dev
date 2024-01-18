@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 import Modal from 'react-modal'
 import './QR.css'
 
-export default function QR() {
+export default function QR({ className }: { className?: string }) {
   const [isShown, setIsShown] = useState(false)
   const [isRotated, setIsRotated] = useState(false)
 
@@ -23,13 +23,13 @@ export default function QR() {
   }, [isShown])
 
   return (
-    <>
+    <div className={className}>
       <button
         onClick={() => setIsShown(true)}
         title='show QR'
-        className='rounded-full p-1 shadow-md bg-gradient-to-br from-red-400 to-red-600 w-12 h-12 flex items-center justify-center hover:from-red-500 hover:to-red-600 hover:shadow-lg transition-all duration-200 outline-none focus:from-red-500 focus:to-red-600 focus:shadow-lg'
+        className='w-14 h-14 sm:w-20 sm:h-20 rounded-full p-1 shadow-lg bg-gradient-to-br from-red-400 to-red-600  flex items-center justify-center hover:from-red-500 hover:to-red-600 hover:shadow-lg transition-all duration-200 outline-none focus:from-red-500 focus:to-red-600 focus:shadow-lg text-4xl sm:text-6xl'
       >
-        <QrCode2Icon fontSize='large' className='text-white' />
+        <QrCode2Icon fontSize='inherit' className='text-white' />
       </button>
       {isShown ? (
         <Modal
@@ -93,6 +93,6 @@ export default function QR() {
       ) : (
         <></>
       )}
-    </>
+    </div>
   )
 }
