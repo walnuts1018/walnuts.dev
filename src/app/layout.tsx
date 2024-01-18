@@ -73,11 +73,11 @@ function Header() {
           <div className='h-full '>
             <UpperDecoration className='h-2/3' />
           </div>
-          <a className='logo px-1' href='#'>
+          <a className='logo' href='#'>
             Walnuts.dev
           </a>
           <div className='h-full items-end flex'>
-            <LowerDecoration className='pl-2 h-3/4' />
+            <LowerDecoration className='pl-1 h-3/4' />
           </div>
         </div>
       </div>
