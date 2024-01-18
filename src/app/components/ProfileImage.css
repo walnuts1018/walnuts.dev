@@ -1,8 +1,3 @@
 .profile-image {
   box-shadow: 15px 15px 40px 5px rgb(15, 14, 31), -5px -5px 30px 5px rgba(254, 255, 234, 0.349);
 }
-
-.profile-image-inline {
-  box-shadow: inset 5px 5px 10px 1px rgba(117, 117, 117, 0.479),
-    inset -5px -5px 10px 5px rgb(233, 233, 233);
-}

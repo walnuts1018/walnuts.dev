@@ -42,7 +42,7 @@ export default function ProfileImage() {
           onRequestClose={() => {
             setIsExpanded(false)
           }}
-          className='fixed h-[100svh] w-screen bg-black bg-opacity-50 flex items-center justify-center overflow-hidden'
+          className='fixed h-[100svh] w-screen bg-black bg-opacity-50 flex items-center justify-center overflow-hidden p-2'
           overlayClassName='fixed inset-0 bg-black bg-opacity-70 z-10'
         >
           <div

@@ -68,7 +68,7 @@ function Header() {
   return (
     <header>
       <div className='flex justify-center w-full '>
-        <div className='w-10/12 flex items-center justify-left h-16  text-black font-bold font-Nunito text-2xl px-1'>
+        <div className='w-10/12 flex items-center justify-left h-12 md:h-16 text-black font-bold font-Nunito text-xl sm:text-2xl px-1'>
           <a className='logo' href='#'>
             Walnuts.dev
           </a>

@@ -61,7 +61,7 @@ export default function QR() {
                   alt='favicon'
                   width={50}
                   height={50}
-                  className='rounded-full'
+                  className='rounded-full object-contain'
                 />
                 <p className='bg-white text-black font-bold font-Nunito text-2xl px-1 text-center'>
                   Walnuts.dev

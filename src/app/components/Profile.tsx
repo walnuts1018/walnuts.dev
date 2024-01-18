@@ -7,7 +7,7 @@ import './Profile.css'
 export function Profile() {
   return (
     <div className='flex flex-col items-center justify-center space-y-4 font-Nunito w-96'>
-      <div className='h-60 w-60 relative'>
+      <div className=' h-48 w-48 sm:h-60 sm:w-60 relative'>
         <ProfileImage />
         <div className='absolute bottom-1 right-0'>
           <QR />
