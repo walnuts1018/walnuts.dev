@@ -5,6 +5,7 @@ import AppleTouchIcon from '../../public/favicons/apple-touch-icon.png'
 import Favicon16 from '../../public/favicons/favicon-16x16.png'
 import Favicon32 from '../../public/favicons/favicon-32x32.png'
 import Favicon from '../../public/favicons/favicon.ico'
+import { LowerDecoration, UpperDecoration } from './components/Decoration'
 
 const title = 'Walnuts.dev'
 const description = 'I am Walnuts'
@@ -69,9 +70,15 @@ function Header() {
     <header>
       <div className='flex justify-center w-full '>
         <div className='w-10/12 flex items-center justify-left h-12 md:h-16 text-black font-bold font-Nunito text-xl sm:text-2xl px-1'>
-          <a className='logo' href='#'>
+          <div className='h-full '>
+            <UpperDecoration className='h-2/3' />
+          </div>
+          <a className='logo px-1' href='#'>
             Walnuts.dev
           </a>
+          <div className='h-full items-end flex'>
+            <LowerDecoration className='pl-2 h-3/4' />
+          </div>
         </div>
       </div>
       <div className='flex justify-center w-full  border-0 '>
