@@ -25,7 +25,7 @@ export default function ProfileImage() {
       <div className='rounded-full bg-gradient-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-full w-full'>
         <div className='rounded-full h-full w-full bg-white overflow-hidden'>
           <Image
-            src='/walnuts.jpg'
+            src='/optimized-walnuts.jpg'
             alt='walnuts icon'
             width={200}
             height={200}
