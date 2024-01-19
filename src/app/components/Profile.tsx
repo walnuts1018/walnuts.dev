@@ -80,17 +80,8 @@ function ProfileList({
   link?: string
   fontSize?: string
 }) {
-  return (
-    <a
-      target='_blank'
-      rel='noopener noreferrer'
-      className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full outline-none flex rounded-full px-6 py-1 profile-list ${
-        link !== undefined
-          ? 'hover:bg-gray-100 hover:shadow-md hover:border-gray-500 focus:bg-gray-100 focus:shadow-md focus:border-gray-500'
-          : ''
-      }`}
-      href={link}
-    >
+  const children = (
+    <>
       <Image
         src={src}
         alt={alt}
@@ -100,6 +91,26 @@ function ProfileList({
         className='min-w-[40px] max-w-[40px]'
       />
       <p>{text}</p>
-    </a>
+    </>
+  )
+  return (
+    <>
+      {link === undefined ? (
+        <div
+          className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full outline-none flex rounded-full px-6 py-1 profile-list`}
+        >
+          {children}
+        </div>
+      ) : (
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full outline-none flex rounded-full px-6 py-1 profile-list hover:bg-gray-100 hover:shadow-md hover:border-gray-500 focus:bg-gray-100 focus:shadow-md focus:border-gray-500`}
+          href={link}
+        >
+          {children}
+        </a>
+      )}
+    </>
   )
 }
