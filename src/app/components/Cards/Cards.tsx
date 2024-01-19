@@ -58,12 +58,6 @@ export default function Cards({ className }: { className?: string }) {
         />
 
         <Card
-          title='walnuts | しずかなインターネット'
-          theme={pinkskyTheme}
-          href='https://sizu.me/walnuts'
-          icon='sizu'
-        />
-        <Card
           title='walnuts1018/wakatime-to-slack'
           theme={githubTheme}
           href='https://github.com/walnuts1018/wakatime-to-slack-profile'
@@ -75,6 +69,19 @@ export default function Cards({ className }: { className?: string }) {
           theme={chocoMintTheme}
           href='https://x.com/walnuts1018/status/1707774804466823674?s=20'
           description='DIGI-CON HACKATHON 2023でジャンプ+賞をいただきました。'
+        />
+        <Card
+          title='walnuts1018/OpenChokin'
+          theme={githubTheme}
+          href='https://github.com/walnuts1018/OpenChokin'
+          icon='github'
+          description='【開発中】貯金を公開するサービスです。 / 鴨川ハッカソンで優秀賞をいただきました。'
+        />
+        <Card
+          title='walnuts | しずかなインターネット'
+          theme={pinkskyTheme}
+          href='https://sizu.me/walnuts'
+          icon='sizu'
         />
       </div>
     </div>
