@@ -96,7 +96,9 @@ function Header() {
             <LowerDecoration className='pl-1 scale-[0.4] sm:scale-[0.5] ml-10 bottom-0' />
           </div> */}
           <div className='absolute right-0 top-0 h-full flex items-center justify-center'>
-            <Login />
+            <div className='h-2/3 text-md md:text-xl'>
+              <Login />
+            </div>
           </div>
         </div>
       </div>
