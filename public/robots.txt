@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://walnuts.dev
+
+# Sitemaps
+Sitemap: https://walnuts.dev/sitemap.xml
