@@ -11,7 +11,6 @@ RUN corepack enable && corepack prepare yarn@${YARN_VERSION}
 
 
 COPY package.json yarn.lock .yarnrc.yaml ./
-COPY .yarn .yarn
 RUN yarn install --imutable
 
 # ---------------------------------------------------------------------------------------------------------------
