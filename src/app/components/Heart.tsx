@@ -43,6 +43,7 @@ export default function Heart() {
         target='_blank'
         onMouseEnter={() => setShowDetail(true)}
         onMouseLeave={() => setShowDetail(false)}
+        title='Heart Rate Grafana Dashboard'
       >
         <FavoriteIcon fontSize='inherit' className=' text-red-500 heart' />
       </Link>
