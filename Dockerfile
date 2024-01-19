@@ -10,7 +10,7 @@ ENV YARN_VERSION=4.0.2
 RUN corepack enable && corepack prepare yarn@${YARN_VERSION}
 
 
-COPY package.json yarn.lock .yarnrc.yaml ./
+COPY package.json yarn.lock .yarnrc.yml ./
 RUN yarn install --imutable
 
 # ---------------------------------------------------------------------------------------------------------------
