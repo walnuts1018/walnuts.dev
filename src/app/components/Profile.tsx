@@ -5,7 +5,7 @@ import './Profile.css'
 
 export function Profile() {
   return (
-    <div className='flex flex-col items-center justify-center space-y-4 font-Nunito w-96'>
+    <div className='flex flex-col items-center justify-center space-y-4 font-Nunito'>
       <div className=' h-48 w-48 sm:h-60 sm:w-60 relative'>
         <ProfileImage />
         <div className='absolute bottom-4 right-0'>
@@ -105,7 +105,7 @@ function ProfileList({
         <a
           target='_blank'
           rel='noopener noreferrer'
-          className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full outline-none flex rounded-full px-6 py-1 profile-list hover:bg-gray-100 hover:shadow-md hover:border-gray-500 focus:bg-gray-100 focus:shadow-md focus:border-gray-500`}
+          className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full outline-none flex rounded-full px-6 py-1 profile-list hover:bg-gray-50 hover:shadow-xl hover:border-gray-600 focus:bg-gray-50 focus:shadow-xl focus:border-gray-600 transition-all duration-50`}
           href={link}
         >
           {children}

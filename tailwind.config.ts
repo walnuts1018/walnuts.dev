@@ -20,6 +20,7 @@ const config: Config = {
     },
     fontFamily: {
       Nunito: ["var(--font-Nunito)"],
+      Noto: ["var(--font-Noto)"],
     },
   },
   plugins: [],
