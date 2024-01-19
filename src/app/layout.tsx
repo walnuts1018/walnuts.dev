@@ -1,6 +1,6 @@
-import { css } from '@emotion/react'
 import type { Metadata } from 'next'
 import { Inter, Nunito } from 'next/font/google'
+import { Suspense } from 'react'
 import './globals.css'
 import AppleTouchIcon from '../../public/favicons/apple-touch-icon.png'
 import Favicon16 from '../../public/favicons/favicon-16x16.png'
@@ -53,7 +53,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='ja'>
       <head>
-        <GoogleAnalytics />
+        <Suspense fallback={<></>}>
+          <GoogleAnalytics />
+        </Suspense>
         <link rel='manifest' href='/favicons/site.webmanifest' />
         <link rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#5bbad5' />
         <meta name='msapplication-TileColor' content='#da532c' />
