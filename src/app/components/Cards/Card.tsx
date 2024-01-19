@@ -98,7 +98,7 @@ export function Card({
         <div className='flex flex-col justify-center h-full w-full px-5 gap-1 z-10'>
           <div className='flex justify-center items-center gap-2 pl-6 pr-2'>
             {iconComponent}
-            <p className={countTextLength(title) < 20 ? 'text-xl' : 'text-lg'}>{title}</p>
+            <h2 className={countTextLength(title) < 20 ? 'text-xl' : 'text-lg'}>{title}</h2>
           </div>
           {description && (
             <div className='w-full pr-11 pt-1'>
