@@ -63,6 +63,13 @@ export default function Cards({ className }: { className?: string }) {
           href='https://sizu.me/walnuts'
           icon='sizu'
         />
+        <Card
+          title='walnuts1018/wakatime-to-slack'
+          theme={githubTheme}
+          href='https://github.com/walnuts1018/wakatime-to-slack-profile'
+          icon='github'
+          description='Wakatimeから今書いている言語をリアルタイムで取得し、Slackのステータスに反映します。'
+        />
       </div>
     </div>
   )
