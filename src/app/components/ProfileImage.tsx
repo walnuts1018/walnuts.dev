@@ -27,8 +27,8 @@ export default function ProfileImage() {
           <Image
             src='/walnuts.jpg'
             alt='walnuts icon'
-            width={500}
-            height={500}
+            width={200}
+            height={200}
             className='rounded-full h-full w-full cursor-pointer  object-contain'
             onClick={() => {
               setIsExpanded(true)
