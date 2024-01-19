@@ -1,3 +1,4 @@
+import { css } from '@emotion/react'
 import type { Metadata } from 'next'
 import { Inter, Nunito } from 'next/font/google'
 import './globals.css'
@@ -78,7 +79,7 @@ function Header() {
           <a className='logo' href='#'>
             Walnuts.dev
           </a>
-          <div className='h-full items-end flex absolute right-0 sm:static'>
+          <div className='h-full items-end flex right-0 relative'>
             <LowerDecoration className='pl-1 h-3/4' />
           </div>
         </div>

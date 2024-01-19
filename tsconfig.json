@@ -18,6 +18,7 @@
         "name": "next"
       }
     ],
+    "types": ["@emotion/react/types/css-prop"],
     "paths": {
       "@/*": ["./src/*"]
     }

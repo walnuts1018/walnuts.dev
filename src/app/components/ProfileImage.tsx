@@ -51,13 +51,13 @@ export default function ProfileImage() {
               setIsExpanded(false)
             }}
           ></div>
-          <div className='rounded-full relative profile-image'>
+          <div className='rounded-full relative profile-image h-[80vmin]'>
             <Image
               src='/walnuts.jpg'
               alt='walnuts icon'
               width={500}
               height={500}
-              className=' h-full w-full object-contain rounded-full '
+              className=' h-full w-full rounded-full'
             />
           </div>
           <button
