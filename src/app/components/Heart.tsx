@@ -19,15 +19,12 @@ export default function Heart() {
     async function fetchHeart() {
       const res = await fetch('/api/heart')
       const data: HeartRate = await res.json()
-      console.log(data)
+      console.debug(data)
       setHeartRate(data.heart)
     }
     fetchHeart()
     setInterval(async () => {
-      const res = await fetch('/api/heart')
-      const data: HeartRate = await res.json()
-      console.log(data)
-      setHeartRate(data.heart)
+      fetchHeart()
     }, fetchInterval)
     return () => {
       clearInterval(fetchInterval)
