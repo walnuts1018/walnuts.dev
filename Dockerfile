@@ -6,8 +6,13 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-COPY package.json yarn.lock ./
-RUN yarn install
+ENV YARN_VERSION=4.0.2
+RUN corepack enable && corepack prepare yarn@${YARN_VERSION}
+
+
+COPY package.json yarn.lock .yarnrc.yaml ./
+COPY .yarn ./.yarn
+RUN yarn install --imutable
 
 # ---------------------------------------------------------------------------------------------------------------
 # Rebuild the source code only when needed
