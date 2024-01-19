@@ -6,10 +6,8 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-RUN yarn set version stable
-
 COPY package.json yarn.lock ./
-RUN yarn --frozen-lockfile
+RUN yarn install
 
 # ---------------------------------------------------------------------------------------------------------------
 # Rebuild the source code only when needed
