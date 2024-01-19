@@ -70,6 +70,12 @@ export default function Cards({ className }: { className?: string }) {
           icon='github'
           description='Wakatimeから今書いている言語をリアルタイムで取得し、Slackのステータスに反映します。'
         />
+        <Card
+          title='DIGI-CON HACKATHON 2023'
+          theme={chocoMintTheme}
+          href='https://x.com/walnuts1018/status/1707774804466823674?s=20'
+          description='DIGI-CON HACKATHON 2023でジャンプ+賞をいただきました。'
+        />
       </div>
     </div>
   )
