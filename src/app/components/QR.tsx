@@ -40,6 +40,7 @@ export default function QR({ className }: { className?: string }) {
           }}
           className='fixed h-[100svh] w-screen bg-black bg-opacity-50 flex flex-col items-center justify-center overflow-hidden'
           overlayClassName='fixed inset-0 bg-black bg-opacity-50 z-10'
+          appElement={document.body}
         >
           <div
             className='fixed h-full w-full -z-10'

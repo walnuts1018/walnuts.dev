@@ -44,6 +44,7 @@ export default function ProfileImage() {
           }}
           className='fixed h-[100svh] w-screen bg-black bg-opacity-50 flex items-center justify-center overflow-hidden p-2'
           overlayClassName='fixed inset-0 bg-black bg-opacity-70 z-10'
+          appElement={document.body}
         >
           <div
             className='fixed h-full w-full -z-10'
