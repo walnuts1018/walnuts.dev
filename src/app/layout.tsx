@@ -76,7 +76,7 @@ function Header() {
       <div className='flex justify-center w-full '>
         <div className='w-10/12 flex items-center justify-left h-12 md:h-16 text-black font-bold font-Nunito text-xl sm:text-2xl px-1 relative'>
           <div className='h-full '>
-            <UpperDecoration className='h-3/4 sm:h-2/3 pr-2 sm:pr-0' />
+            <UpperDecoration className='h-3/4 sm:h-2/3 pr-2 sm:pr-0 mr-7 sm:mr-12' />
           </div>
           <a className='logo' href='#'>
             Walnuts.dev
