@@ -82,7 +82,7 @@ function Header() {
   return (
     <header>
       <div className='flex justify-center w-full '>
-        <div className='w-10/12 flex items-center justify-left h-12 md:h-16 text-black font-bold font-Nunito text-xl sm:text-2xl px-1 relative'>
+        <div className='w-10/12 flex items-center justify-left h-12 md:h-16 text-black font-bold font-Nunito text-xl sm:text-2xl px-3 relative'>
           {/* <div className='h-full '>
             <UpperDecoration
               className='h-3/4 sm:h-2/3 pr-2 sm:pr-0 mr-7 sm:mr-12'
@@ -96,8 +96,7 @@ function Header() {
             <LowerDecoration className='pl-1 scale-[0.4] sm:scale-[0.5] ml-10 bottom-0' />
           </div> */}
           <div className='absolute right-0 top-0 h-full flex items-center justify-center'>
-            <div className='h-2/3 text-md md:text-xl'>
-            </div>
+            <div className='h-2/3 text-md md:text-xl'></div>
           </div>
         </div>
       </div>
