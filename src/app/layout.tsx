@@ -97,7 +97,6 @@ function Header() {
           </div> */}
           <div className='absolute right-0 top-0 h-full flex items-center justify-center'>
             <div className='h-2/3 text-md md:text-xl'>
-              <Login />
             </div>
           </div>
         </div>
