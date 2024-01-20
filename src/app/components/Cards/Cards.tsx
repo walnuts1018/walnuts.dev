@@ -40,7 +40,7 @@ export default function Cards({ className }: { className?: string }) {
         <Card
           title='HedgeDocをKubernetesに構築する'
           theme={pinkskyTheme}
-          href='https://hedgedoc.walnuts.dev/-Arpt4ZFQMC7Sz0acSG8Jg'
+          href='https://hedgedoc.walnuts.dev/s/rhYgE94FN'
         />
         <Card
           title='walnuts1018/machine-status-api'
