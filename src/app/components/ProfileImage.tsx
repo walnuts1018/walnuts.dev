@@ -30,6 +30,7 @@ export default function ProfileImage() {
             width={256}
             height={256}
             className='rounded-full h-full w-full cursor-pointer  object-contain'
+            priority={true}
             onClick={() => {
               setIsExpanded(true)
             }}
