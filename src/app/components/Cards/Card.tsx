@@ -69,7 +69,7 @@ export function Card({
         className='-m-2'
       />
     ),
-    sizu: <Image src='/icons/sizu.jpg' alt='hatena' width={35} height={35} className='-m-2' />,
+    sizu: <Image src='/icons/sizu.jpg' alt='しずかなインターネット' width={35} height={35} className='-m-2' />,
     none: <></>,
   }[icon || 'none']
 
