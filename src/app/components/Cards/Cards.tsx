@@ -11,7 +11,7 @@ import {
 export default function Cards({ className }: { className?: string }) {
   return (
     <div className={className}>
-      <div className='flex flex-wrap justify-center'>
+      <div className='flex flex-wrap justify-center gap-8'>
         <Card
           title='walnuts1018/infra'
           description='Kubernetesのインフラ構成を管理するリポジトリです。'

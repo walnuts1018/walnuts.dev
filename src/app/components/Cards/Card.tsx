@@ -69,12 +69,20 @@ export function Card({
         className='-m-2'
       />
     ),
-    sizu: <Image src='/icons/sizu.jpg' alt='しずかなインターネット' width={35} height={35} className='-m-2' />,
+    sizu: (
+      <Image
+        src='/icons/sizu.jpg'
+        alt='しずかなインターネット'
+        width={35}
+        height={35}
+        className='-m-2'
+      />
+    ),
     none: <></>,
   }[icon || 'none']
 
   return (
-    <div className=' h-[13rem] w-[22rem] p-5 hover:scale-105 duration-200 transition-all active:scale-100 font-Noto'>
+    <div className=' h-[11rem] w-[20rem] hover:scale-105 duration-200 transition-all active:scale-100 font-Noto'>
       <Link
         href={href}
         className='flex justify-center items-center h-full rounded-2xl relative bg-[#f6f7fa] cursor-pointer active:bg-[#e2e2e2] duration-200 transition-all'
