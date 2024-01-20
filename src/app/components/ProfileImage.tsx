@@ -29,7 +29,7 @@ export default function ProfileImage() {
             alt='walnuts icon'
             width={256}
             height={256}
-            className='rounded-full h-full w-full cursor-pointer  object-contain'
+            className='rounded-full h-full w-full cursor-pointer object-contain'
             priority={true}
             onClick={() => {
               setIsExpanded(true)
@@ -53,13 +53,13 @@ export default function ProfileImage() {
               setIsExpanded(false)
             }}
           ></div>
-          <div className='rounded-full relative profile-image h-[80vmin]'>
+          <div className='rounded-full relative profile-image h-[80vmin] w-[80vmin]'>
             <Image
               src='/walnuts.jpg'
               alt='walnuts icon'
               width={1024}
               height={1024}
-              className=' h-full w-full rounded-full'
+              className='rounded-full object-contain h-full w-full'
             />
           </div>
           <button
