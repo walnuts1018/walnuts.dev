@@ -10,7 +10,6 @@ import './QR.css'
 export default function QR({ className }: { className?: string }) {
   const [isShown, setIsShown] = useState(false)
   const [isRotated, setIsRotated] = useState(false)
-
   useEffect(() => {
     if (isShown) {
       disableBodyScroll(document.body)
