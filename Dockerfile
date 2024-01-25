@@ -9,9 +9,7 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN --mount=type=cache,target=/app/node_modules yarn global add pnpm && pnpm i --frozen-lockfile;
-RUN --mount=type=cache,target=/app/.next/cache --mount=type=cache,target=/app/node_modules pnpm build
-
+RUN --mount=type=cache,target=/app/.next/cache --mount=type=cache,target=/app/node_modules --mount=type=cache,target=/root/.pnpm-store yarn global add pnpm && pnpm i --frozen-lockfile && pnpm build
 # ---------------------------------------------------------------------------------------------------------------
 # Production image, copy all the files and run next
 FROM base AS runner
