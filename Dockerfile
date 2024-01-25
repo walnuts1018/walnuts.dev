@@ -54,6 +54,6 @@ ENV PORT 3000
 # set hostname to localhost
 ENV HOSTNAME "0.0.0.0"
 
-RUN yarn global add pnpm && pnpm i sharp
+RUN npm i sharp
 
 CMD ["node", "server.js"]
