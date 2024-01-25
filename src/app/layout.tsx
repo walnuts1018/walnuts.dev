@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Nunito, Noto_Sans_JP } from 'next/font/google'
+import { Nunito, Noto_Sans_JP } from 'next/font/google'
 import { Suspense } from 'react'
 import './globals.css'
 import AppleTouchIcon from '../../public/favicons/apple-touch-icon.png'
@@ -22,8 +22,6 @@ const NotoFont = Noto_Sans_JP({
   subsets: ['latin'],
   variable: '--font-Noto',
 })
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -68,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name='theme-color' content='#ffffff' />
         <meta name='twitter:image' content='https://walnuts.dev/walnuts.jpg' />
       </head>
-      <body className={`${inter.className} ${NunitoFont.variable} ${NotoFont.variable}`}>
+      <body className={`${NunitoFont.variable} ${NotoFont.variable}`}>
         <Header />
         {children}
       </body>
