@@ -41,14 +41,12 @@ export const hatenaTheme: CardTheme = {
 export function Card({
   title,
   description,
-  image,
   icon,
   theme,
   href,
 }: {
   title: string
   description?: string
-  image?: string
   icon?: 'github' | 'zenn' | 'hatena' | 'sizu'
   theme?: CardTheme
   href: string
