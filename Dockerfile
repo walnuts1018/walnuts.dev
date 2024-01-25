@@ -9,6 +9,7 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
+RUN --mount=type=cache,target=/app/node_modules rm -rf node_modules
 RUN --mount=type=cache,target=/app/.next/cache --mount=type=cache,target=/app/node_modules --mount=type=cache,target=/root/.npm npm ci && npm run build
 # ---------------------------------------------------------------------------------------------------------------
 # Production image, copy all the files and run next
