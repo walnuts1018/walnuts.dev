@@ -9,7 +9,7 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN yarn global add pnpm && pnpm i --frozen-lockfile;
+RUN --mount=type=cache,target=/app/node_modules yarn global add pnpm && pnpm i --frozen-lockfile;
 RUN --mount=type=cache,target=/app/.next/cache pnpm build
 
 # ---------------------------------------------------------------------------------------------------------------
