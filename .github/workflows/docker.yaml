@@ -29,7 +29,7 @@ jobs:
         with:
           path: |
             node_modules
-            .next/cache
+            .next
             .npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
