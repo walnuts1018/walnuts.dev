@@ -14,6 +14,7 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  optimizeFonts: false,
 }
 
 module.exports = nextConfig
