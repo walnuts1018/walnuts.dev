@@ -6,9 +6,7 @@ ENV NODE_ENV production
 # Uncomment the following line in case you want to disable telemetry during runtime.
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN npm i sharp
-RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
-RUN mkdir .next && chown nextjs:nodejs .next
+RUN npm i sharp && addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs && mkdir .next && chown nextjs:nodejs .next
 
 COPY ./public ./public
 COPY --chown=nextjs:nodejs ./.next/standalone ./
