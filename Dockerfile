@@ -9,7 +9,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs && mkdir .next && chown nextjs:nodejs .next
 RUN npm i sharp
 
-COPY ./public ./public
+COPY --chown=nextjs:nodejs ./public ./public
 COPY --chown=nextjs:nodejs ./.next/standalone ./
 COPY --chown=nextjs:nodejs ./.next/static ./.next/static
 
