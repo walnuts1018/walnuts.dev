@@ -44,28 +44,10 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           cache-from: type=gha
-          #cache-to: type=gha,mode=max
+          cache-to: type=gha,mode=max
           tags: |
             ghcr.io/walnuts1018/walnuts.dev:latest
             ghcr.io/walnuts1018/walnuts.dev:${{ github.sha }}-${{ github.run_number }}
-
-      - name: Build Docker images for cache (amd64)
-        uses: docker/build-push-action@v5
-        with:
-          push: false
-          context: .
-          platforms: linux/amd64
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Build Docker images for cache (arm64)
-        uses: docker/build-push-action@v5
-        with:
-          push: false
-          context: .
-          platforms: linux/arm64
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
 
   SucceessNotification:
     if: ${{ success() }}
