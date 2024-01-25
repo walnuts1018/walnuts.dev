@@ -28,9 +28,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            - node_modules
-            - .next/cache
-            - .npm
+            node_modules
+            .next/cache
+            .npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: setup-node
