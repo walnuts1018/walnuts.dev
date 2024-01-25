@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
 import { Nunito, Noto_Sans_JP } from 'next/font/google'
-import { Suspense } from 'react'
 import './globals.css'
 import AppleTouchIcon from '../../public/favicons/apple-touch-icon.png'
 import Favicon16 from '../../public/favicons/favicon-16x16.png'
 import Favicon32 from '../../public/favicons/favicon-32x32.png'
 import Favicon from '../../public/favicons/favicon.ico'
-import GoogleAnalytics from './components/GoogleAnalytics'
 
 const title = 'Walnuts.dev'
 const description = 'I am Walnuts'
@@ -56,9 +54,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='ja'>
       <head>
-        <Suspense fallback={<></>}>
-          <GoogleAnalytics />
-        </Suspense>
         <link rel='manifest' href='/favicons/site.webmanifest' />
         <link rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#5bbad5' />
         <meta name='msapplication-TileColor' content='#da532c' />
