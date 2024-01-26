@@ -1,5 +1,3 @@
-/*hoverで斜め30度の白線が左から右に1sで流れる */
-
 .deco-button-shine-overlay {
   animation: shine 5s ease-in-out 2s infinite;
 }
