@@ -1,5 +1,6 @@
 .heart {
-  animation: heartbeat var(--heart-interval) cubic-bezier(0.27, -0.01, 0.38, 0.98) infinite;
+  animation: heartbeat var(--heart-interval)
+    cubic-bezier(0.27, -0.01, 0.38, 0.98) infinite;
 }
 
 @keyframes heartbeat {

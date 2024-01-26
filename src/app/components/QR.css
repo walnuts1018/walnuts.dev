@@ -5,7 +5,8 @@
 
 @media (min-width: 640px) {
   .container {
-    box-shadow: 15px 15px 40px 5px rgb(15, 14, 31), -5px -5px 30px 5px rgba(254, 255, 234, 0.349);
+    box-shadow: 15px 15px 40px 5px rgb(15, 14, 31),
+      -5px -5px 30px 5px rgba(254, 255, 234, 0.349);
   }
 }
 
