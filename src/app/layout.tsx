@@ -59,8 +59,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel='manifest' href='/favicons/site.webmanifest' />
         <link rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#5bbad5' />
-        <meta name='msapplication-TileColor' content='#da532c' />
-        <meta name='theme-color' content='#ffffff' />
+        <meta name='msapplication-TileColor' content='#FF9F21' />
+        <meta name='theme-color' content='#FF9F21' />
         <meta name='twitter:image' content='https://walnuts.dev/walnuts.jpg' />
       </head>
       <body className={`${NunitoFont.variable} ${NotoFont.variable}`}>
