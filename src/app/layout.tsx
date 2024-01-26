@@ -80,9 +80,11 @@ function Header() {
               innerClassName='scale-[0.15] sm:scale-[0.2]'
             />
           </div> */}
-          <a className='logo' href='#'>
-            Walnuts.dev
-          </a>
+          <h1>
+            <a className='logo' href='#'>
+              Walnuts.dev
+            </a>
+          </h1>
           {/* <div className='h-full items-end flex right-0 relative'>
             <LowerDecoration className='pl-1 scale-[0.4] sm:scale-[0.5] ml-10 bottom-0' />
           </div> */}
