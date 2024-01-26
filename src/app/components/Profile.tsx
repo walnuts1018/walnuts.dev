@@ -58,7 +58,7 @@ export function Profile() {
           <ProfileList
             src='/icons/favorite_FILL0_wght400_GRAD0_opsz24.svg'
             alt='School'
-            text='Kubernetes / Proxmox VE / Golang'
+            text='Kubernetes / Proxmox VE / Golang / Next.js'
             fontSize='text-2xl'
           />
         </div>
