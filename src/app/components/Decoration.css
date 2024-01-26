@@ -1,0 +1,5 @@
+.UpperDecoration1 {
+  box-shadow: 4px 4px 4px 0px rgba(255, 255, 255, 0.56) inset,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.15),
+    -2px -4px 5px 0px rgba(37, 51, 48, 0.13) inset;
+}

@@ -87,8 +87,7 @@ function ProfileList({
         alt={alt}
         width={40}
         height={40}
-        style={{ objectFit: "contain" }}
-        className="min-w-[40px] max-w-[40px]"
+        className="min-w-[40px] max-w-[40px] object-contain"
       />
       <p>{text}</p>
     </>

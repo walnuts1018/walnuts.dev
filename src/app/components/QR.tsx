@@ -54,10 +54,9 @@ export default function QR({ className }: { className?: string }) {
           ></div>
           <div className="flex justify-between items-center w-2/3 sm:w-3/4 md:w-1/2 xl:w-1/3 flex-col ">
             <div
-              className="rounded-3xl bg-white p-4 shadow-md flex flex-col justify-center items-center transition-all duration-500 container z-30"
-              style={{
-                transform: isRotated ? "rotate(180deg)" : "rotate(0deg)",
-              }}
+              className={`rounded-3xl bg-white p-4 shadow-md flex flex-col justify-center items-center transition-all duration-500 container z-30 ${
+                isRotated ? "rotate-180" : "rotate-0"
+              }`}
             >
               <div className="flex justify-center items-center">
                 <Image
@@ -89,12 +88,10 @@ export default function QR({ className }: { className?: string }) {
               onClick={() => setIsRotated((prev) => !prev)}
             >
               <ScreenRotationAltIcon
-                className="text-[#83dbd6] w-full h-full"
+                className={`text-[#83dbd6] w-full h-full transition-all duration-500 ease-in-out ${
+                  isRotated ? "rotate-[360deg]" : "rotate-0"
+                }`}
                 fontSize="large"
-                style={{
-                  transform: isRotated ? "rotate(360deg)" : "rotate(0deg)",
-                  transition: "transform 0.5s ease-in-out",
-                }}
               />
             </button>
           </div>
