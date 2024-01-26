@@ -11,7 +11,7 @@ import {
 } from "react-share";
 
 const URL = "https://walnuts.dev";
-const title = "Walnuts․dev\n@walnuts1018\n";
+const title = "Walnuts․dev\n";
 
 export default function Share({
   className,
@@ -22,7 +22,7 @@ export default function Share({
 }) {
   return (
     <div className={className}>
-      <TwitterShareButton url={URL} title={title}>
+      <TwitterShareButton url={URL} title={title + "@walnuts1018\n"}>
         <TwitterIcon size={size} round={true} />
       </TwitterShareButton>
       <FacebookShareButton url={URL} title={title}>
