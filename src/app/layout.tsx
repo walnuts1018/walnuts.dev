@@ -91,7 +91,7 @@ function Header() {
             />
           </div> */}
           <h1>
-            <a className="logo" href="#">
+            <a className="logo" href="/">
               Walnuts.dev
             </a>
           </h1>
