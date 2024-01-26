@@ -104,7 +104,7 @@ function ProfileList({
         <a
           target="_blank"
           rel="noopener noreferrer"
-          className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full outline-none flex rounded-full px-6 py-1 profile-list hover:bg-gray-50 hover:shadow-xl hover:border-gray-600 focus:bg-gray-50 focus:shadow-xl focus:border-gray-600 transition-all duration-50 hover:scale-105 active:scale-100 focus:scale-105`}
+          className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full outline-none flex rounded-full px-6 py-1 profile-list sm:hover:bg-gray-50 sm:hover:shadow-xl sm:hover:border-gray-600 sm:focus:bg-gray-50 sm:focus:shadow-xl sm:focus:border-gray-600 transition-all duration-50 sm:hover:scale-105 active:scale-100 sm:focus:scale-105`}
           href={link}
         >
           {children}
