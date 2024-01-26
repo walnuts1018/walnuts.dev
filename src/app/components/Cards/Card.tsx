@@ -82,10 +82,10 @@ export function Card({
   }[icon || "none"];
 
   return (
-    <div className=" h-[11rem] w-[20rem] hover:scale-105 duration-200 transition-all active:scale-100 font-Noto">
+    <div className=" h-[11rem] w-[20rem] hover:scale-105  duration-200 transition-all active:scale-100 font-Noto ">
       <Link
         href={href}
-        className="flex justify-center items-center h-full rounded-2xl relative bg-[#f6f7fa] cursor-pointer active:bg-[#e2e2e2] duration-200 transition-all card-shadow"
+        className="flex justify-center items-center h-full rounded-2xl focus:scale-105 relative bg-[#f6f7fa] cursor-pointer active:bg-[#e2e2e2] duration-200 outline-none transition-all card-shadow"
         target="_blank"
       >
         <UpperDecoration
