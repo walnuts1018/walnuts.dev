@@ -8,7 +8,7 @@ import Favicon from '../../public/favicons/favicon.ico'
 
 const title = 'Walnuts-dev'
 const description =
-  "Hi, I'm Walnuts. Love: Kubernetes, Proxmox, Golang, Next.js, and more. このサイトは、SNSリンクをまとめる、ポートフォリオを公開する、Server Status/Metricsを公開する、などの目的で作成されました。現在はまだ開発中です。今後機能を追加していく予定です。"
+  "Hi, I'm Walnuts. このサイトでは、SNSアカウント一覧、ポートフォリオ、自宅サーバーの状態、WalnutsのHealth Metricsなどを公開しています。"
 const url = 'https://walnuts.dev'
 
 const NunitoFont = Nunito({
