@@ -18,7 +18,7 @@ const NunitoFont = Nunito({
 })
 
 const NotoFont = localFont({
-  src: './font/NotoSansCJKjp-DemiLight.woff2',
+  src: './font/NotoSansCJKjp-Regular.woff2',
   variable: '--font-Noto',
   display: 'swap',
 })
