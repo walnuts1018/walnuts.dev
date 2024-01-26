@@ -10,6 +10,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Modal from "react-modal";
 import "./QR.css";
+import Share from "./Share";
 
 export default function QR({ className }: { className?: string }) {
   const [isShown, setIsShown] = useState(false);
@@ -79,6 +80,7 @@ export default function QR({ className }: { className?: string }) {
                   height={500}
                 />
               </div>
+              <Share className=" flex justify-between gap-3" size={38} />
             </div>
           </div>
           <div className="flex justify-center items-center">
