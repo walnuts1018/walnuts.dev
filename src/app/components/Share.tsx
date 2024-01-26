@@ -11,7 +11,7 @@ import {
 } from "react-share";
 
 const URL = "https://walnuts.dev";
-const title = "Walnuts-dev";
+const title = "Walnuts․dev\n@walnuts1018\n";
 
 export default function Share({
   className,
