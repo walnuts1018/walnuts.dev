@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Nunito, Noto_Sans_JP } from 'next/font/google'
+import { Nunito } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import AppleTouchIcon from '../../public/favicons/apple-touch-icon.png'
 import Favicon16 from '../../public/favicons/favicon-16x16.png'
@@ -16,9 +17,10 @@ const NunitoFont = Nunito({
   variable: '--font-Nunito',
 })
 
-const NotoFont = Noto_Sans_JP({
-  subsets: ['latin'],
+const NotoFont = localFont({
+  src: './font/NotoSansCJKjp-DemiLight.woff2',
   variable: '--font-Noto',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
