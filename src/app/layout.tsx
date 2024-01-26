@@ -6,7 +6,7 @@ import Favicon16 from '../../public/favicons/favicon-16x16.png'
 import Favicon32 from '../../public/favicons/favicon-32x32.png'
 import Favicon from '../../public/favicons/favicon.ico'
 
-const title = 'Walnuts-dev'
+const title = "Walnuts-dev / I'm Walnuts"
 const description =
   "Hi, I'm Walnuts. このサイトでは、SNSアカウント一覧、ポートフォリオ、自宅サーバーの状態、WalnutsのHealth Metricsなどを公開しています。"
 const url = 'https://walnuts.dev'
