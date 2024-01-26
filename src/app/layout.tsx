@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
+import localFont from "next/font/local";
 import AppleTouchIcon from "../../public/favicons/apple-touch-icon.png";
 import Favicon16 from "../../public/favicons/favicon-16x16.png";
 import Favicon32 from "../../public/favicons/favicon-32x32.png";
