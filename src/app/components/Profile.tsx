@@ -14,9 +14,11 @@ export function Profile() {
       </div>
 
       <div className="flex flex-col items-center justify-center">
-        <p className="text-black font-extrabold text-4xl">Walnuts</p>
+        <p className="text-black font-extrabold text-4xl pb-3 sm:pb-5">
+          Walnuts
+        </p>
         {/* <Heart /> */}
-        <div className="space-y-2 mt-6">
+        <div className="space-y-1 sm:space-y-2">
           {/*<ProfileList src='/icons/sell_FILL0_wght400_GRAD0_opsz24.svg' alt='Name' text='Ryota Tawara' />*/}
           <ProfileList
             src="/icons/twitter-x-line.svg"
@@ -72,7 +74,7 @@ function ProfileList({
   alt,
   text,
   link,
-  fontSize = "text-3xl",
+  fontSize = "text-2xl sm:text-3xl",
 }: {
   src: string;
   alt: string;
@@ -87,7 +89,7 @@ function ProfileList({
         alt={alt}
         width={40}
         height={40}
-        className="min-w-[40px] max-w-[40px] object-contain"
+        className="min-w-[36px] max-w-[36px] sm:min-w-[40px] sm:max-w-[40px] object-contain"
       />
       <p>{text}</p>
     </>
@@ -96,7 +98,7 @@ function ProfileList({
     <>
       {link === undefined ? (
         <div
-          className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full outline-none flex rounded-full px-6 py-1 profile-list`}
+          className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full sm:outline-none flex rounded-full px-6 py-1 profile-list`}
         >
           {children}
         </div>
@@ -104,7 +106,7 @@ function ProfileList({
         <a
           target="_blank"
           rel="noopener noreferrer"
-          className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full outline-none flex rounded-full px-6 py-1 profile-list sm:hover:bg-gray-50 sm:hover:shadow-xl sm:hover:border-gray-600 sm:focus:bg-gray-50 sm:focus:shadow-xl sm:focus:border-gray-600 transition-all duration-50 sm:hover:scale-105 active:scale-100 sm:focus:scale-105`}
+          className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full sm:outline-none flex rounded-full px-6 py-1 profile-list hover:bg-gray-50 hover:shadow-xl hover:border-gray-600 focus:bg-gray-50 focus:shadow-xl focus:border-gray-600 transition-all duration-50 sm:hover:scale-105 active:scale-100 sm:focus:scale-105`}
           href={link}
         >
           {children}
