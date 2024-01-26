@@ -6,8 +6,8 @@ import Favicon16 from '../../public/favicons/favicon-16x16.png'
 import Favicon32 from '../../public/favicons/favicon-32x32.png'
 import Favicon from '../../public/favicons/favicon.ico'
 
-const title = 'Walnuts.dev'
-const description = 'I am Walnuts'
+const title = 'Walnuts dev'
+const description = 'This is a personal website of walnuts1018.'
 const url = 'https://walnuts.dev'
 
 const NunitoFont = Nunito({
