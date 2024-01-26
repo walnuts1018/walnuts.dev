@@ -80,7 +80,6 @@ export default function QR({ className }: { className?: string }) {
                   height={500}
                 />
               </div>
-              <Share className=" flex justify-between gap-3" size={38} />
             </div>
           </div>
           <div className="flex justify-center items-center">
