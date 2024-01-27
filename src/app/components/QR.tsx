@@ -88,12 +88,13 @@ export default function QR({ className }: { className?: string }) {
               className="bg-white rounded-full border-white p-3 border-4 shadow-neumorphism-button active:shadow-neumorphism-button-pressed mt-10 w-[72px] h-[72px] outline-none"
               onClick={() => setIsRotated((prev) => !prev)}
             >
-              <ScreenRotationAltIcon
-                className={`text-[#83dbd6] w-full h-full transition-all duration-500 ease-in-out ${
+              <div
+                className={`text-[#83dbd6] transition-all duration-500 ease-in-out ${
                   isRotated ? "rotate-[360deg]" : "rotate-0"
                 }`}
-                fontSize="large"
-              />
+              >
+                <ScreenRotationAltIcon fontSize="large" />
+              </div>
             </button>
           </div>
         </Modal>
