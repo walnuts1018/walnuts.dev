@@ -15,7 +15,7 @@
     </a>
 </p>
 
-# LightHouse Scores
+## LightHouse Scores
 
 <p align="center">
     <img src="https://img.shields.io/badge/Performance-81%25-blue.svg" alt="Performance" />
