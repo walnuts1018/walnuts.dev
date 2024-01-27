@@ -18,7 +18,7 @@
 # LightHouse Scores
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Performance-97%25-green.svg" alt="Performance" />
+    <img src="https://img.shields.io/badge/Performance-81%25-green.svg" alt="Performance" />
     <img src="https://img.shields.io/badge/Accessibility-100%25-green.svg" alt="Accessibility" />
     <img src="https://img.shields.io/badge/Best%20Practices-100%25-green.svg" alt="Best Practices" />
     <img src="https://img.shields.io/badge/SEO-100%25-green.svg" alt="SEO" />
