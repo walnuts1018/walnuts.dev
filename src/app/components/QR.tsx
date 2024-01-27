@@ -61,7 +61,7 @@ export default function QR({ className }: { className?: string }) {
             >
               <div className="flex justify-center items-center">
                 <Image
-                  src="/walnuts.jpg"
+                  src="/walnuts.png"
                   alt="favicon"
                   width={50}
                   height={50}
