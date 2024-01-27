@@ -48,7 +48,9 @@ export default function Heart() {
         onMouseLeave={() => setShowDetail(false)}
         title="Heart Rate Grafana Dashboard"
       >
-        <FavoriteIcon fontSize="inherit" className=" text-red-500 heart" />
+        <div className=" text-red-500 heart">
+          <FavoriteIcon fontSize="inherit" />
+        </div>
       </Link>
       <div
         className={`absolute items-center h-full w-full top-10 flex left-0 justify-center text-2xl font-bold text-black transition-all duration-100 pointer-events-none 
