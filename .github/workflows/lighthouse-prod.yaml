@@ -1,0 +1,42 @@
+name: Lighthouse
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: install Lighthouse
+        run: |
+          npm install -g lighthouse hjson
+      - name: run Lighthouse
+        run: |
+          lighthouse https://walnuts.dev/ --chrome-flags="--headless" --output json --enable-error-reporting > lighthouse.json
+
+      - name: extract score
+        run: |
+          cat lighthouse.json |sed -e "/nodeLabel/D" |hjson -j | jq "[.categories[] |{(.id): .score}]| add" > score.json
+
+      - name: rewrite README.md
+        run: |
+          cat README.md |sed -e "/"https://img.shields.io/badge/Performance-.*-green.svg/"https://img.shields.io/badge/Performance-$(cat score.json |jq -r '.performance'| awk '$0=$0*100"%"')-green.svg"/" > README.md
+          cat README.md |sed -e "/"https://img.shields.io/badge/Accessibility-.*-green.svg/"https://img.shields.io/badge/Accessibility-$(cat score.json |jq -r '.accessibility'| awk '$0=$0*100"%"')-green.svg"/" > README.md
+          cat README.md |sed -e "/"https://img.shields.io/badge/Best Practices-.*-green.svg/"https://img.shields.io/badge/Best Practices-$(cat score.json |jq -r '.best-practices'| awk '$0=$0*100"%"')-green.svg"/" > README.md
+          cat README.md |sed -e "/"https://img.shields.io/badge/SEO-.*-green.svg/"https://img.shields.io/badge/SEO-$(cat score.json |jq -r '.seo'| awk '$0=$0*100"%"')-green.svg"/" > README.md
+
+      - name: push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "update README.md"
+          git push --set-upstream origin main

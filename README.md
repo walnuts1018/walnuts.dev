@@ -14,4 +14,12 @@
       <img src="https://wakatime.com/badge/user/981e52dd-a7ab-4b00-9a71-125be9dc2de6/project/cab1a4de-a0f7-4674-a7f9-8db12b087db6.svg" alt="wakatime">
     </a>
 </p>
+
+<p align="center">
+    LightHouse Scores
+    <img src=https://img.shields.io/badge/Performance-0%-green.svg alt="Performance" />
+    <img src=https://img.shields.io/badge/Accessibility-0%-green.svg alt="Accessibility" />
+    <img src=https://img.shields.io/badge/Best%20Practices-0%-green.svg alt="Best Practices" />
+    <img src=https://img.shields.io/badge/SEO-0%-green.svg alt="SEO" />
+</p>
 <https://walnuts.dev>
