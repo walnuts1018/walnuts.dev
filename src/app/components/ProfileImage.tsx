@@ -27,9 +27,9 @@ export default function ProfileImage() {
   return (
     <>
       <div className="rounded-full bg-gradient-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-full w-full">
-        <div className="rounded-full h-full w-full bg-white overflow-hidden">
+        <div className="rounded-full h-full w-full overflow-hidden bg-[#f6f7fa]">
           <Image
-            src="/optimized-walnuts.jpg"
+            src="/walnuts-f6f7fa.png"
             alt="walnuts icon"
             width={256}
             height={256}
@@ -38,6 +38,7 @@ export default function ProfileImage() {
             onClick={() => {
               setIsExpanded(true);
             }}
+            quality={32}
           />
         </div>
       </div>
@@ -59,7 +60,7 @@ export default function ProfileImage() {
           ></div>
           <div className="rounded-full relative profile-image h-[80vmin] w-[80vmin]">
             <Image
-              src="/walnuts.jpg"
+              src="/walnuts.png"
               alt="walnuts icon"
               width={1024}
               height={1024}
