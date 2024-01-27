@@ -15,9 +15,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+
       - name: install Lighthouse
         run: |
           npm install -g lighthouse hjson
+
+      - name: install chrome
+        run: |
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt install ./google-chrome-stable_current_amd64.deb
+
       - name: run Lighthouse
         run: |
           lighthouse https://walnuts.dev/ --chrome-flags="--headless" --output json --enable-error-reporting > lighthouse.json
