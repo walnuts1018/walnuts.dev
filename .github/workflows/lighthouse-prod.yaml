@@ -35,10 +35,10 @@ jobs:
 
       - name: rewrite README.md
         run: |
-          cat README.md |sed -e "/"https://img.shields.io/badge/Performance-.*-green.svg/"https://img.shields.io/badge/Performance-$(cat score.json |jq -r '.performance'| awk '$0=$0*100"%"')-green.svg"/" > README.md
-          cat README.md |sed -e "/"https://img.shields.io/badge/Accessibility-.*-green.svg/"https://img.shields.io/badge/Accessibility-$(cat score.json |jq -r '.accessibility'| awk '$0=$0*100"%"')-green.svg"/" > README.md
-          cat README.md |sed -e "/"https://img.shields.io/badge/Best Practices-.*-green.svg/"https://img.shields.io/badge/Best Practices-$(cat score.json |jq -r '.best-practices'| awk '$0=$0*100"%"')-green.svg"/" > README.md
-          cat README.md |sed -e "/"https://img.shields.io/badge/SEO-.*-green.svg/"https://img.shields.io/badge/SEO-$(cat score.json |jq -r '.seo'| awk '$0=$0*100"%"')-green.svg"/" > README.md
+          cat README.md |sed -e "/"https://img.shields.io/badge/Performance-.*25-green.svg/"https://img.shields.io/badge/Performance-$(cat score.json |jq -r '.performance'| awk '$0=$0*100"%"')25-green.svg"/" > README.md
+          cat README.md |sed -e "/"https://img.shields.io/badge/Accessibility-.*25-green.svg/"https://img.shields.io/badge/Accessibility-$(cat score.json |jq -r '.accessibility'| awk '$0=$0*100"%"')25-green.svg"/" > README.md
+          cat README.md |sed -e "/"https://img.shields.io/badge/Best Practices-.*25-green.svg/"https://img.shields.io/badge/Best Practices-$(cat score.json |jq -r '.best-practices'| awk '$0=$0*100"%"')25-green.svg"/" > README.md
+          cat README.md |sed -e "/"https://img.shields.io/badge/SEO-.*25-green.svg/"https://img.shields.io/badge/SEO-$(cat score.json |jq -r '.seo'| awk '$0=$0*100"%"')25-green.svg"/" > README.md
 
       - name: push
         run: |
