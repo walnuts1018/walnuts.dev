@@ -1,5 +1,3 @@
-import "./Decoration.css";
-
 export function UpperDecoration({
   className,
   innerClassName,
@@ -18,9 +16,11 @@ export function UpperDecoration({
     <div className={className}>
       <div className={`relative left-0 w-full ${innerClassName}`}>
         <div
-          className={`w-[219.49px] h-[52.99px] left-[33.21px] top-0 absolute origin-top-left rotate-[25.98deg] rounded-[20px] opacity-75 UpperDecoration1`}
+          className={`w-[219.49px] h-[52.99px] left-[33.21px] top-0 absolute origin-top-left rotate-[25.98deg] rounded-[20px] opacity-75`}
           style={{
             backgroundColor: primaryColor,
+            boxShadow:
+              "4px 4px 4px 0px rgba(255, 255, 255, 0.56) inset,0px 4px 4px 0px rgba(0, 0, 0, 0.15),-2px -4px 5px 0px rgba(37, 51, 48, 0.13) inset",
           }}
         />
         <div
