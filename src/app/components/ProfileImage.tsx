@@ -38,7 +38,7 @@ export default function ProfileImage() {
             onClick={() => {
               setIsExpanded(true);
             }}
-            quality={32}
+            quality={60}
           />
         </div>
       </div>
