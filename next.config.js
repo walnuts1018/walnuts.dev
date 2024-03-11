@@ -1,4 +1,4 @@
-const apiurl = 'https://fitbit.walnuts.dev/v1/'
+const apiurl = 'fitbit.walnuts.dev/v1/'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
