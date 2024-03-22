@@ -18,9 +18,9 @@
 ## LightHouse Scores
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Performance-82%25-blue.svg" alt="Performance" />
+    <img src="https://img.shields.io/badge/Performance-94%25-blue.svg" alt="Performance" />
     <img src="https://img.shields.io/badge/Accessibility-100%25-blue.svg" alt="Accessibility" />
-    <img src="https://img.shields.io/badge/Best%20Practices-96%25-blue.svg" alt="Best Practices" />
+    <img src="https://img.shields.io/badge/Best%20Practices-100%25-blue.svg" alt="Best Practices" />
     <img src="https://img.shields.io/badge/SEO-100%25-blue.svg" alt="SEO" />
 </p>
 <https://walnuts.dev>
