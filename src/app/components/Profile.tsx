@@ -2,6 +2,8 @@ import Image from "next/image";
 import Heart from "./Heart";
 import ProfileImage from "./ProfileImage";
 import "./Profile.css";
+import link from "next/link";
+import { text } from "stream/consumers";
 
 export function Profile() {
   return (
@@ -19,62 +21,74 @@ export function Profile() {
         </p>
         {/* <Heart /> */}
         <div className="space-y-1 sm:space-y-2">
-          {/*<ProfileList src='/icons/sell_FILL0_wght400_GRAD0_opsz24.svg' alt='Name' text='Ryota Tawara' />*/}
+          {/*<ProfileList src='/icons/sell_FILL0_wght400_GRAD0_opsz24.svg' alt='Name' child='Ryota Tawara' />*/}
           <ProfileList
             src="/icons/twitter-x-line.svg"
             alt="X(Twitter)"
-            text="@walnuts1018"
             link="https://twitter.com/walnuts1018"
-          />
+          >
+            @walnuts1018
+          </ProfileList>
           <ProfileList
             src="/icons/github-fill.svg"
             alt="GitHub"
-            text="walnuts1018"
             link="https://github.com/walnuts1018"
-          />
+          >
+            walnuts1018
+          </ProfileList>
           <ProfileList
             src="/icons/instagram-line.svg"
             alt="Instagram"
-            text="@walnuts_1018"
             link="https://www.instagram.com/walnuts_1018/"
-          />
+          >
+            @walnuts_1018
+          </ProfileList>
           <ProfileList
             src="/icons/mail_FILL0_wght400_GRAD0_opsz24.svg"
             alt="Mail"
-            text="r.juglans.1018@gmail.com"
             link="mailto:r.juglans.1018@gmail.com"
             fontSize="text-2xl"
-          />
+          >
+            r.juglans.1018@gmail.com
+          </ProfileList>
           <ProfileList
             src="/icons/KMClogo_trans.svg"
             alt="KMC"
-            text="KMC 46th Chairman"
             link="https://kmc.gr.jp"
-          />
+            fontSize="text-2xl"
+          >
+            46th Chairman /
+            <br />
+            47th Representative
+          </ProfileList>
           <ProfileList
             src="/icons/school_FILL0_wght400_GRAD0_opsz24.svg"
             alt="School"
-            text="Kyoto Univ. / B2"
             link="https://www.s-ee.t.kyoto-u.ac.jp/ja"
-          />
+          >
+            Kyoto Univ. / B2
+          </ProfileList>
           <ProfileList
             src="/icons/favorite_FILL0_wght400_GRAD0_opsz24.svg"
             alt="Favorite Tech"
-            text="Kubernetes / Proxmox VE / Golang / Next.js"
             fontSize="text-2xl"
-          />
+          >
+            Kubernetes / Proxmox VE / Golang / Next.js
+          </ProfileList>
           <ProfileList
             src="/icons/map_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="favorite food map"
-            text="😋"
+            alt="Map Icon"
             link="https://maps.app.goo.gl/2nuqetk7S8FcNayWA"
-          />
+          >
+            <Image src="/icons/yummy.png" alt="yummy" width={30} height={30} />
+          </ProfileList>
           <ProfileList
             src="/icons/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="amazon want-to-buy list"
-            text="Want-to-Buy"
+            alt="shopping cart icon"
             link="https://www.amazon.jp/hz/wishlist/ls/1L1NGV8XKP7X6?ref_=wl_share"
-          />
+          >
+            Want-to-Buy
+          </ProfileList>
         </div>
       </div>
     </div>
@@ -84,17 +98,17 @@ export function Profile() {
 function ProfileList({
   src,
   alt,
-  text,
+  children,
   link,
   fontSize = "text-2xl sm:text-3xl",
 }: {
   src: string;
   alt: string;
-  text: string;
+  children: React.ReactNode;
   link?: string;
   fontSize?: string;
 }) {
-  const children = (
+  const content = (
     <>
       <Image
         src={src}
@@ -103,7 +117,7 @@ function ProfileList({
         height={40}
         className="min-w-[36px] max-w-[36px] sm:min-w-[40px] sm:max-w-[40px] object-contain"
       />
-      <p>{text}</p>
+      <p className="leading-7">{children}</p>
     </>
   );
   return (
@@ -112,7 +126,7 @@ function ProfileList({
         <div
           className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full sm:outline-none flex rounded-full px-6 py-1 profile-list`}
         >
-          {children}
+          {content}
         </div>
       ) : (
         <a
@@ -121,7 +135,7 @@ function ProfileList({
           className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full sm:outline-none flex rounded-full px-6 py-1 profile-list hover:bg-gray-50 hover:shadow-xl hover:border-gray-600 focus:bg-gray-50 focus:shadow-xl focus:border-gray-600 transition-all duration-50 sm:hover:scale-105 active:scale-100 sm:focus:scale-105`}
           href={link}
         >
-          {children}
+          {content}
         </a>
       )}
     </>
