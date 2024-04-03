@@ -59,9 +59,21 @@ export function Profile() {
           />
           <ProfileList
             src="/icons/favorite_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="School"
+            alt="Favorite Tech"
             text="Kubernetes / Proxmox VE / Golang / Next.js"
             fontSize="text-2xl"
+          />
+          <ProfileList
+            src="/icons/map_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="favorite food map"
+            text="😋"
+            link="https://maps.app.goo.gl/2nuqetk7S8FcNayWA"
+          />
+          <ProfileList
+            src="/icons/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="amazon want-to-buy list"
+            text="Want-to-Buy"
+            link="https://www.amazon.jp/hz/wishlist/ls/1L1NGV8XKP7X6?ref_=wl_share"
           />
         </div>
       </div>
