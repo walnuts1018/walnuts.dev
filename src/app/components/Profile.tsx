@@ -2,8 +2,7 @@ import Image from "next/image";
 import Heart from "./Heart";
 import ProfileImage from "./ProfileImage";
 import "./Profile.css";
-import link from "next/link";
-import { text } from "stream/consumers";
+import Link from "next/link";
 
 export function Profile() {
   return (
@@ -19,9 +18,13 @@ export function Profile() {
         <p className="text-black font-extrabold text-4xl pb-3 sm:pb-5">
           Walnuts
         </p>
-        {/* <Heart /> */}
         <div className="space-y-1 sm:space-y-2">
-          {/*<ProfileList src='/icons/sell_FILL0_wght400_GRAD0_opsz24.svg' alt='Name' child='Ryota Tawara' />*/}
+          {/* <ProfileList
+            src="/icons/id_card_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Name"
+          >
+            Ryota Tawara
+          </ProfileList> */}
           <ProfileList
             src="/icons/twitter-x-line.svg"
             alt="X(Twitter)"
@@ -129,14 +132,14 @@ function ProfileList({
           {content}
         </div>
       ) : (
-        <a
+        <Link
           target="_blank"
           rel="noopener noreferrer"
           className={`flex space-x-3 text-[#7f7f7f] font-bold items-center ${fontSize} w-full sm:outline-none flex rounded-full px-6 py-1 profile-list hover:bg-gray-50 hover:shadow-xl hover:border-gray-600 focus:bg-gray-50 focus:shadow-xl focus:border-gray-600 transition-all duration-50 sm:hover:scale-105 active:scale-100 sm:focus:scale-105`}
           href={link}
         >
           {content}
-        </a>
+        </Link>
       )}
     </>
   );
