@@ -69,7 +69,7 @@ export function Profile() {
             alt="School"
             link="https://www.s-ee.t.kyoto-u.ac.jp/ja"
           >
-            Kyoto Univ. / B2
+            Kyoto Univ. / B3
           </ProfileList>
           <ProfileList
             src="/icons/favorite_FILL0_wght400_GRAD0_opsz24.svg"
