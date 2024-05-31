@@ -3,38 +3,35 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import "./Heart.css";
+import useSWR from "swr";
 
-const fetchInterval = 60 * 1000;
+const fetchInterval = 10 * 1000;
 
 type HeartRate = {
   heart: number;
   time: string;
 };
 
+async function fetcher(key: string) {
+  return fetch(key).then((res) => res.json() as Promise<HeartRate>);
+}
+
 export default function Heart() {
-  const [heartRate, setHeartRate] = useState(0);
   const [showDetail, setShowDetail] = useState(false);
 
-  useEffect(() => {
-    async function fetchHeart() {
-      const res = await fetch("/api/heart");
-      const data: HeartRate = await res.json();
-      console.debug(data);
-      setHeartRate(data.heart);
-    }
-    fetchHeart();
-    setInterval(async () => {
-      fetchHeart();
-    }, fetchInterval);
-    return () => {
-      clearInterval(fetchInterval);
-    };
-  }, []);
+  const { data, error } = useSWR("/api/heart", fetcher, {
+    refreshInterval: fetchInterval,
+  });
+
+  const heartRate = data?.heart || 0;
+  if (error) {
+    console.error(error);
+  }
 
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--heart-interval",
-      `${60 / heartRate}s`,
+      `${60 / heartRate}s`
     );
   }, [heartRate]);
 
