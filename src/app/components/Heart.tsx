@@ -34,7 +34,7 @@ export default function Heart() {
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--heart-interval",
-      `${60 / heartRate}s`
+      `${60 / heartRate}s`,
     );
   }, [heartRate]);
 

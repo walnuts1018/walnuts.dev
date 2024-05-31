@@ -1,20 +1,20 @@
-const apiurl = 'https://fitbit.walnuts.dev/v1/'
+const apiurl = "https://fitbit.walnuts.dev/v1/";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  output: "standalone",
   async rewrites() {
     return [
       {
-        source: '/api/:path*',
+        source: "/api/:path*",
         destination: `${apiurl}:path*`,
       },
-    ]
+    ];
   },
   images: {
-    formats: ['image/webp', 'image/avif'],
+    formats: ["image/webp", "image/avif"],
   },
   poweredByHeader: false,
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
