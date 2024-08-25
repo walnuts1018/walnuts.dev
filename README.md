@@ -1,8 +1,8 @@
 # Walnuts.dev
 
 <p align="center">
-    <a href="https://walnuts.dev" alt="WakaTime">
-        <img src="./public/logo.png" alt="walnuts" width="430px" />
+    <a href="https://walnuts.dev">
+        <img src="./public/logo.png" alt="walnuts.dev icon" width="430px" />
     </a>
 </p>
 
@@ -14,13 +14,3 @@
       <img src="https://wakatime.com/badge/user/981e52dd-a7ab-4b00-9a71-125be9dc2de6/project/cab1a4de-a0f7-4674-a7f9-8db12b087db6.svg" alt="wakatime">
     </a>
 </p>
-
-## LightHouse Scores
-
-<p align="center">
-    <img src="https://img.shields.io/badge/Performance-85%25-blue.svg" alt="Performance" />
-    <img src="https://img.shields.io/badge/Accessibility-100%25-blue.svg" alt="Accessibility" />
-    <img src="https://img.shields.io/badge/Best%20Practices-100%25-blue.svg" alt="Best Practices" />
-    <img src="https://img.shields.io/badge/SEO-100%25-blue.svg" alt="SEO" />
-</p>
-<https://walnuts.dev>
