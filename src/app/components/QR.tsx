@@ -10,7 +10,6 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Modal from "react-modal";
 import "./QR.css";
-import Share from "./Share";
 
 export default function QR({ className }: { className?: string }) {
   const [isShown, setIsShown] = useState(false);

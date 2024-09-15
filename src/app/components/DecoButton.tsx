@@ -29,7 +29,7 @@ export default function DecoButton({
           {shineOverlay}
         </Link>
       ) : (
-        <button className={`${className} `}>
+        <button className={`${className} `} onClick={onClick}>
           {children}
           {shineOverlay}
         </button>
