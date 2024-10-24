@@ -12,8 +12,8 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.19",
-    "@mui/material": "^5.15.19",
+    "@mui/icons-material": "^6.1.5",
+    "@mui/material": "^6.1.5",
     "@opentelemetry/auto-instrumentations-node": "^0.51.0",
     "@opentelemetry/exporter-metrics-otlp-proto": "^0.54.0",
     "@opentelemetry/exporter-trace-otlp-proto": "^0.54.0",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/body-scroll-lock": "^3.1.2",
-    "@types/node": "^20",
+    "@types/node": "^22.7.9",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "@types/react-modal": "^3.16.3",
