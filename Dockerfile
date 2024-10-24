@@ -1,5 +1,4 @@
-FROM node:20-alpine AS base
-FROM base AS runner
+FROM node:lts-bookworm-slim
 WORKDIR /app
 
 ENV NODE_ENV production

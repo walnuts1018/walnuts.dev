@@ -15,6 +15,9 @@ const nextConfig = {
     formats: ["image/webp", "image/avif"],
   },
   poweredByHeader: false,
+  experimental: {
+    instrumentationHook: true,
+  },
 };
 
 module.exports = nextConfig;
