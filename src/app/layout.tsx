@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
+import Link from "next/link";
 import AppleTouchIcon from "../../public/favicons/apple-touch-icon.png";
 import Favicon16 from "../../public/favicons/favicon-16x16.png";
 import Favicon32 from "../../public/favicons/favicon-32x32.png";
@@ -91,9 +92,9 @@ function Header() {
             />
           </div> */}
           <h1>
-            <a className="logo outline-none" href="/">
+            <Link className="logo outline-none" href="/">
               Walnuts.dev
-            </a>
+            </Link>
           </h1>
           {/* <div className='h-full items-end flex right-0 relative'>
             <LowerDecoration className='pl-1 scale-[0.4] sm:scale-[0.5] ml-10 bottom-0' />
