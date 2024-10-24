@@ -1,8 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import Heart from "./Heart";
 import ProfileImage from "./ProfileImage";
 import "./Profile.css";
-import Link from "next/link";
 
 export function Profile() {
   return (

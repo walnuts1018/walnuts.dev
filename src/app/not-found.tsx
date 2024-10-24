@@ -1,4 +1,3 @@
-import Link from "next/link";
 import DecoButton from "./components/DecoButton";
 
 export default function NotFound() {

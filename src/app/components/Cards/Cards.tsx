@@ -3,7 +3,6 @@ import {
   githubTheme,
   hatenaTheme,
   pinkskyTheme,
-  qiitaTheme,
   zennTheme,
   Card,
 } from "./Card";
