@@ -5,7 +5,6 @@ import { PeriodicExportingMetricReader } from "@opentelemetry/sdk-metrics";
 import { OTLPMetricExporter } from "@opentelemetry/exporter-metrics-otlp-proto";
 import { getNodeAutoInstrumentations } from "@opentelemetry/auto-instrumentations-node";
 import { ATTR_SERVICE_NAME } from "@opentelemetry/semantic-conventions";
-import process from "process";
 
 const sdk = new NodeSDK({
   resource: new Resource({
