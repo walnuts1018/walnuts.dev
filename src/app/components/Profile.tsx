@@ -76,7 +76,7 @@ export function Profile() {
             alt="Favorite Tech"
             fontSize="text-2xl"
           >
-            Kubernetes / Proxmox VE / Golang / Next.js
+            Kubernetes / Golang / OpenTelemetry / Next.js
           </ProfileList>
           <ProfileList
             src="/icons/map_FILL0_wght400_GRAD0_opsz24.svg"
