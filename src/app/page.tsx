@@ -15,7 +15,7 @@ export default function Home() {
           <div className="flex flex-col gap-8">
             <SwapText
               textClassName="cursor-default text-4xl text-center lg:text-left"
-              initialText="Works"
+              initialText="Projects"
               initialTextClassName="font-Nunito"
               finalText="作品"
               finalTextClassName="font-Noto font-semibold"
