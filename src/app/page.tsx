@@ -1,10 +1,10 @@
+import { Suspense } from "react";
 import Cards from "./components/Cards/Cards";
 import { ContentHeader } from "./components/ContentHeader";
 import HatenaBlog from "./components/HatenaBlog/HatenaBlog";
 import { Profile } from "./components/Profile";
 import QR from "./components/QR";
 import ExperienceTimeline from "./components/timeline/timeline";
-import { Suspense } from "react";
 
 export default function Home() {
   return (

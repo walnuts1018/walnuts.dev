@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { ContentHeader } from "../components/ContentHeader";
 import { PiBankBold } from "react-icons/pi";
+import { ContentHeader } from "../components/ContentHeader";
 
 export default function Payment() {
   return (
