@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { M_PLUS_Rounded_1c, Nunito, Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
 import Link from "next/link";
@@ -16,6 +16,11 @@ const url = "https://walnuts.dev";
 const NunitoFont = Nunito({
   subsets: ["latin"],
   variable: "--font-Nunito",
+});
+
+const ZenMaruGothicFont = Zen_Maru_Gothic({
+  weight: "400",
+  variable: "--font-ZenMaruGothic",
 });
 
 const NotoFont = localFont({
@@ -72,7 +77,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#FF9F21" />
         <meta name="twitter:image" content="https://walnuts.dev/walnuts.jpg" />
       </head>
-      <body className={`${NunitoFont.variable} ${NotoFont.variable}`}>
+      <body
+        className={`${NunitoFont.variable} ${NotoFont.variable} ${ZenMaruGothicFont.variable}`}
+      >
         <Header />
         {children}
       </body>

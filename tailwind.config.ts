@@ -26,6 +26,7 @@ const config: Config = {
     fontFamily: {
       Nunito: ["var(--font-Nunito)"],
       Noto: ["var(--font-Noto)"],
+      ZenMaruGothic: ["var(--font-ZenMaruGothic)"],
     },
     transitionTimingFunction: {
       slow: "cubic-bezier(.405, 0, .025, 1)",

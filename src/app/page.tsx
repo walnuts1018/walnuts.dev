@@ -18,7 +18,7 @@ export default function Home() {
               initialText="Projects"
               initialTextClassName="font-Nunito"
               finalText="作品"
-              finalTextClassName="font-Noto font-semibold"
+              finalTextClassName="font-ZenMaruGothic font-semibold"
               disableClick={true}
             />
             <Cards className="" />
@@ -29,7 +29,7 @@ export default function Home() {
               initialText="Education & Work Experience"
               initialTextClassName="font-Nunito"
               finalText="学歴・職歴"
-              finalTextClassName="font-Noto font-semibold"
+              finalTextClassName="font-ZenMaruGothic font-semibold"
               disableClick={true}
             />
             <ExperienceTimeline />
