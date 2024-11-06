@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { M_PLUS_Rounded_1c, Nunito, Zen_Maru_Gothic } from "next/font/google";
+import { Nunito, Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
 import Link from "next/link";
