@@ -101,14 +101,14 @@ function ExperienceTimelineItem({
   );
 
   const baseClassName =
-    "flex flex-col gap-1 items-start pb-6 font-Noto p-2 px-4";
+    "flex flex-col gap-1 items-start pb-6 font-Noto p-2 px-4 w-full lg:w-[calc(100%-18rem-1rem)] rounded-xl";
 
   const timelineContent = href ? (
     <Link
       href={href}
       className={cn(
         baseClassName,
-        "flex flex-col gap-1 items-start pb-6 font-Noto cursor-pointer hover:bg-gray-200 hover:shadow-lg rounded-xl hover:scale-[1.02]  duration-200 transition-all active:scale-100"
+        "flex flex-col gap-1 items-start pb-6 font-Noto cursor-pointer hover:bg-gray-200 hover:shadow-lg hover:scale-[1.02]  duration-200 transition-all active:scale-100"
       )}
     >
       {child}
