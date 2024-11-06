@@ -97,7 +97,7 @@ export function Card({
           className="absolute top-0 left-0"
           innerClassName={cn(
             decorationSize === "medium"
-              ? "scale-[0.3] lg:scale-[0.4] card:scale-[0.3"
+              ? "scale-[0.3] lg:scale-[0.4] card:scale-[0.3]"
               : "scale-[0.2] lg:scale-[0.3] card:scale-[0.2]"
           )}
           primaryColor={theme?.primaryColor}

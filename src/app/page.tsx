@@ -13,7 +13,7 @@ export default function Home() {
         <div className="w-96">
           <Profile />
         </div>
-        <div className="flex flex-col gap-20 w-full lg:w-[calc(95%-24rem)] 2xl:w-[calc(85%-24rem)]">
+        <div className="flex flex-col gap-20 w-full lg:w-[calc(95%-24rem)] 2xl:w-[calc(85%-24rem)] pb-24">
           <div className="flex flex-col gap-8">
             <ContentHeader initialText="Projects" finalText="作品" />
             <Cards className="" />

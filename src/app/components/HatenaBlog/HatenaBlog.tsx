@@ -56,7 +56,7 @@ function EntryItem({
     >
       <div className="flex-none flex items-center justify-between w-[20rem] lg:w-[24rem] card:w-[20rem] aspect-[20/11] p-8">
         <div className="flex flex-col justify-center h-full w-full px-5 gap-1 z-10">
-          <h2 className={"text-lg lg:text-xl card:text-lg"}>{title}</h2>
+          <h2 className={"text-lg lg:text-xl line-clamp-3"}>{title}</h2>
           <p className={"text-gray-500"}>{parsedDate}</p>
         </div>
         <HatenaBlogImage src={imageSrc || ""} alt={title} />
