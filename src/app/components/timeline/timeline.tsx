@@ -95,8 +95,8 @@ function ExperienceTimelineItem({
 
   const child = (
     <>
-      <h3 className="text-lg">{title}</h3>
-      <p className="text-gray-500 text-sm">{content}</p>
+      <h3 className="text-base lg:text-lg">{title}</h3>
+      <p className="text-gray-500 text-xs lg:text-sm">{content}</p>
     </>
   );
 
@@ -124,8 +124,8 @@ function ExperienceTimelineItem({
         {withConnector && <TimelineConnector className="h-full" />}
       </TimelineSeparator>
       <TimelineContent>
-        <div className="flex items-start font-Nunito gap-2">
-          <p className="text-sm text-gray-500 w-72 mt-2">
+        <div className="flex  flex-wrap items-start font-Nunito gap-2">
+          <p className="text-sm text-gray-500 min-w-64 lg:w-72 mt-1">
             {format(from, pattern)} - {toStr}
           </p>
           {timelineContent}
