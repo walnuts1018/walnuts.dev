@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import {
   chocoMintTheme,
   githubTheme,
@@ -7,6 +6,7 @@ import {
   zennTheme,
   Card,
 } from "./Card";
+import { cn } from "@/lib/utils";
 
 export default function Cards({ className }: { className?: string }) {
   return (

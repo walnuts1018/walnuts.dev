@@ -7,6 +7,7 @@
     "build": "next build && next-sitemap --config next-sitemap.config.js",
     "start": "next build && next start",
     "lint": "next lint --dir src",
+    "lint:fix": "next lint --dir src --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {
@@ -29,6 +30,9 @@
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.2.2",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.14.0",
     "@types/body-scroll-lock": "^3.1.2",
     "@types/node": "^22.8.7",
     "@types/react": "npm:types-react@19.0.0-rc.1",
