@@ -1,8 +1,8 @@
 import Cards from "./components/Cards/Cards";
+import { ContentHeader } from "./components/ContentHeader";
 import HatenaBlog from "./components/HatenaBlog/HatenaBlog";
 import { Profile } from "./components/Profile";
 import QR from "./components/QR";
-import SwapText from "./components/SwapText";
 import ExperienceTimeline from "./components/timeline/timeline";
 import { Suspense } from "react";
 
@@ -37,22 +37,3 @@ export default function Home() {
     </>
   );
 }
-
-const ContentHeader = ({
-  initialText,
-  finalText,
-}: {
-  initialText: string;
-  finalText: string;
-}) => {
-  return (
-    <SwapText
-      textClassName="cursor-default text-4xl text-center lg:text-left"
-      initialText={initialText}
-      initialTextClassName="font-Nunito"
-      finalText={finalText}
-      finalTextClassName="font-ZenMaruGothic font-semibold"
-      disableClick={true}
-    />
-  );
-};
