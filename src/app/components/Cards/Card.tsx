@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LowerDecoration, UpperDecoration } from "../Decoration";
 import "./Card.css";
+import { cn } from "@/lib/utils";
 
 export type CardTheme = {
   primaryColor: string;
@@ -54,7 +55,7 @@ export function Card({
 }) {
   const iconComponent = {
     github: (
-      <div className="text-3xl items-center justify-center flex">
+      <div className="text-3xl lg:text-4xl card:text-3xl items-center justify-center flex">
         <GitHubIcon fontSize="inherit" />
       </div>
     ),
@@ -82,7 +83,7 @@ export function Card({
   }[icon || "none"];
 
   return (
-    <div className=" h-[11rem] w-[20rem] hover:scale-105  duration-200 transition-all active:scale-100 font-Noto ">
+    <div className="w-[20rem] lg:w-[24rem] card:w-[20rem] aspect-[20/11] hover:scale-105  duration-200 transition-all active:scale-100 font-Noto ">
       <Link
         href={href}
         className="flex justify-center items-center h-full rounded-2xl focus:scale-105 relative bg-[#f6f7fa] cursor-pointer active:bg-[#e2e2e2] duration-200 outline-none transition-all card-shadow"
@@ -90,28 +91,38 @@ export function Card({
       >
         <UpperDecoration
           className="absolute top-0 left-0"
-          innerClassName="scale-[0.3]"
+          innerClassName="scale-[0.3] lg:scale-[0.4] card:scale-[0.3]"
           primaryColor={theme?.primaryColor}
           secondaryColor={theme?.secondaryColor}
         />
         <LowerDecoration
           className="absolute bottom-0 right-0 "
-          innerClassName="scale-[0.9]"
+          innerClassName="scale-[0.9] lg:scale-[1.1] card:scale-[0.9]"
           primaryColor={theme?.primaryColor}
           secondaryColor={theme?.secondaryColor}
         />
         <div className="flex flex-col justify-center h-full w-full px-5 gap-1 z-10">
           <div className="flex justify-center items-center gap-2 pl-6 pr-2">
             {iconComponent}
-            <h2 className={countTextLength(title) < 20 ? "text-xl" : "text-lg"}>
+            <h2
+              className={cn(
+                "text-lg lg:text-xl card:text-lg",
+                countTextLength(title) < 20 &&
+                  "text-xl lg:text-2xl card:text-xl"
+              )}
+            >
               {title}
             </h2>
           </div>
           {description && (
             <div className="w-full pr-11 pt-1">
               <p
-                className={`text-gray-500 
-            ${countTextLength(description) < 50 ? "text-sm" : "text-xs"}`}
+                className={cn(
+                  "text-gray-500",
+                  countTextLength(description) < 50
+                    ? "text-sm lg:text-base card:text-sm"
+                    : "text-xs lg:text-sm card:text-xs"
+                )}
               >
                 {description}
               </p>

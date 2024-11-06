@@ -11,7 +11,7 @@ export default function Home() {
         <div className="w-96">
           <Profile />
         </div>
-        <div className="flex flex-col gap-20 w-full lg:w-[calc(85%-24rem)]">
+        <div className="flex flex-col gap-20 w-full lg:w-[calc(95%-24rem)] 2xl:w-[calc(85%-24rem)]">
           <div className="flex flex-col gap-8">
             <SwapText
               textClassName="cursor-default text-4xl text-center lg:text-left"

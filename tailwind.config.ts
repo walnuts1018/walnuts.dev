@@ -19,6 +19,9 @@ const config: Config = {
         "neumorphism-button-pressed":
           "15px 10px 15px -7px rgba(70, 70, 70, 0.3) inset, 10px 10px 25px 0px rgba(0, 0, 0, 0.25), 0px 0px 8px 1px rgba(255, 255, 255, 0.3",
       },
+      screens: {
+        'card': '1700px',
+      },
     },
     fontFamily: {
       Nunito: ["var(--font-Nunito)"],

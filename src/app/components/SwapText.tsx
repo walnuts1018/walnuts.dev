@@ -85,10 +85,14 @@ export default function SwapText({
           }
         </span>
         <span
-          className={cn(`${common} absolute top-full`, finalTextClassName, {
-            "-translate-y-full": active,
-            "group-hover:-translate-y-full": supportsHover,
-          })}
+          className={cn(
+            `${common} absolute top-full w-full`,
+            finalTextClassName,
+            {
+              "-translate-y-full": active,
+              "group-hover:-translate-y-full": supportsHover,
+            }
+          )}
         >
           {finalText}
         </span>
