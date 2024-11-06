@@ -40,7 +40,7 @@ function PaymentCard({
   description?: string;
 }) {
   return (
-    <div className="flex items-center justify-between w-full p-4 px-6 border-2 border-gray-400 rounded-3xl aspect-[4/1]">
+    <div className="flex items-center justify-between w-full p-4 px-6 border-2 border-gray-400 rounded-3xl aspect-[7/2]">
       <div className="flex items-center justify-start gap-4">
         {icon &&
           (typeof icon === "string" ? (
