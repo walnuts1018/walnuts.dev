@@ -22,6 +22,20 @@ const config: Config = {
       screens: {
         'card': '1700px',
       },
+      keyframes: {
+        "marquee-x": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-y": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+      },
+      animation: {
+        "marquee-horizontal": "marquee-x var(--duration) infinite linear",
+        "marquee-vertical": "marquee-y var(--duration) linear infinite",
+      },
     },
     fontFamily: {
       Nunito: ["var(--font-Nunito)"],

@@ -18,4 +18,5 @@
 
 body {
   background-color: #f6f7fa;
+  word-break: break-word;
 }

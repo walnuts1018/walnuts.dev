@@ -1,8 +1,10 @@
 import Cards from "./components/Cards/Cards";
+import HatenaBlog from "./components/HatenaBlog/HatenaBlog";
 import { Profile } from "./components/Profile";
 import QR from "./components/QR";
 import SwapText from "./components/SwapText";
 import ExperienceTimeline from "./components/timeline/timeline";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -13,26 +15,21 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-20 w-full lg:w-[calc(95%-24rem)] 2xl:w-[calc(85%-24rem)]">
           <div className="flex flex-col gap-8">
-            <SwapText
-              textClassName="cursor-default text-4xl text-center lg:text-left"
-              initialText="Projects"
-              initialTextClassName="font-Nunito"
-              finalText="作品"
-              finalTextClassName="font-ZenMaruGothic font-semibold"
-              disableClick={true}
-            />
+            <ContentHeader initialText="Projects" finalText="作品" />
             <Cards className="" />
           </div>
           <div className="flex flex-col gap-8">
-            <SwapText
-              textClassName="cursor-default text-4xl text-center lg:text-left"
+            <ContentHeader
               initialText="Education & Work Experience"
-              initialTextClassName="font-Nunito"
               finalText="学歴・職歴"
-              finalTextClassName="font-ZenMaruGothic font-semibold"
-              disableClick={true}
             />
             <ExperienceTimeline />
+          </div>
+          <div className="flex flex-col gap-8">
+            <ContentHeader initialText="Blog" finalText="ブログ" />
+            <Suspense fallback={<h2>Loading...</h2>}>
+              <HatenaBlog />
+            </Suspense>
           </div>
         </div>
       </main>
@@ -40,3 +37,22 @@ export default function Home() {
     </>
   );
 }
+
+const ContentHeader = ({
+  initialText,
+  finalText,
+}: {
+  initialText: string;
+  finalText: string;
+}) => {
+  return (
+    <SwapText
+      textClassName="cursor-default text-4xl text-center lg:text-left"
+      initialText={initialText}
+      initialTextClassName="font-Nunito"
+      finalText={finalText}
+      finalTextClassName="font-ZenMaruGothic font-semibold"
+      disableClick={true}
+    />
+  );
+};

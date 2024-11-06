@@ -44,14 +44,18 @@ export function Card({
   title,
   description,
   icon,
+  decorationSize = "medium",
   theme,
   href,
+  children,
 }: {
-  title: string;
+  title?: string;
   description?: string;
   icon?: "github" | "zenn" | "hatena" | "sizu";
+  decorationSize?: "small" | "medium";
   theme?: CardTheme;
   href: string;
+  children?: React.ReactNode;
 }) {
   const iconComponent = {
     github: (
@@ -91,44 +95,58 @@ export function Card({
       >
         <UpperDecoration
           className="absolute top-0 left-0"
-          innerClassName="scale-[0.3] lg:scale-[0.4] card:scale-[0.3]"
+          innerClassName={cn(
+            decorationSize === "medium"
+              ? "scale-[0.3] lg:scale-[0.4] card:scale-[0.3"
+              : "scale-[0.2] lg:scale-[0.3] card:scale-[0.2]"
+          )}
           primaryColor={theme?.primaryColor}
           secondaryColor={theme?.secondaryColor}
         />
         <LowerDecoration
           className="absolute bottom-0 right-0 "
-          innerClassName="scale-[0.9] lg:scale-[1.1] card:scale-[0.9]"
+          innerClassName={cn(
+            decorationSize === "medium"
+              ? "scale-[0.9] lg:scale-[1.1] card:scale-[0.9]"
+              : "scale-[0.7] lg:scale-[0.9] card:scale-[0.7]"
+          )}
           primaryColor={theme?.primaryColor}
           secondaryColor={theme?.secondaryColor}
         />
-        <div className="flex flex-col justify-center h-full w-full px-5 gap-1 z-10">
-          <div className="flex justify-center items-center gap-2 pl-6 pr-2">
-            {iconComponent}
-            <h2
-              className={cn(
-                "text-lg lg:text-xl card:text-lg",
-                countTextLength(title) < 20 &&
-                  "text-xl lg:text-2xl card:text-xl"
-              )}
-            >
-              {title}
-            </h2>
-          </div>
-          {description && (
-            <div className="w-full pr-11 pt-1">
-              <p
+        {children ? (
+          children
+        ) : (
+          <div className="flex flex-col justify-center h-full w-full px-5 gap-1 z-10">
+            <div className="flex justify-center items-center gap-2 pl-6 pr-2">
+              {iconComponent}
+              <h2
                 className={cn(
-                  "text-gray-500",
-                  countTextLength(description) < 50
-                    ? "text-sm lg:text-base card:text-sm"
-                    : "text-xs lg:text-sm card:text-xs"
+                  countTextLength(title || "") < 20
+                    ? "text-xl lg:text-2xl card:text-xl"
+                    : countTextLength(title || "") < 30
+                      ? "text-lg lg:text-xl card:text-lg"
+                      : "text-base lg:text-lg card:text-base"
                 )}
               >
-                {description}
-              </p>
+                {title}
+              </h2>
             </div>
-          )}
-        </div>
+            {description && (
+              <div className="w-full pr-11 pt-1">
+                <p
+                  className={cn(
+                    "text-gray-500",
+                    countTextLength(description) < 50
+                      ? "text-sm lg:text-base card:text-sm"
+                      : "text-xs lg:text-sm card:text-xs"
+                  )}
+                >
+                  {description}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
       </Link>
     </div>
   );

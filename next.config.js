@@ -13,6 +13,12 @@ const nextConfig = {
   },
   images: {
     formats: ["image/webp"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
   poweredByHeader: false,
 };
