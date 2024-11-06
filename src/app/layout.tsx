@@ -20,6 +20,7 @@ const NunitoFont = Nunito({
 
 const ZenMaruGothicFont = Zen_Maru_Gothic({
   weight: "400",
+  preload: false,
   variable: "--font-ZenMaruGothic",
 });
 
