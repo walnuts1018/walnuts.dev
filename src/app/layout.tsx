@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Nunito, Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
-import Link from "next/link";
 import AppleTouchIcon from "../../public/favicons/apple-touch-icon.png";
 import Favicon16 from "../../public/favicons/favicon-16x16.png";
 import Favicon32 from "../../public/favicons/favicon-32x32.png";
 import Favicon from "../../public/favicons/favicon.ico";
+import Header from "@/components/Header/header";
 
 const title = "Walnuts-dev | I'm Walnuts";
 const description =
@@ -85,36 +85,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  );
-}
-
-function Header() {
-  return (
-    <header>
-      <div className="flex justify-center w-full ">
-        <div className="w-10/12 flex items-center justify-left h-12 md:h-16 text-black font-bold font-Nunito text-xl sm:text-2xl px-3 relative">
-          {/* <div className='h-full '>
-            <UpperDecoration
-              className='h-3/4 sm:h-2/3 pr-2 sm:pr-0 mr-7 sm:mr-12'
-              innerClassName='scale-[0.15] sm:scale-[0.2]'
-            />
-          </div> */}
-          <h1>
-            <Link className="logo outline-none" href="/">
-              Walnuts.dev
-            </Link>
-          </h1>
-          {/* <div className='h-full items-end flex right-0 relative'>
-            <LowerDecoration className='pl-1 scale-[0.4] sm:scale-[0.5] ml-10 bottom-0' />
-          </div> */}
-          <div className="absolute right-0 top-0 h-full flex items-center justify-center">
-            <div className="h-2/3 text-md md:text-xl"></div>
-          </div>
-        </div>
-      </div>
-      <div className="flex justify-center w-full  border-0 pb-2">
-        <div className="w-10/12 h-[4px] rounded-full px-20 bg-gray-200"></div>
-      </div>
-    </header>
   );
 }

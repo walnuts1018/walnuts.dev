@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { PiBankBold } from "react-icons/pi";
-import { ContentHeader } from "../components/ContentHeader";
+import { ContentHeader } from "../../components/ContentHeader";
 
 export default function Payment() {
   return (
@@ -40,22 +40,22 @@ function PaymentCard({
   description?: string;
 }) {
   return (
-    <div className="flex items-center justify-between w-full p-4 px-6 border-2 border-gray-400 rounded-3xl aspect-[7/2]">
+    <div className="flex items-center justify-between w-full p-4 px-6 border-2 border-gray-400 rounded-3xl aspect-[7/3]">
       <div className="flex items-center justify-start gap-4">
         {icon &&
           (typeof icon === "string" ? (
             <Image
               src={icon}
               alt="icon"
-              width={50}
-              height={50}
-              className="rounded-full"
+              width={100}
+              height={100}
+              className="rounded-full aspect-square w-[30%]"
             />
           ) : (
             icon
           ))}
         <div className="flex flex-col items-start justify-start">
-          <h2 className="text-2xl font-semibold">{title}</h2>
+          <h2 className="text-2xl 2xl:text-4xl font-semibold">{title}</h2>
           {description && <p className="text-gray-500">{description}</p>}
         </div>
       </div>
@@ -63,9 +63,9 @@ function PaymentCard({
         <Image
           src={imageSrc}
           alt={title}
-          width={100}
-          height={100}
-          className="rounded-lg"
+          width={300}
+          height={300}
+          className="rounded-lg object-contain aspect-square w-[33%]"
         />
       )}
     </div>
