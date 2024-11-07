@@ -101,7 +101,7 @@ function ExperienceTimelineItem({
   );
 
   const baseClassName =
-    "flex flex-col gap-1 items-start pb-6 font-Noto p-2 px-4 w-full lg:w-[calc(100%-18rem-1rem)] rounded-xl";
+    "flex flex-col gap-1 items-start pb-6 font-Noto p-2 px-4 w-full md:w-[calc(100%-18rem-1rem)] rounded-xl min-w-72";
 
   const timelineContent = href ? (
     <Link

@@ -5,7 +5,7 @@ import { ContentHeader } from "../../components/ContentHeader";
 export default function Payment() {
   return (
     <main className="flex  min-h-screen items-center justify-start lg:items-start lg:justify-center px-6 lg:px-10 lg:py-6 flex-col lg:flex-row gap-8">
-      <div className="flex flex-col gap-8 w-full lg:w-2/5 p-4">
+      <div className="flex flex-col gap-8 w-full sm:w-3/4 md:w-3/5 lg:w-1/2 xl:w-2/5 2xl:w-[30%] p-4">
         <ContentHeader initialText="Payment" finalText="送金" />
         <PaymentCard
           icon="/icons/paypay.jpg"
@@ -55,7 +55,7 @@ function PaymentCard({
             icon
           ))}
         <div className="flex flex-col items-start justify-start">
-          <h2 className="text-2xl 2xl:text-4xl font-semibold">{title}</h2>
+          <h2 className="text-2xl 2xl:text-3xl font-semibold">{title}</h2>
           {description && <p className="text-gray-500">{description}</p>}
         </div>
       </div>
