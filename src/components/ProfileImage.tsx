@@ -26,7 +26,7 @@ export default function ProfileImage() {
 
   return (
     <>
-      <div className="rounded-full bg-gradient-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-full w-full">
+      <div className="rounded-full bg-gradient-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-full w-full hover:scale-105 duration-200">
         <div className="rounded-full h-full w-full overflow-hidden bg-[#f6f7fa]">
           <Image
             src="/walnuts-f6f7fa.png"

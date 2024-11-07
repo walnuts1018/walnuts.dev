@@ -24,6 +24,13 @@ export default function Cards({ className }: { className?: string }) {
         icon="github"
       />
       <Card
+        title="walnuts1018/code-server-operator"
+        description="coder/code-serverをKubernetesのCRDとして管理するOperatorです。"
+        theme={githubTheme}
+        href="https://github.com/walnuts1018/code-server-operator "
+        icon="github"
+      />
+      <Card
         title="お絵描き伝言ゲーム"
         description="NF2023で開催したお絵描き伝言ゲームの結果発表ページです。"
         href="https://oekaki.walnuts.dev/public"
@@ -36,22 +43,10 @@ export default function Cards({ className }: { className?: string }) {
         icon="zenn"
       />
       <Card
-        title="Walnuts.dev を支える技術 (物理環境/ネットワーク編)"
+        title="はてなブログやGigaViewerで使われている画像変換プロキシをEC2からEKSに移行しました"
+        href="https://developer.hatenastaff.com/entry/2024/08/29/124236"
         theme={hatenaTheme}
         icon="hatena"
-        href="https://walnuts.hatenablog.com/entry/a30d4de2-e5cd-4542-bb8b-46ce3983f9ef"
-      />
-      <Card
-        title="HedgeDocをKubernetesに構築する"
-        theme={pinkskyTheme}
-        href="https://hedgedoc.walnuts.dev/s/rhYgE94FN"
-      />
-      <Card
-        title="walnuts1018/machine-status-api"
-        description="ラズパイと自作回路を組み合わせ、遠隔でサーバーの電源を操作するAPIです。"
-        theme={githubTheme}
-        href="https://github.com/walnuts1018/machine-status-api"
-        icon="github"
       />
       <Card
         title="walnuts1018/k8s-badge"
@@ -60,7 +55,19 @@ export default function Cards({ className }: { className?: string }) {
         href="https://github.com/walnuts1018/k8s-badge"
         icon="github"
       />
-
+      <Card
+        title="プログラミングサークルの新歓を支える技術"
+        description="Kyoto Tech Talk #5で発表しました。"
+        theme={chocoMintTheme}
+        href="https://speakerdeck.com/walnuts1018/puroguramingusakurunoxin-huan-wozhi-eruji-shu"
+      />
+      <Card
+        title="cybozu-go/pona"
+        description="サイボウズ株式会社サマーインターンで開発したEgress Gatewayです。"
+        theme={githubTheme}
+        href="https://github.com/cybozu-go/pona"
+        icon="github"
+      />
       <Card
         title="walnuts1018/wakatime-to-slack"
         theme={githubTheme}
@@ -75,17 +82,23 @@ export default function Cards({ className }: { className?: string }) {
         description="DIGI-CON HACKATHON 2023でジャンプ+賞をいただきました。"
       />
       <Card
+        title="HedgeDocをKubernetesに構築する"
+        theme={pinkskyTheme}
+        href="https://hedgedoc.walnuts.dev/s/rhYgE94FN"
+      />
+      <Card
+        title="walnuts1018/machine-status-api"
+        description="ラズパイと自作回路を組み合わせ、遠隔でサーバーの電源を操作するAPIです。"
+        theme={githubTheme}
+        href="https://github.com/walnuts1018/machine-status-api"
+        icon="github"
+      />
+      <Card
         title="walnuts1018/OpenChokin"
         theme={githubTheme}
         href="https://github.com/walnuts1018/OpenChokin"
         icon="github"
         description="【開発中】貯金を公開するサービスです。 / 鴨川ハッカソンで優秀賞をいただきました。"
-      />
-      <Card
-        title="walnuts | しずかなインターネット"
-        theme={pinkskyTheme}
-        href="https://sizu.me/walnuts"
-        icon="sizu"
       />
     </div>
   );
