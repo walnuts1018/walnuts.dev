@@ -4,8 +4,8 @@ import MobileHeaderLinks from "./MobildeHeader";
 export default function Header() {
   const headerLinks = [
     { name: "Home", href: "/" },
-    { name: "Payment", href: "/payment" },
     { name: "Blogs", href: "/blogs" },
+    { name: "Payment", href: "/payment" },
   ];
 
   return (
