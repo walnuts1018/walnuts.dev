@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 interface SwapTextProps extends React.ComponentPropsWithoutRef<"div"> {
   /**
@@ -59,7 +59,7 @@ export default function SwapText({
   return (
     <div
       {...props}
-      className={cn("relative overflow-hidden text-foreground", className)}
+      className={cn("relative overflow-hidden text-foreground z-0", className)}
     >
       <div
         className={cn(
