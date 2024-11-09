@@ -1,14 +1,14 @@
+import Header from "@/components/Header/header";
 import type { Metadata } from "next";
 import { Nunito, Zen_Maru_Gothic, Noto_Sans_JP } from "next/font/google";
 import AppleTouchIcon from "../../public/favicons/apple-touch-icon.png";
 import Favicon16 from "../../public/favicons/favicon-16x16.png";
 import Favicon32 from "../../public/favicons/favicon-32x32.png";
 import Favicon from "../../public/favicons/favicon.ico";
-import Header from "@/components/Header/header";
 import "./globals.css";
 
-const title = "Walnuts (@walnuts1018)";
-const description =
+const defaultTitle = "Walnuts (@walnuts1018)";
+const defaultDescription =
   "Hi, I'm Walnuts. このサイトでは、SNSアカウント一覧、ポートフォリオ、自宅サーバーの状態、WalnutsのHealth Metricsなどを公開しています。";
 const url = "https://walnuts.dev";
 
@@ -34,10 +34,15 @@ const NotoFont = Noto_Sans_JP({
 export const metadata: Metadata = {
   metadataBase: new URL(url),
   title: {
-    default: title,
-    template: `%s - ${title}`,
+    default: defaultTitle,
+    template: `%s | Walnuts.dev`,
   },
-  description: description,
+  description: defaultDescription,
+  authors: {
+    name: "Walnuts (@walnuts1018)",
+    url: new URL(url),
+  },
+
   icons: [
     { rel: "icon", url: Favicon.src },
     { rel: "apple-touch-icon", url: AppleTouchIcon.src },
@@ -45,17 +50,17 @@ export const metadata: Metadata = {
     { rel: "icon", type: "image/png", sizes: "16x16", url: Favicon16.src },
   ],
   openGraph: {
-    title: title,
-    description,
+    title: defaultTitle,
+    description: defaultDescription,
     url,
-    siteName: title,
+    siteName: defaultTitle,
     locale: "ja_JP",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: title,
-    description,
+    title: defaultTitle,
+    description: defaultDescription,
     site: "@walnuts1018",
     creator: "@walnuts1018",
   },
