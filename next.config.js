@@ -21,6 +21,9 @@ const nextConfig = {
     ],
   },
   poweredByHeader: false,
+  experimental: {
+    turbo: {},
+  },
 };
 
 module.exports = nextConfig;
