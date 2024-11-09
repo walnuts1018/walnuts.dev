@@ -1,6 +1,4 @@
 "use client";
-import QrCode2Icon from "@mui/icons-material/QrCode2";
-import ScreenRotationAltIcon from "@mui/icons-material/ScreenRotationAlt";
 import {
   clearAllBodyScrollLocks,
   disableBodyScroll,
@@ -8,6 +6,8 @@ import {
 } from "body-scroll-lock";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { MdScreenRotationAlt, MdQrCode2 } from "react-icons/md";
+
 import Modal from "react-modal";
 import "./QR.css";
 
@@ -32,7 +32,7 @@ export default function QR({ className }: { className?: string }) {
         title="show QR"
         className="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-1 shadow-lg bg-gradient-to-br from-red-400 to-red-600  flex items-center justify-center hover:from-red-500 hover:to-red-600 hover:shadow-lg transition-all duration-200 outline-none focus:from-red-500 focus:to-red-600 focus:shadow-lg text-4xl sm:text-5xl"
       >
-        <QrCode2Icon fontSize="inherit" className="text-white" />
+        <MdQrCode2 fontSize="inherit" className="text-white" />
       </button>
       {isShown ? (
         <Modal
@@ -92,7 +92,7 @@ export default function QR({ className }: { className?: string }) {
                   isRotated ? "rotate-[360deg]" : "rotate-0"
                 }`}
               >
-                <ScreenRotationAltIcon fontSize="large" />
+                <MdScreenRotationAlt fontSize="large" />
               </div>
             </button>
           </div>

@@ -1,7 +1,7 @@
 "use client";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { MdFavorite } from "react-icons/md";
 import "./Heart.css";
 import useSWR from "swr";
 
@@ -45,7 +45,7 @@ export default function Heart() {
         onMouseLeave={() => setShowDetail(false)}
         title="Heart Rate Grafana Dashboard"
       >
-        <FavoriteIcon fontSize="inherit" className=" text-red-500 heart" />
+        <MdFavorite fontSize="inherit" className=" text-red-500 heart" />
       </Link>
       <div
         className={`absolute items-center h-full w-full top-10 flex left-0 justify-center text-2xl font-bold text-black transition-all duration-200 pointer-events-none 

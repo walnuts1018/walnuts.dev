@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/image";
 import Link from "next/link";
+import { BsGithub } from "react-icons/bs";
 import { LowerDecoration, UpperDecoration } from "../Decoration";
 import "./Card.css";
 import { format } from "date-fns";
@@ -64,7 +64,7 @@ export function Card({
   const iconComponent = {
     github: (
       <div className="text-3xl lg:text-4xl card:text-3xl items-center justify-center flex">
-        <GitHubIcon fontSize="inherit" />
+        <BsGithub fontSize="inherit" />
       </div>
     ),
     zenn: <Image src="/icons/zenn.svg" alt="zenn" width={30} height={30} />,
@@ -110,7 +110,7 @@ export function Card({
           secondaryColor={theme?.secondaryColor}
         />
 
-        <div className="flex justify-center items-center px-5 gap-1 z-10">
+        <div className="flex justify-center items-center px-5 gap-1">
           <div className="flex flex-col gap-1">
             <div
               className={cn("flex justify-center items-center gap-2 pr-2", {

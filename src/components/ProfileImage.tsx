@@ -1,5 +1,4 @@
 "use client";
-import CloseIcon from "@mui/icons-material/Close";
 import {
   clearAllBodyScrollLocks,
   disableBodyScroll,
@@ -7,6 +6,7 @@ import {
 } from "body-scroll-lock";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { MdClose } from "react-icons/md";
 import Modal from "react-modal";
 import "./ProfileImage.css";
 
@@ -72,7 +72,7 @@ export default function ProfileImage() {
             className="absolute top-4 right-4 text-4xl"
             onClick={() => setIsExpanded(false)}
           >
-            <CloseIcon fontSize="inherit" className="text-white" />
+            <MdClose fontSize="inherit" className="text-white" />
           </button>
         </Modal>
       ) : (
