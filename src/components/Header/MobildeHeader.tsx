@@ -1,6 +1,11 @@
 "use client";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { CgClose } from "react-icons/cg";
 import { LuMenu } from "react-icons/lu";
 import Modal from "react-modal";
@@ -15,6 +20,17 @@ export default function MobileHeaderLinks({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      disableBodyScroll(document.body);
+    } else {
+      enableBodyScroll(document.body);
+    }
+    return () => {
+      clearAllBodyScrollLocks();
+    };
+  }, [isOpen]);
 
   return (
     <div className="relative flex items-center justify-center">
