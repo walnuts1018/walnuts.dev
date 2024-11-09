@@ -1,9 +1,9 @@
+import { cn } from "@/lib/utils";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/image";
 import Link from "next/link";
 import { LowerDecoration, UpperDecoration } from "../Decoration";
 import "./Card.css";
-import { cn } from "@/lib/utils";
 
 export type CardTheme = {
   primaryColor: string;

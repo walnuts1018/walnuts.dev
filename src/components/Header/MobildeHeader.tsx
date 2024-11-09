@@ -1,10 +1,10 @@
 "use client";
-import { LuMenu } from "react-icons/lu";
-import { CgClose } from "react-icons/cg";
+import Divider from "@mui/material/Divider";
+import Menu from "@mui/material/Menu";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import Menu from "@mui/material/Menu";
-import Divider from "@mui/material/Divider";
+import { CgClose } from "react-icons/cg";
+import { LuMenu } from "react-icons/lu";
 
 export default function MobileHeaderLinks({
   headerLinks,

@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Timeline from "@mui/lab/Timeline";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
@@ -6,7 +7,6 @@ import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import { format } from "date-fns";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 export default function ExperienceTimeline() {
   return (

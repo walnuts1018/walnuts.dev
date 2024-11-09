@@ -37,6 +37,7 @@
     "@eslint/compat": "^1.2.2",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.14.0",
+    "@next/bundle-analyzer": "^15.0.3",
     "@types/body-scroll-lock": "^3.1.2",
     "@types/node": "^22.8.7",
     "@types/react": "npm:types-react@19.0.0-rc.1",
