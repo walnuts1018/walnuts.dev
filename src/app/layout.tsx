@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Nunito, Zen_Maru_Gothic } from "next/font/google";
-import "./globals.css";
-import localFont from "next/font/local";
+import { Nunito, Zen_Maru_Gothic, Noto_Sans_JP } from "next/font/google";
 import AppleTouchIcon from "../../public/favicons/apple-touch-icon.png";
 import Favicon16 from "../../public/favicons/favicon-16x16.png";
 import Favicon32 from "../../public/favicons/favicon-32x32.png";
 import Favicon from "../../public/favicons/favicon.ico";
 import Header from "@/components/Header/header";
+import "./globals.css";
 
 const title = "Walnuts-dev | I'm Walnuts";
 const description =
@@ -24,10 +23,9 @@ const ZenMaruGothicFont = Zen_Maru_Gothic({
   variable: "--font-ZenMaruGothic",
 });
 
-const NotoFont = localFont({
-  src: "./font/NotoSansCJKjp-Regular.woff2",
+const NotoFont = Noto_Sans_JP({
+  subsets: ["latin"],
   variable: "--font-Noto",
-  display: "swap",
 });
 
 export const metadata: Metadata = {

@@ -1,8 +1,8 @@
-import { cn } from "@/lib/utils";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/image";
 import Link from "next/link";
 import { LowerDecoration, UpperDecoration } from "../Decoration";
+import { cn } from "@/lib/utils";
 import "./Card.css";
 
 export type CardTheme = {
