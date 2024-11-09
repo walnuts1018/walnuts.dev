@@ -54,7 +54,7 @@ export function Profile() {
           >
             r.juglans.1018@gmail.com
           </ProfileList>
-          <ProfileList
+          {/* <ProfileList
             src="/icons/KMClogo_trans.svg"
             alt="KMC"
             link="https://kmc.gr.jp"
@@ -63,7 +63,7 @@ export function Profile() {
             46th Chairman /
             <br />
             47th Representative
-          </ProfileList>
+          </ProfileList> */}
           <ProfileList
             src="/icons/school_FILL0_wght400_GRAD0_opsz24.svg"
             alt="School"

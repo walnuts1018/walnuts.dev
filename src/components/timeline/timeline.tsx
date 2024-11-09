@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Timeline from "@mui/lab/Timeline";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
@@ -6,7 +7,6 @@ import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import { format } from "date-fns";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 export default function ExperienceTimeline() {
   return (
@@ -38,7 +38,6 @@ export default function ExperienceTimeline() {
         from={new Date("2023-12-01")}
         title="株式会社 はてな サービスプラットフォームチーム アルバイト"
         content="Perl/Goを用いたバックエンド開発・サービスのKubernetes移行など"
-        href="https://developer.hatenastaff.com/entry/2024/08/29/124236"
       />
       <ExperienceTimelineItem
         from={new Date("2023-08-21")}
@@ -52,6 +51,13 @@ export default function ExperienceTimeline() {
         to={new Date("2024-03-31")}
         title="株式会社 演算工房 開発部 アルバイト"
         content="WPFソフト開発"
+      />
+      <ExperienceTimelineItem
+        from={new Date("2022-04-01")}
+        to={new Date("2026-03-31")}
+        title="KMC (京大マイコンクラブ)"
+        content="第46代 会長/第47代 代表"
+        href="https://www.kmc.gr.jp/"
       />
       <ExperienceTimelineItem
         from={new Date("2022-04-01")}
