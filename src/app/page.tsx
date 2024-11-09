@@ -1,11 +1,13 @@
+import Blogs from "@/components/blog/Blogs";
 import { person } from "@/lib/jsonld";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Suspense } from "react";
+import { FaArrowRight } from "react-icons/fa";
 import { JsonLd } from "react-schemaorg";
 import { WebSite } from "schema-dts";
 import Cards from "../components/Cards/Cards";
 import { ContentHeader } from "../components/ContentHeader";
-import HatenaBlog from "../components/HatenaBlog/HatenaBlog";
 import { Profile } from "../components/Profile";
 import QR from "../components/QR";
 import ExperienceTimeline from "../components/timeline/timeline";
@@ -52,8 +54,17 @@ export default function Home() {
           <div className="flex flex-col gap-8">
             <ContentHeader initialText="Blog" finalText="ブログ" />
             <Suspense fallback={<h2>Loading...</h2>}>
-              <HatenaBlog />
+              <Blogs className="lg:justify-start" maxItems={6} />
             </Suspense>
+            <div className="flex justify-end w-full pr-16 lg:pr-24">
+              <Link
+                href="/blogs"
+                className="flex items-center justify-center font-ZenMaruGothic font-bold text-md text-gray-500 hover:text-gray-700 hover:scale-110 duration-200 transition-all cursor-pointer active:scale-100 gap-1"
+              >
+                もっと見る
+                <FaArrowRight />
+              </Link>
+            </div>
           </div>
         </div>
       </main>

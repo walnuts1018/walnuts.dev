@@ -1,9 +1,11 @@
+import { cn } from "@/lib/utils";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Image from "next/image";
 import Link from "next/link";
 import { LowerDecoration, UpperDecoration } from "../Decoration";
-import { cn } from "@/lib/utils";
 import "./Card.css";
+import { format } from "date-fns";
+import CardImage from "./Image";
 
 export type CardTheme = {
   primaryColor: string;
@@ -47,15 +49,17 @@ export function Card({
   decorationSize = "medium",
   theme,
   href,
-  children,
+  date,
+  imageSrc,
 }: {
   title?: string;
   description?: string;
-  icon?: "github" | "zenn" | "hatena" | "sizu";
+  icon?: "github" | "zenn" | "hatena";
   decorationSize?: "small" | "medium";
   theme?: CardTheme;
   href: string;
-  children?: React.ReactNode;
+  date?: Date;
+  imageSrc?: string;
 }) {
   const iconComponent = {
     github: (
@@ -73,18 +77,10 @@ export function Card({
         className="-m-2"
       />
     ),
-    sizu: (
-      <svg viewBox="0 0 70 88" className="w-10">
-        <path
-          d="m23,63.5c2.9-1.9,6-3.8,9.5-4.2s7.5,1.2,8.6,4.5c1.5,4.2-2.2,8.4-5.8,11-3.4,2.5-7.1,4.6-11.2,5.6-4.1,1-8.6.7-12.3-1.3-4.3-2.4-6.9-7-7.9-11.8s-.4-9.7.4-14.5C7.4,36,14.5,19.7,26.2,7.3c2.5-2.7,6.1-5.4,9.6-4,3.4,1.4,4.2,5.8,4.1,9.5-.3,11.3-3.3,22.4-8.7,32.3-.7,1.2-1.4,2.5-2.6,3.3s-2.8,1.1-4,.4c-2.2-1.4-1.3-4.9.3-7,3.4-4.8,8.2-8.4,13.8-10.4,3.9-1.4,8.6-1.7,11.7.9,2.4,2.1,3.2,5.5,2.7,8.6s-2.2,5.9-4.1,8.4c-1.4,1.8-3.7,3.6-5.6,2.4-2.2-1.3-1.1-4.7.4-6.8,2.7-4,6.3-8.2,11.1-8.8,5.2-.6,10.1,3.3,11.8,8.2s.7,10.3-1.5,15c-4,8.9-12,15.9-21.4,18.7"
-          fill="none"
-          stroke="black"
-          strokeWidth="3"
-        ></path>
-      </svg>
-    ),
     none: <></>,
   }[icon || "none"];
+
+  const parsedDate = date ? format(date, "yyyy年MM月dd日") : "";
 
   return (
     <div className="w-[20rem] lg:w-[24rem] card:w-[20rem] aspect-[20/11] hover:scale-105  duration-200 transition-all active:scale-100 font-Noto ">
@@ -113,14 +109,18 @@ export function Card({
           primaryColor={theme?.primaryColor}
           secondaryColor={theme?.secondaryColor}
         />
-        {children ? (
-          children
-        ) : (
-          <div className="flex flex-col justify-center h-full w-full px-5 gap-1 z-10">
-            <div className="flex justify-center items-center gap-2 pl-6 pr-2">
+
+        <div className="flex justify-center items-center px-5 gap-1 z-10">
+          <div className="flex flex-col gap-1">
+            <div
+              className={cn("flex justify-center items-center gap-2 pr-2", {
+                "pl-8": description,
+              })}
+            >
               {iconComponent}
               <h2
                 className={cn(
+                  "line-clamp-4",
                   countTextLength(title || "") < 20
                     ? "text-xl lg:text-2xl card:text-xl"
                     : countTextLength(title || "") < 30
@@ -131,6 +131,7 @@ export function Card({
                 {title}
               </h2>
             </div>
+            {parsedDate && <p className="text-gray-500 px-5">{parsedDate}</p>}
             {description && (
               <div className="w-full pr-11 pt-1">
                 <p
@@ -146,7 +147,8 @@ export function Card({
               </div>
             )}
           </div>
-        )}
+          {imageSrc && <CardImage src={imageSrc || ""} alt={title} />}
+        </div>
       </Link>
     </div>
   );
