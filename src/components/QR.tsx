@@ -7,7 +7,6 @@ import {
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { MdScreenRotationAlt, MdQrCode2 } from "react-icons/md";
-
 import Modal from "react-modal";
 import "./QR.css";
 

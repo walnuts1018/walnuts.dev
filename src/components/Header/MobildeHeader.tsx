@@ -5,6 +5,9 @@ import { CgClose } from "react-icons/cg";
 import { LuMenu } from "react-icons/lu";
 import Modal from "react-modal";
 
+if (typeof document !== "undefined") {
+  Modal.setAppElement("body");
+}
 export default function MobileHeaderLinks({
   headerLinks,
 }: {
@@ -35,7 +38,6 @@ export default function MobileHeaderLinks({
         }}
         className="bg-transparent duration-200 transition-all"
         overlayClassName="fixed bg-transparent inset-0"
-        appElement={document.body}
       >
         <div className="absolute mt-10 min-w-max top-0 right-0 will-change-auto backdrop-blur-md shadow-md bg-white/2 flex flex-col items-center justify-center bg-transparent z-10">
           {headerLinks.map((link) => (
