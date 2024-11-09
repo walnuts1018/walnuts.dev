@@ -1,5 +1,4 @@
 import Header from "@/components/Header/header";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import type { Metadata } from "next";
 import { Nunito, Zen_Maru_Gothic, Noto_Sans_JP } from "next/font/google";
 import AppleTouchIcon from "../../public/favicons/apple-touch-icon.png";
@@ -88,10 +87,8 @@ export default function RootLayout({
       <body
         className={`${NunitoFont.variable} ${NotoFont.variable} ${ZenMaruGothicFont.variable}`}
       >
-        <AppRouterCacheProvider>
-          <Header />
-          {children}
-        </AppRouterCacheProvider>
+        <Header />
+        {children}
       </body>
     </html>
   );

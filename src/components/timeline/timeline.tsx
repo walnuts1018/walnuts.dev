@@ -1,24 +1,85 @@
 import { cn } from "@/lib/utils";
-import Timeline from "@mui/lab/Timeline";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import { format } from "date-fns";
 import Link from "next/link";
+import { FaCircle } from "react-icons/fa6";
+
+function ExperienceTimelineItem({
+  from,
+  to,
+  useDay = false,
+
+  title,
+  content,
+  href,
+
+  withConnector = true,
+}: {
+  from: Date;
+  to?: Date;
+  useDay?: boolean;
+
+  title: string;
+  content?: string;
+  href?: string;
+
+  withConnector?: boolean;
+}) {
+  if (to && from > to) {
+    throw new Error("from date must be past");
+  }
+
+  const pattern = useDay ? "yyyy年MM月dd日" : "yyyy年MM月";
+
+  const now = new Date();
+  const toStr = !to || to > now ? "現在" : format(to, pattern);
+
+  const child = (
+    <>
+      <h3 className="text-base lg:text-lg">{title}</h3>
+      <p className="text-gray-500 text-xs lg:text-sm">{content}</p>
+    </>
+  );
+
+  const baseClassName =
+    "flex flex-col gap-1 items-start font-Noto w-full md:w-[calc(100%-18rem-1rem)] rounded-xl min-w-72 p-2 px-4 pb-6";
+
+  const timelineContent = href ? (
+    <Link
+      href={href}
+      className={cn(
+        baseClassName,
+        "cursor-pointer hover:bg-gray-200 hover:shadow-lg hover:scale-[1.02]  duration-200 transition-all active:scale-100"
+      )}
+    >
+      {child}
+    </Link>
+  ) : (
+    <div className={cn(baseClassName)}>{child}</div>
+  );
+
+  return (
+    <div className="grid grid-cols-[2rem_1fr] grid-rows-[2rem_1fr] min-h-20">
+      <div className="w-full h-full col-start-1 col-end-2 row-start-1 row-end-2 flex justify-center items-center">
+        <FaCircle className="w-3 h-3 text-[#bdbdbd] " />
+      </div>
+      {withConnector && (
+        <div className="w-full h-full col-start-1 col-end-2 row-start-2 row-end-3 flex justify-center items-center">
+          <span className="w-[2px] rounded-full h-full bg-[#bdbdbd]" />
+        </div>
+      )}
+      <div className="flex flex-wrap items-start font-Nunito col-start-2 col-end-3 row-start-1 row-end-3 pt-[0.4rem] pl-2">
+        <p className="text-sm text-gray-500 min-w-64 lg:w-72">
+          {format(from, pattern)} - {toStr}
+        </p>
+        {timelineContent}
+      </div>
+    </div>
+  );
+}
 
 export default function ExperienceTimeline() {
   return (
-    <Timeline
-      className="font-Noto w-full flex flex-col justify-between"
-      sx={{
-        [`& .${timelineItemClasses.root}:before`]: {
-          flex: 0,
-          padding: 0,
-        },
-      }}
-    >
+    <div className="font-Noto w-full flex flex-col justify-between">
       <ExperienceTimelineItem
         from={new Date("2024-9-6")}
         to={new Date("2024-9-20")}
@@ -65,78 +126,6 @@ export default function ExperienceTimeline() {
         withConnector={false}
         title="京都大学 工学部 電気電子工学科"
       />
-    </Timeline>
-  );
-}
-
-function ExperienceTimelineItem({
-  from,
-  to,
-  useDay = false,
-
-  title,
-  content,
-  href,
-
-  withConnector = true,
-}: {
-  from: Date;
-  to?: Date;
-  useDay?: boolean;
-
-  title: string;
-  content?: string;
-  href?: string;
-
-  withConnector?: boolean;
-}) {
-  if (to && from > to) {
-    throw new Error("from date must be past");
-  }
-
-  const pattern = useDay ? "yyyy年MM月dd日" : "yyyy年MM月";
-
-  const now = new Date();
-  const toStr = !to || to > now ? "現在" : format(to, pattern);
-
-  const child = (
-    <>
-      <h3 className="text-base lg:text-lg">{title}</h3>
-      <p className="text-gray-500 text-xs lg:text-sm">{content}</p>
-    </>
-  );
-
-  const baseClassName =
-    "flex flex-col gap-1 items-start pb-6 font-Noto p-2 px-4 w-full md:w-[calc(100%-18rem-1rem)] rounded-xl min-w-72";
-
-  const timelineContent = href ? (
-    <Link
-      href={href}
-      className={cn(
-        baseClassName,
-        "flex flex-col gap-1 items-start pb-6 font-Noto cursor-pointer hover:bg-gray-200 hover:shadow-lg hover:scale-[1.02]  duration-200 transition-all active:scale-100"
-      )}
-    >
-      {child}
-    </Link>
-  ) : (
-    <div className={cn(baseClassName)}>{child}</div>
-  );
-
-  return (
-    <TimelineItem>
-      <TimelineSeparator>
-        <TimelineDot />
-        {withConnector && <TimelineConnector className="h-full" />}
-      </TimelineSeparator>
-      <TimelineContent>
-        <div className="flex  flex-wrap items-start font-Nunito gap-2">
-          <p className="text-sm text-gray-500 min-w-64 lg:w-72 mt-1">
-            {format(from, pattern)} - {toStr}
-          </p>
-          {timelineContent}
-        </div>
-      </TimelineContent>
-    </TimelineItem>
+    </div>
   );
 }
