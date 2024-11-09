@@ -87,11 +87,11 @@ export default function QR({ className }: { className?: string }) {
               onClick={() => setIsRotated((prev) => !prev)}
             >
               <div
-                className={`text-[#83dbd6] transition-all duration-500 ease-in-out ${
+                className={`text-[#83dbd6] flex justify-center items-center transition-all duration-500 ease-in-out ${
                   isRotated ? "rotate-[360deg]" : "rotate-0"
                 }`}
               >
-                <MdScreenRotationAlt fontSize="large" />
+                <MdScreenRotationAlt size="38px" />
               </div>
             </button>
           </div>
