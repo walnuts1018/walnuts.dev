@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
 import { Card, hatenaTheme, qiitaTheme, zennTheme } from "../Cards/Card";
 import hatenaBlogItems from "./hatena-blog";
+import { cn } from "@/lib/utils";
 
 export default async function Blogs({
   maxItems,
@@ -89,5 +89,11 @@ const blogItems: BlogItem[] = [
     href: "https://zenn.dev/walnuts/scraps/3f60401529cf2d",
     type: "zenn",
     date: new Date("2023-11-06"),
+  },
+  {
+    title:
+      "eBPFを用いてPod ごとのインターネットトラフィック量を計測するツールの開発",
+    href: "https://tech.preferred.jp/ja/blog/pod-level-internet-traffic-measurement-using-ebpf/",
+    date: new Date("2024-11-13"),
   },
 ];
