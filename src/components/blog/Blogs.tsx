@@ -95,5 +95,7 @@ const blogItems: BlogItem[] = [
       "eBPFを用いてPodごとのインターネットトラフィック量を計測するツールの開発",
     href: "https://tech.preferred.jp/ja/blog/pod-level-internet-traffic-measurement-using-ebpf/",
     date: new Date("2024-11-13"),
+    imageSrc:
+      "https://tech.preferred.jp/wp-content/uploads/2024/11/2b530e80c7d0de90885e285c5d798063.png",
   },
 ];
