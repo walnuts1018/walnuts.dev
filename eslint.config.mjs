@@ -12,7 +12,7 @@ const compat = new FlatCompat({
   allConfig: js.configs.all,
 });
 
-export default [
+const config = [
   ...fixupConfigRules(
     compat.extends(
       "next/core-web-vitals",
@@ -35,3 +35,5 @@ export default [
     },
   },
 ];
+
+export default config;
