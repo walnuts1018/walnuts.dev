@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { PiBankBold } from "react-icons/pi";
 import { ContentHeader } from "../../components/ContentHeader";
 
@@ -12,11 +13,13 @@ export default function Payment() {
           title="PayPay"
           description="PayPay ID: juglans"
           imageSrc="/payments/paypay-userimage.jpg"
+          href="paypay://user/juglans"
         />
         <PaymentCard
           icon="/icons/Kyash.png"
           title="Kyash"
           imageSrc="/payments/Kyash-QR.png"
+          href="kyash://qr/u/3654958567120614335"
         />
         <PaymentCard
           icon={<PiBankBold size="50px" />}
@@ -33,14 +36,16 @@ function PaymentCard({
   imageSrc,
   title,
   description,
+  href,
 }: {
   icon?: string | React.ReactNode;
   imageSrc?: string;
   title: string;
   description?: string;
+  href?: string;
 }) {
-  return (
-    <div className="flex items-center justify-between w-full p-4 px-6 border-2 border-gray-400 rounded-3xl aspect-[7/3]">
+  const content = (
+    <>
       <div className="flex items-center justify-start gap-4">
         {icon &&
           (typeof icon === "string" ? (
@@ -68,6 +73,23 @@ function PaymentCard({
           className="rounded-lg object-contain aspect-square w-[33%]"
         />
       )}
-    </div>
+    </>
+  );
+
+  return (
+    <>
+      {href ? (
+        <Link
+          href={href}
+          className="flex items-center justify-between w-full p-4 px-6 border-2 border-gray-400 rounded-3xl aspect-[7/3] hover:bg-gray-200 hover:shadow-lg hover:scale-105 transition-transform duration-200"
+        >
+          {content}
+        </Link>
+      ) : (
+        <div className="flex items-center justify-between w-full p-4 px-6 border-2 border-gray-400 rounded-3xl aspect-[7/3]">
+          {content}
+        </div>
+      )}
+    </>
   );
 }
