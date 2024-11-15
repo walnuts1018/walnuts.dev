@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import Link from "next/link";
 import { FaCircle } from "react-icons/fa6";
+import { cn } from "@/lib/utils";
 
 function ExperienceTimelineItem({
   from,
@@ -86,6 +86,7 @@ export default function ExperienceTimeline() {
         useDay={true}
         title="株式会社 Preferred Networks サマーインターン"
         content="Kubernetesに関するソフトウェア開発"
+        href="https://tech.preferred.jp/ja/blog/pod-level-internet-traffic-measurement-using-ebpf/"
       />
       <ExperienceTimelineItem
         from={new Date("2024-8-19")}
