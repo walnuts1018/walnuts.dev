@@ -7,7 +7,7 @@
     "build": "next build && next-sitemap --config next-sitemap.config.js",
     "start": "next build && next start",
     "lint": "next lint --dir src",
-    "lint:fix": "next lint --dir src --fix",
+    "lint:fix": "next lint --dir src --fix"
   },
   "dependencies": {
     "body-scroll-lock": "^4.0.0-beta.0",
