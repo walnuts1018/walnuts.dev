@@ -1,5 +1,3 @@
-import Blogs from "@/components/blog/Blogs";
-import { person } from "@/lib/jsonld";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
@@ -11,6 +9,8 @@ import { ContentHeader } from "../components/ContentHeader";
 import { Profile } from "../components/Profile";
 import QR from "../components/QR";
 import ExperienceTimeline from "../components/timeline/timeline";
+import Blogs from "@/components/blog/Blogs";
+import { person } from "@/lib/jsonld";
 
 const title = "Walnuts (@walnuts1018)";
 const description = "Walnuts (@walnuts1018) です。";

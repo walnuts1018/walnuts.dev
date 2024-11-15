@@ -1,10 +1,10 @@
-import Header from "@/components/Header/header";
 import type { Metadata } from "next";
 import { Nunito, Zen_Maru_Gothic, Noto_Sans_JP } from "next/font/google";
 import AppleTouchIcon from "../../public/favicons/apple-touch-icon.png";
 import Favicon16 from "../../public/favicons/favicon-16x16.png";
 import Favicon32 from "../../public/favicons/favicon-32x32.png";
 import Favicon from "../../public/favicons/favicon.ico";
+import Header from "@/components/Header/header";
 import "./globals.css";
 
 const defaultTitle = "Walnuts (@walnuts1018)";
