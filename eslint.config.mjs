@@ -18,22 +18,10 @@ const config = [
       "next/core-web-vitals",
       "next/typescript",
       "plugin:import/recommended",
-      "plugin:import/warnings"
+      "plugin:import/warnings",
+      "plugin:import/recommended",
     )
-  ),
-  {
-    rules: {
-      "import/order": [
-        "warn",
-        {
-          alphabetize: {
-            order: "asc",
-            caseInsensitive: true,
-          },
-        },
-      ],
-    },
-  },
+  )
 ];
 
 export default config;
