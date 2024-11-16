@@ -16,7 +16,7 @@ if (typeof document !== "undefined") {
 export default function MobileHeaderLinks({
   headerLinks,
 }: {
-  headerLinks: { name: string; href: string }[];
+  headerLinks: { href: string; name: string }[];
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef(null);

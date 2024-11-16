@@ -38,11 +38,11 @@ function PaymentCard({
   description,
   href,
 }: {
+  description?: string;
+  href?: string;
   icon?: string | React.ReactNode;
   imageSrc?: string;
   title: string;
-  description?: string;
-  href?: string;
 }) {
   const content = (
     <>

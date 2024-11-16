@@ -37,7 +37,7 @@ export default function Header() {
 function NormalHeaderLinks({
   headerLinks,
 }: {
-  headerLinks: { name: string; href: string }[];
+  headerLinks: { href: string; name: string }[];
 }) {
   return (
     <>

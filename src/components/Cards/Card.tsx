@@ -52,14 +52,14 @@ export function Card({
   date,
   imageSrc,
 }: {
-  title?: string;
-  description?: string;
-  icon?: "github" | "zenn" | "hatena";
-  decorationSize?: "small" | "medium";
-  theme?: CardTheme;
-  href: string;
   date?: Date;
+  decorationSize?: "small" | "medium";
+  description?: string;
+  href: string;
+  icon?: "github" | "zenn" | "hatena";
   imageSrc?: string;
+  theme?: CardTheme;
+  title?: string;
 }) {
   const iconComponent = {
     github: (

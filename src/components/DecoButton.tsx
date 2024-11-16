@@ -7,10 +7,10 @@ export default function DecoButton({
   href,
   onClick,
 }: {
-  className?: string;
   children: React.ReactNode;
-  mode: "link" | "button";
+  className?: string;
   href?: string;
+  mode: "link" | "button";
   onClick?: () => void;
 }) {
   className =

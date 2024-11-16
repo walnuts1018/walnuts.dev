@@ -6,8 +6,8 @@ export default async function Blogs({
   maxItems,
   className,
 }: {
-  maxItems?: number;
   className?: string;
+  maxItems?: number;
 }) {
   const items = blogItems.concat(await hatenaBlogItems());
   items.sort((a, b) =>
@@ -47,10 +47,10 @@ export default async function Blogs({
 }
 
 export type BlogItem = {
-  title: string;
-  href: string;
   date?: Date;
+  href: string;
   imageSrc?: string;
+  title: string;
   type?: "hatena" | "qiita" | "zenn";
 };
 

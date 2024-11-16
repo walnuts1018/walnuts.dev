@@ -105,11 +105,11 @@ function ProfileList({
   link,
   fontSize = "text-2xl sm:text-3xl",
 }: {
-  src: string;
   alt: string;
   children: React.ReactNode;
-  link?: string;
   fontSize?: string;
+  link?: string;
+  src: string;
 }) {
   const content = (
     <>

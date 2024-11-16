@@ -4,14 +4,29 @@ import { cn } from "@/lib/utils";
 
 interface SwapTextProps extends React.ComponentPropsWithoutRef<"div"> {
   /**
-   * The initial text to display.
+   * Whether to disable the click interaction.
    */
-  initialText: string;
+  disableClick?: boolean;
 
   /**
    * The final text to display.
    */
   finalText: string;
+
+  /**
+   * The class name for the final text.
+   */
+  finalTextClassName?: string;
+
+  /**
+   * The initial text to display.
+   */
+  initialText: string;
+
+  /**
+   * The class name for the initial text.
+   */
+  initialTextClassName?: string;
 
   /**
    * Whether the component should toggle on hover as well as click.
@@ -22,21 +37,6 @@ interface SwapTextProps extends React.ComponentPropsWithoutRef<"div"> {
    * The class name for the text.
    */
   textClassName?: string;
-
-  /**
-   * The class name for the initial text.
-   */
-  initialTextClassName?: string;
-
-  /**
-   * The class name for the final text.
-   */
-  finalTextClassName?: string;
-
-  /**
-   * Whether to disable the click interaction.
-   */
-  disableClick?: boolean;
 }
 
 export default function SwapText({

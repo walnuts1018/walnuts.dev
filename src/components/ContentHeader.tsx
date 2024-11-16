@@ -4,8 +4,8 @@ export const ContentHeader = ({
   initialText,
   finalText,
 }: {
-  initialText: string;
   finalText: string;
+  initialText: string;
 }) => {
   return (
     <SwapText

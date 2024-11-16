@@ -14,13 +14,13 @@ function ExperienceTimelineItem({
 
   withConnector = true,
 }: {
+  content?: string;
   from: Date;
-  to?: Date;
-  useDay?: boolean;
+  href?: string;
 
   title: string;
-  content?: string;
-  href?: string;
+  to?: Date;
+  useDay?: boolean;
 
   withConnector?: boolean;
 }) {
