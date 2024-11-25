@@ -38,7 +38,7 @@
     "eslint": "^9.15.0",
     "eslint-config-next": "15.0.3",
     "eslint-import-resolver-typescript": "^3.6.3",
-    "eslint-plugin-perfectionist": "^3.9.1",
+    "eslint-plugin-perfectionist": "^4.1.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.12.0",
     "next-sitemap": "^4.2.3",
