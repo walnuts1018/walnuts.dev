@@ -21,7 +21,7 @@
     "react-share": "^5.1.0",
     "rss-parser": "^3.13.0",
     "swr": "^2.2.5",
-    "tailwind-merge": "^2.5.4"
+    "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.2",
