@@ -62,10 +62,7 @@ export default function SwapText({
       className={cn("relative overflow-hidden text-foreground z-0", className)}
     >
       <div
-        className={cn(
-          "group cursor-pointer select-none text-3xl font-bold",
-          textClassName
-        )}
+        className={cn("group cursor-none text-3xl font-bold", textClassName)}
         onClick={() => !disableClick && setActive((current) => !current)}
       >
         <span
