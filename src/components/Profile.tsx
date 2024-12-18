@@ -3,6 +3,7 @@ import Link from "next/link";
 import Heart from "./Heart";
 import ProfileImage from "./ProfileImage";
 import "./Profile.css";
+import SwapText from "./SwapText";
 
 export function Profile() {
   return (
@@ -15,16 +16,17 @@ export function Profile() {
       </div>
 
       <div className="flex flex-col items-center justify-center">
-        <p className="text-black font-extrabold text-4xl pb-3 sm:pb-5">
-          Walnuts
-        </p>
+        <div className="pb-3 sm:pb-5">
+          <SwapText
+            textClassName="text-black font-extrabold text-4xl text-center font-Nunito"
+            initialText="Walnuts"
+            initialTextClassName=""
+            finalText="Ryota Tawara"
+            finalTextClassName=""
+            disableClick={true}
+          />
+        </div>
         <div className="space-y-1 sm:space-y-2">
-          {/* <ProfileList
-            src="/icons/id_card_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="Name"
-          >
-            Ryota Tawara
-          </ProfileList> */}
           <ProfileList
             src="/icons/twitter-x-line.svg"
             alt="X(Twitter)"
