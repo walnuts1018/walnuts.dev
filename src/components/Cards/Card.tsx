@@ -151,7 +151,7 @@ export function Card({
             )}
           </div>
           {imageSrc && (
-            <CardImage src={imageSrc || ""} alt={title} loading={loading} />
+            <CardImage src={imageSrc || ""} alt={title} loading="lazy" />
           )}
         </div>
       </Link>
