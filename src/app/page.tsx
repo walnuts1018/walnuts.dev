@@ -54,7 +54,7 @@ export default function Home() {
           <div className="flex flex-col gap-8">
             <ContentHeader initialText="Blog" finalText="ブログ" />
             <Suspense fallback={<h2>Loading...</h2>}>
-              <Blogs className="lg:justify-start" maxItems={6} />
+              <Blogs className="lg:justify-start" maxItems={6} loading="lazy" />
             </Suspense>
             <div className="flex justify-end w-full pr-16 lg:pr-24">
               <Link

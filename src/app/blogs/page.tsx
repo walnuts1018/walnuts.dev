@@ -6,7 +6,7 @@ export default function BlogsPage() {
       <div className="flex flex-col gap-8 max-w-full lg:max-w-[66.6%]">
         <ContentHeader initialText="Blog" finalText="ブログ" />
         <div className="flex flex-col gap-20 ">
-          <Blogs />
+          <Blogs loading="eager" />
         </div>
       </div>
     </main>

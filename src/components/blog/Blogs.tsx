@@ -5,8 +5,10 @@ import { cn } from "@/lib/utils";
 export default async function Blogs({
   maxItems,
   className,
+  loading,
 }: {
   className?: string;
+  loading?: "eager" | "lazy";
   maxItems?: number;
 }) {
   const items = blogItems.concat(await hatenaBlogItems());
@@ -28,17 +30,18 @@ export default async function Blogs({
             item.type === "hatena"
               ? "hatena"
               : item.type === "zenn"
-                ? "zenn"
-                : undefined
+              ? "zenn"
+              : undefined
           }
+          loading={loading}
           theme={
             item.type === "hatena"
               ? hatenaTheme
               : item.type === "zenn"
-                ? zennTheme
-                : item.type === "qiita"
-                  ? qiitaTheme
-                  : undefined
+              ? zennTheme
+              : item.type === "qiita"
+              ? qiitaTheme
+              : undefined
           }
         />
       ))}

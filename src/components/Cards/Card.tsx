@@ -5,6 +5,8 @@ import { BsGithub } from "react-icons/bs";
 import { LowerDecoration, UpperDecoration } from "../Decoration";
 import CardImage from "./Image";
 import { cn } from "@/lib/utils";
+import hatenaBlogIcon from "../icons/hatenablog-logo.svg";
+import zennIcon from "../icons/zenn.svg";
 import "./Card.css";
 
 export type CardTheme = {
@@ -51,6 +53,7 @@ export function Card({
   href,
   date,
   imageSrc,
+  loading,
 }: {
   date?: Date;
   decorationSize?: "small" | "medium";
@@ -58,6 +61,7 @@ export function Card({
   href: string;
   icon?: "github" | "zenn" | "hatena";
   imageSrc?: string;
+  loading?: "eager" | "lazy";
   theme?: CardTheme;
   title?: string;
 }) {
@@ -67,14 +71,13 @@ export function Card({
         <BsGithub fontSize="inherit" />
       </div>
     ),
-    zenn: <Image src="/icons/zenn.svg" alt="zenn" width={30} height={30} />,
+    zenn: <Image src={zennIcon} alt="zenn" className="w-8" loading={loading} />,
     hatena: (
       <Image
-        src="/icons/hatenablog-logo.svg"
+        src={hatenaBlogIcon}
         alt="hatena"
-        width={45}
-        height={45}
-        className="-m-2"
+        className="-m-2 w-11"
+        loading={loading}
       />
     ),
     none: <></>,
@@ -124,8 +127,8 @@ export function Card({
                   countTextLength(title || "") < 20
                     ? "text-xl lg:text-2xl card:text-xl"
                     : countTextLength(title || "") < 30
-                      ? "text-lg lg:text-xl card:text-lg"
-                      : "text-base lg:text-lg card:text-base"
+                    ? "text-lg lg:text-xl card:text-lg"
+                    : "text-base lg:text-lg card:text-base"
                 )}
               >
                 {title}
@@ -147,7 +150,9 @@ export function Card({
               </div>
             )}
           </div>
-          {imageSrc && <CardImage src={imageSrc || ""} alt={title} />}
+          {imageSrc && (
+            <CardImage src={imageSrc || ""} alt={title} loading={loading} />
+          )}
         </div>
       </Link>
     </div>
