@@ -8,6 +8,8 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { MdClose } from "react-icons/md";
 import Modal from "react-modal";
+import WalnutsIcon from "./walnuts.png";
+import WalnutsIconF6F7FA from "./walnuts-f6f7fa.png";
 import "./ProfileImage.css";
 
 export default function ProfileImage() {
@@ -29,7 +31,7 @@ export default function ProfileImage() {
       <div className="rounded-full bg-gradient-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-full w-full hover:scale-105 duration-200">
         <div className="rounded-full h-full w-full overflow-hidden bg-[#f6f7fa]">
           <Image
-            src="/walnuts-f6f7fa.png"
+            src={WalnutsIconF6F7FA}
             alt="walnuts icon"
             width={256}
             height={256}
@@ -60,7 +62,7 @@ export default function ProfileImage() {
           ></div>
           <div className="rounded-full relative profile-image h-[80vmin] w-[80vmin]">
             <Image
-              src="/walnuts.png"
+              src={WalnutsIcon}
               alt="walnuts icon"
               width={1024}
               height={1024}
