@@ -38,11 +38,16 @@ export const metadata: Metadata = {
     template: `%s | Walnuts.dev`,
   },
   description: defaultDescription,
-  authors: {
-    name: "Walnuts (@walnuts1018)",
-    url: new URL(url),
-  },
-
+  authors: [
+    {
+      name: "Walnuts (@walnuts1018)",
+      url: new URL(url),
+    },
+    {
+      name: "Walnuts (id:walnuts1018)",
+      url: new URL("http://www.hatena.ne.jp/walnuts1018/"),
+    },
+  ],
   icons: [
     { rel: "icon", url: Favicon.src },
     { rel: "apple-touch-icon", url: AppleTouchIcon.src },
@@ -52,7 +57,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: defaultTitle,
     description: defaultDescription,
-    url,
+    url: new URL(url),
     siteName: defaultTitle,
     locale: "ja_JP",
     type: "website",
