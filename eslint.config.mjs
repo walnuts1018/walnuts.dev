@@ -3,11 +3,12 @@ import { fileURLToPath } from "node:url";
 import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
-import perfectionistPlugin from 'eslint-plugin-perfectionist';
-import tseslint from 'typescript-eslint';
-import unusedImportsPlugin from 'eslint-plugin-unused-imports';
-import globals from 'globals';
-import nextPlugin from '@next/eslint-plugin-next';
+import perfectionistPlugin from "eslint-plugin-perfectionist";
+import tseslint from "typescript-eslint";
+import unusedImportsPlugin from "eslint-plugin-unused-imports";
+import globals from "globals";
+import nextPlugin from "@next/eslint-plugin-next";
+import { configs } from "typescript-eslint";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,26 +25,28 @@ const config = tseslint.config(
     },
   },
   js.configs.recommended,
-  ...tseslint.configs.strict,
+  nextPlugin.configs.recommended,
+  ...configs.strict,
   ...fixupConfigRules(
     compat.extends(
+      "next",
       "next/core-web-vitals",
       "plugin:import/recommended",
-      "plugin:import/typescript",
+      "plugin:import/typescript"
     )
   ),
   {
-    plugins: { 'unused-imports': unusedImportsPlugin },
+    plugins: { "unused-imports": unusedImportsPlugin },
     rules: {
-      '@typescript-eslint/no-unused-vars': 'off',
-      'unused-imports/no-unused-imports': 'error',
-      'unused-imports/no-unused-vars': [
-        'error',
+      "@typescript-eslint/no-unused-vars": "off",
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "error",
         {
-          vars: 'all',
-          varsIgnorePattern: '^_',
-          args: 'after-used',
-          argsIgnorePattern: '^_',
+          vars: "all",
+          varsIgnorePattern: "^_",
+          args: "after-used",
+          argsIgnorePattern: "^_",
         },
       ],
     },
@@ -51,10 +54,10 @@ const config = tseslint.config(
   {
     plugins: { perfectionist: perfectionistPlugin },
     rules: {
-      'perfectionist/sort-interfaces': 'warn', 
-      'perfectionist/sort-object-types': 'warn',
+      "perfectionist/sort-interfaces": "warn",
+      "perfectionist/sort-object-types": "warn",
     },
-  },
+  }
 );
 
 export default config;
