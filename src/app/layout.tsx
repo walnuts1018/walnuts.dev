@@ -6,6 +6,7 @@ import Favicon32 from "../../public/favicons/favicon-32x32.png";
 import Favicon from "../../public/favicons/favicon.ico";
 import Header from "@/components/Header/header";
 import "./globals.css";
+import Footer from "@/components/Footer/footer";
 
 const defaultTitle = "Walnuts (@walnuts1018)";
 const defaultDescription =
@@ -95,6 +96,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
