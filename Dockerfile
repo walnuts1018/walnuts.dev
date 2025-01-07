@@ -12,7 +12,7 @@ COPY --chown=nextjs:nodejs ./public ./public
 COPY --chown=nextjs:nodejs ./.next/standalone ./
 COPY --chown=nextjs:nodejs ./.next/static ./.next/static
 
-USER nextjs
+USER 10001
 
 EXPOSE 3000
 
