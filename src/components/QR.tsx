@@ -29,7 +29,7 @@ export default function QR({ className }: { className?: string }) {
       <button
         onClick={() => setIsShown(true)}
         title="show QR"
-        className="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-1 shadow-lg bg-gradient-to-br from-red-400 to-red-600  flex items-center justify-center hover:from-red-500 hover:to-red-600 hover:shadow-lg transition-all duration-200 outline-none focus:from-red-500 focus:to-red-600 focus:shadow-lg text-4xl sm:text-5xl"
+        className="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-1 shadow-lg bg-linear-to-br from-red-400 to-red-600  flex items-center justify-center hover:from-red-500 hover:to-red-600 hover:shadow-lg transition-all duration-200 outline-hidden focus:from-red-500 focus:to-red-600 focus:shadow-lg text-4xl sm:text-5xl"
       >
         <MdQrCode2 fontSize="inherit" className="text-white" />
       </button>
@@ -83,7 +83,7 @@ export default function QR({ className }: { className?: string }) {
           <div className="flex justify-center items-center">
             <button
               title="rotate QR"
-              className="bg-white rounded-full border-white p-3 border-4 shadow-neumorphism-button active:shadow-neumorphism-button-pressed mt-10 w-[72px] h-[72px] outline-none"
+              className="bg-white rounded-full border-white p-3 border-4 shadow-neumorphism-button active:shadow-neumorphism-button-pressed mt-10 w-[72px] h-[72px] outline-hidden"
               onClick={() => setIsRotated((prev) => !prev)}
             >
               <div

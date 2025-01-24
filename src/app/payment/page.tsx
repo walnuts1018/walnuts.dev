@@ -104,12 +104,12 @@ function PaymentCard({
       {href ? (
         <Link
           href={href}
-          className="flex items-center justify-between w-full p-4 px-6 border-2 border-gray-400 rounded-3xl aspect-[7/3] hover:bg-gray-200 hover:shadow-lg hover:scale-105 transition-transform duration-200"
+          className="flex items-center justify-between w-full p-4 px-6 border-2 border-gray-400 rounded-3xl aspect-7/3 hover:bg-gray-200 hover:shadow-lg hover:scale-105 transition-transform duration-200"
         >
           {content}
         </Link>
       ) : (
-        <div className="flex items-center justify-between w-full p-4 px-6 border-2 border-gray-400 rounded-3xl aspect-[7/3]">
+        <div className="flex items-center justify-between w-full p-4 px-6 border-2 border-gray-400 rounded-3xl aspect-7/3">
           {content}
         </div>
       )}

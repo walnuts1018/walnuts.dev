@@ -38,7 +38,7 @@ export default function Heart() {
   return (
     <div className="">
       <Link
-        className="flex items-center justify-center outline-none border-red-500 rounded-full p-0 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-md text-3xl sm:text-4xl hover:scale-110 duration-200"
+        className="flex items-center justify-center outline-hidden border-red-500 rounded-full p-0 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-md text-3xl sm:text-4xl hover:scale-110 duration-200"
         href="https://grafana.walnuts.dev/public-dashboards/e6b8482ee79a488f9201b190be2bafac"
         target="_blank"
         onMouseEnter={() => setShowDetail(true)}

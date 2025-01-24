@@ -86,10 +86,10 @@ export function Card({
   const parsedDate = date ? format(date, "yyyy年MM月dd日") : "";
 
   return (
-    <div className="w-[20rem] lg:w-[24rem] card:w-[20rem] aspect-[20/11] hover:scale-105  duration-200 transition-all active:scale-100 font-Noto ">
+    <div className="w-[20rem] lg:w-[24rem] card:w-[20rem] aspect-20/11 hover:scale-105  duration-200 transition-all active:scale-100 font-Noto ">
       <Link
         href={href}
-        className="flex justify-center items-center h-full rounded-2xl focus:scale-105 relative bg-[#f6f7fa] cursor-pointer active:bg-[#e2e2e2] duration-200 outline-none transition-all card-shadow"
+        className="flex justify-center items-center h-full rounded-2xl focus:scale-105 relative bg-[#f6f7fa] cursor-pointer active:bg-[#e2e2e2] duration-200 outline-hidden transition-all card-shadow"
         target="_blank"
       >
         <UpperDecoration

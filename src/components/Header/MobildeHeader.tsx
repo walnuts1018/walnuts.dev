@@ -38,7 +38,7 @@ export default function MobileHeaderLinks({
         onClick={() => setIsOpen((open) => !open)}
         title="Menu"
         type="button"
-        className="focus:outline-none transform hover:scale-110 active:scale-100 duration-200 transition-all"
+        className="focus:outline-hidden transform hover:scale-110 active:scale-100 duration-200 transition-all"
         ref={ref}
       >
         {isOpen ? (
