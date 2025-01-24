@@ -20,12 +20,7 @@ jobs:
       - run: yarn install
 
       - name: eslint
-        uses: reviewdog/action-eslint@v1
-        with:
-          github_token: ${{ secrets.github_token }}
-          reporter: github-pr-review
-          eslint_flags: "src/**/*.{ts,tsx}"
-          fail_level: any
+        run: yarn lint
 
   build-test:
     runs-on: ubuntu-latest
