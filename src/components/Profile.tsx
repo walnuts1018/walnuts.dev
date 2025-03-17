@@ -27,80 +27,64 @@ export function Profile() {
           />
         </div>
         <div className="space-y-1 sm:space-y-2">
-          <ProfileList
+          <ProfileItem
             src="/icons/twitter-x-line.svg"
             alt="X(Twitter)"
             link="https://twitter.com/walnuts1018"
           >
             @walnuts1018
-          </ProfileList>
-          <ProfileList
+          </ProfileItem>
+          <ProfileItem
             src="/icons/github-fill.svg"
             alt="GitHub"
             link="https://github.com/walnuts1018"
           >
             walnuts1018
-          </ProfileList>
-          <ProfileList
+          </ProfileItem>
+          <ProfileItem
             src="/icons/instagram-line.svg"
             alt="Instagram"
             link="https://www.instagram.com/walnuts_1018/"
           >
             @walnuts_1018
-          </ProfileList>
-          <ProfileList
+          </ProfileItem>
+          <ProfileItem
             src="/icons/mail_FILL0_wght400_GRAD0_opsz24.svg"
             alt="Mail"
             link="mailto:r.juglans.1018@gmail.com"
             fontSize="text-2xl"
           >
             r.juglans.1018@gmail.com
-          </ProfileList>
-          {/* <ProfileList
-            src="/icons/KMClogo_trans.svg"
-            alt="KMC"
-            link="https://kmc.gr.jp"
-            fontSize="text-2xl"
-          >
-            46th Chairman /
-            <br />
-            47th Representative
-          </ProfileList> */}
-          <ProfileList
-            src="/icons/school_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="School"
-            link="https://www.s-ee.t.kyoto-u.ac.jp/ja"
-          >
-            Kyoto Univ. / B3
-          </ProfileList>
-          <ProfileList
+          </ProfileItem>
+          <School />
+          <ProfileItem
             src="/icons/favorite_FILL0_wght400_GRAD0_opsz24.svg"
             alt="Favorite Tech"
             fontSize="text-2xl"
           >
-            Kubernetes / Golang / OpenTelemetry / Next.js
-          </ProfileList>
-          <ProfileList
+            Kubernetes / Golang / OpenTelemetry / React
+          </ProfileItem>
+          <ProfileItem
             src="/icons/map_FILL0_wght400_GRAD0_opsz24.svg"
             alt="Map Icon"
             link="https://maps.app.goo.gl/2nuqetk7S8FcNayWA"
           >
             <Image src="/icons/yummy.png" alt="yummy" width={30} height={30} />
-          </ProfileList>
-          <ProfileList
+          </ProfileItem>
+          <ProfileItem
             src="/icons/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg"
             alt="shopping cart icon"
             link="https://www.amazon.jp/hz/wishlist/ls/1L1NGV8XKP7X6?ref_=wl_share"
           >
             Want-to-Buy
-          </ProfileList>
+          </ProfileItem>
         </div>
       </div>
     </div>
   );
 }
 
-function ProfileList({
+function ProfileItem({
   src,
   alt,
   children,
@@ -144,5 +128,24 @@ function ProfileList({
         </Link>
       )}
     </>
+  );
+}
+
+function School() {
+  const now = new Date();
+  if (now >= new Date("2026-03-31")) {
+    return <></>;
+  }
+
+  const b = now >= new Date("2025-04-01") ? "B4" : "B3";
+
+  return (
+    <ProfileItem
+      src="/icons/school_FILL0_wght400_GRAD0_opsz24.svg"
+      alt="School"
+      link="https://www.s-ee.t.kyoto-u.ac.jp/ja"
+    >
+      Kyoto Univ. / {b}
+    </ProfileItem>
   );
 }
