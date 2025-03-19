@@ -89,4 +89,5 @@ jobs:
         run: |
           docker buildx imagetools create \
             -t ghcr.io/walnuts1018/walnuts.dev:latest \
-            ghcr.io/walnuts1018/walnuts.dev:${{ github.sha }}-${{ github.run_number }}
+            -t ghcr.io/walnuts1018/walnuts.dev:${{ github.sha }}-${{ github.run_number }} \
+            $(printf 'ghcr.io/walnuts1018/walnuts.dev@sha256:%s ' *)
