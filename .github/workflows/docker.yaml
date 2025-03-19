@@ -42,8 +42,8 @@ jobs:
           context: .
           platforms: ${{ matrix.platform }}
           outputs: type=image,name=ghcr.io/walnuts1018/walnuts.dev,push-by-digest=true,name-canonical=true,push=true
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-from: type=gha,scope=${{ matrix.key }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.key }}
 
       - name: Export digest
         run: |
