@@ -65,10 +65,10 @@ importers:
         version: 22.13.10
       '@types/react':
         specifier: ^19
-        version: 19.0.11
+        version: 19.0.12
       '@types/react-dom':
         specifier: ^19
-        version: 19.0.4(@types/react@19.0.11)
+        version: 19.0.4(@types/react@19.0.12)
       '@types/react-modal':
         specifier: ^3.16.3
         version: 3.16.3
@@ -458,8 +458,8 @@ packages:
   '@types/react-modal@3.16.3':
     resolution: {integrity: sha512-xXuGavyEGaFQDgBv4UVm8/ZsG+qxeQ7f77yNrW3n+1J6XAstUy5rYHeIHPh1KzsGc6IkCIdu6lQ2xWzu1jBTLg==}
 
-  '@types/react@19.0.11':
-    resolution: {integrity: sha512-vrdxRZfo9ALXth6yPfV16PYTLZwsUWhVjjC+DkfE5t1suNSbBrWC9YqSuuxJZ8Ps6z1o2ycRpIqzZJIgklq4Tw==}
+  '@types/react@19.0.12':
+    resolution: {integrity: sha512-V6Ar115dBDrjbtXSrS+/Oruobc+qVbbUxDFC1RSbRqLt5SYvxxyIDrSC85RWml54g+jfNeEMZhEj7wW07ONQhA==}
 
   '@typescript-eslint/eslint-plugin@8.26.1':
     resolution: {integrity: sha512-2X3mwqsj9Bd3Ciz508ZUtoQQYpOhU/kWoUqIf49H8Z0+Vbh6UF/y0OEYp0Q0axOGzaBGs7QxRwq0knSQ8khQNA==}
@@ -2373,15 +2373,15 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
-  '@types/react-dom@19.0.4(@types/react@19.0.11)':
+  '@types/react-dom@19.0.4(@types/react@19.0.12)':
     dependencies:
-      '@types/react': 19.0.11
+      '@types/react': 19.0.12
 
   '@types/react-modal@3.16.3':
     dependencies:
-      '@types/react': 19.0.11
+      '@types/react': 19.0.12
 
-  '@types/react@19.0.11':
+  '@types/react@19.0.12':
     dependencies:
       csstype: 3.1.3
 
