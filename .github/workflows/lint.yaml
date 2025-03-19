@@ -16,8 +16,9 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
-      - run: yarn install
+          node-version-file: "package.json"
+
+      - run: pnpm install
 
       - name: eslint
         uses: reviewdog/action-eslint@v1
@@ -45,13 +46,13 @@ jobs:
       - name: setup-node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: "package.json"
 
       - name: install
-        run: yarn install
+        run: pnpm install
 
       - name: build
-        run: yarn build
+        run: pnpm run build
 
   status-check:
     runs-on: ubuntu-latest
