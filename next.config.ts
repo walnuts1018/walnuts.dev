@@ -1,7 +1,8 @@
+import type { NextConfig } from "next";
+
 const apiurl = "https://fitbit.walnuts.dev/v1/";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   output: "standalone",
   async rewrites() {
     return [
@@ -20,10 +21,6 @@ const nextConfig = {
       },
     ],
   },
-  poweredByHeader: false,
-  experimental: {
-    turbo: {},
-  },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
