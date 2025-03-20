@@ -67,7 +67,7 @@ export function Card({
 }) {
   const iconComponent = {
     github: (
-      <div className="text-3xl lg:text-4xl card:text-3xl items-center justify-center flex">
+      <div className="text-3xl lg:text-4xl 2xl:text-3xl items-center justify-center flex">
         <BsGithub fontSize="inherit" />
       </div>
     ),
@@ -86,18 +86,18 @@ export function Card({
   const parsedDate = date ? format(date, "yyyy年MM月dd日") : "";
 
   return (
-    <div className="w-[20rem] lg:w-[24rem] card:w-[20rem] aspect-[20/11] hover:scale-105  duration-200 transition-all active:scale-100 font-Noto ">
+    <div className="w-[20rem] lg:w-[24rem] 2xl:w-[20rem] aspect-20/11 hover:scale-105  duration-200 transition-all active:scale-100 font-Noto ">
       <Link
         href={href}
-        className="flex justify-center items-center h-full rounded-2xl focus:scale-105 relative bg-[#f6f7fa] cursor-pointer active:bg-[#e2e2e2] duration-200 outline-none transition-all card-shadow"
+        className="flex justify-center items-center h-full rounded-2xl focus:scale-105 relative bg-[#f6f7fa] cursor-pointer active:bg-[#e2e2e2] duration-200 outline-hidden transition-all card-shadow"
         target="_blank"
       >
         <UpperDecoration
           className="absolute top-0 left-0"
           innerClassName={cn(
             decorationSize === "medium"
-              ? "scale-[0.3] lg:scale-[0.4] card:scale-[0.3]"
-              : "scale-[0.2] lg:scale-[0.3] card:scale-[0.2]"
+              ? "scale-[0.3] lg:scale-[0.4] 2xl:scale-[0.3]"
+              : "scale-[0.2] lg:scale-[0.3] 2xl:scale-[0.2]"
           )}
           primaryColor={theme?.primaryColor}
           secondaryColor={theme?.secondaryColor}
@@ -106,8 +106,8 @@ export function Card({
           className="absolute bottom-0 right-0 "
           innerClassName={cn(
             decorationSize === "medium"
-              ? "scale-[0.9] lg:scale-[1.1] card:scale-[0.9]"
-              : "scale-[0.7] lg:scale-[0.9] card:scale-[0.7]"
+              ? "scale-[0.9] lg:scale-[1.1] 2xl:scale-[0.9]"
+              : "scale-[0.7] lg:scale-[0.9] 2xl:scale-[0.7]"
           )}
           primaryColor={theme?.primaryColor}
           secondaryColor={theme?.secondaryColor}
@@ -125,10 +125,10 @@ export function Card({
                 className={cn(
                   "line-clamp-4",
                   countTextLength(title || "") < 20
-                    ? "text-xl lg:text-2xl card:text-xl"
+                    ? "text-xl lg:text-2xl 2xl:text-xl"
                     : countTextLength(title || "") < 30
-                    ? "text-lg lg:text-xl card:text-lg"
-                    : "text-base lg:text-lg card:text-base"
+                    ? "text-lg lg:text-xl 2xl:text-lg"
+                    : "text-base lg:text-lg 2xl:text-base"
                 )}
               >
                 {title}
@@ -141,8 +141,8 @@ export function Card({
                   className={cn(
                     "text-gray-500",
                     countTextLength(description) < 50
-                      ? "text-sm lg:text-base card:text-sm"
-                      : "text-xs lg:text-sm card:text-xs"
+                      ? "text-sm lg:text-base 2xl:text-sm"
+                      : "text-xs lg:text-sm 2xl:text-xs"
                   )}
                 >
                   {description}

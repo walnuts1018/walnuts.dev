@@ -28,7 +28,7 @@ export default function ProfileImage() {
 
   return (
     <>
-      <div className="rounded-full bg-gradient-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-full w-full hover:scale-105 duration-200">
+      <div className="rounded-full bg-linear-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-full w-full hover:scale-105 duration-200">
         <div className="rounded-full h-full w-full overflow-hidden bg-[#f6f7fa]">
           <Image
             src={WalnutsIconF6F7FA}
@@ -50,8 +50,8 @@ export default function ProfileImage() {
           onRequestClose={() => {
             setIsExpanded(false);
           }}
-          className="fixed h-[100svh] w-screen bg-black bg-opacity-50 flex items-center justify-center overflow-hidden p-2"
-          overlayClassName="fixed inset-0 bg-black bg-opacity-70 z-10"
+          className="fixed h-[100svh] w-screen bg-black/50 flex items-center justify-center overflow-hidden p-2"
+          overlayClassName="fixed inset-0 bg-black/70 z-10"
           appElement={document.body}
         >
           <div
