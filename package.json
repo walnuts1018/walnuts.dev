@@ -57,5 +57,8 @@
       "sharp"
     ]
   },
+  "engines": {
+    "node": "22.14.0"
+  },
   "packageManager": "pnpm@10.6.5"
 }
