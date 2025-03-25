@@ -10,6 +10,7 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
+    "@vercel/otel": "^1.10.4",
     "body-scroll-lock": "4.0.0-beta.0",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
