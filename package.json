@@ -34,7 +34,7 @@
     "@next/bundle-analyzer": "^15.2.4",
     "@tailwindcss/postcss": "^4.0.17",
     "@types/body-scroll-lock": "^3.1.2",
-    "@types/node": "^20.19.0",
+    "@types/node": "^20",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "@types/react-modal": "^3.16.3",
