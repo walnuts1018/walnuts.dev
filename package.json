@@ -41,7 +41,7 @@
     "@typescript-eslint/parser": "^8.30.1",
     "eslint": "^9.25.0",
     "eslint-config-next": "15.3.1",
-    "eslint-import-resolver-typescript": "^4.3.3",
+    "eslint-import-resolver-typescript": "^4.3.4",
     "eslint-plugin-perfectionist": "^4.11.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^16.0.0",
