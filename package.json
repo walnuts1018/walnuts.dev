@@ -10,9 +10,9 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
-    "@opentelemetry/api-logs": "^0.200.0",
-    "@opentelemetry/instrumentation": "^0.200.0",
-    "@opentelemetry/sdk-logs": "^0.200.0",
+    "@opentelemetry/api-logs": "^0.201.0",
+    "@opentelemetry/instrumentation": "^0.201.0",
+    "@opentelemetry/sdk-logs": "^0.201.0",
     "@vercel/otel": "^1.11.0",
     "body-scroll-lock": "4.0.0-beta.0",
     "clsx": "^2.1.1",
