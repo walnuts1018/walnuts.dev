@@ -24,7 +24,7 @@ export default function CardImage({
       width={300}
       height={300}
       loading={loading}
-      className="rounded-2xl object-cover aspect-square w-1/4"
+      className="aspect-square w-1/4 rounded-2xl object-cover"
     />
   );
 }

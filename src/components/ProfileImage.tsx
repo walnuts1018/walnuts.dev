@@ -8,8 +8,8 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { MdClose } from "react-icons/md";
 import Modal from "react-modal";
-import WalnutsIcon from "./walnuts.png";
 import WalnutsIconF6F7FA from "./walnuts-f6f7fa.png";
+import WalnutsIcon from "./walnuts.png";
 import "./ProfileImage.css";
 
 export default function ProfileImage() {
@@ -28,14 +28,14 @@ export default function ProfileImage() {
 
   return (
     <>
-      <div className="rounded-full bg-linear-to-br from-[#94e5d2] to-[#84E3F6] p-1 h-full w-full hover:scale-105 duration-200">
-        <div className="rounded-full h-full w-full overflow-hidden bg-[#f6f7fa]">
+      <div className="h-full w-full rounded-full bg-linear-to-br from-[#94e5d2] to-[#84E3F6] p-1 duration-200 hover:scale-105">
+        <div className="h-full w-full overflow-hidden rounded-full bg-[#f6f7fa]">
           <Image
             src={WalnutsIconF6F7FA}
             alt="walnuts icon"
             width={256}
             height={256}
-            className="rounded-full h-full w-full cursor-pointer object-contain"
+            className="h-full w-full cursor-pointer rounded-full object-contain"
             priority={true}
             onClick={() => {
               setIsExpanded(true);
@@ -50,23 +50,23 @@ export default function ProfileImage() {
           onRequestClose={() => {
             setIsExpanded(false);
           }}
-          className="fixed h-[100svh] w-screen bg-black/50 flex items-center justify-center overflow-hidden p-2"
+          className="fixed flex h-[100svh] w-screen items-center justify-center overflow-hidden bg-black/50 p-2"
           overlayClassName="fixed inset-0 bg-black/70 z-10"
           appElement={document.body}
         >
           <div
-            className="fixed h-full w-full -z-10"
+            className="fixed -z-10 h-full w-full"
             onClick={() => {
               setIsExpanded(false);
             }}
-          ></div>
-          <div className="rounded-full relative profile-image h-[80vmin] w-[80vmin]">
+          />
+          <div className="profile-image relative h-[80vmin] w-[80vmin] rounded-full">
             <Image
               src={WalnutsIcon}
               alt="walnuts icon"
               width={1024}
               height={1024}
-              className="rounded-full object-contain h-full w-full"
+              className="h-full w-full rounded-full object-contain"
             />
           </div>
           <button

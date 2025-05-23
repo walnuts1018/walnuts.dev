@@ -30,18 +30,18 @@ export default async function Blogs({
             item.type === "hatena"
               ? "hatena"
               : item.type === "zenn"
-              ? "zenn"
-              : undefined
+                ? "zenn"
+                : undefined
           }
           loading={loading}
           theme={
             item.type === "hatena"
               ? hatenaTheme
               : item.type === "zenn"
-              ? zennTheme
-              : item.type === "qiita"
-              ? qiitaTheme
-              : undefined
+                ? zennTheme
+                : item.type === "qiita"
+                  ? qiitaTheme
+                  : undefined
           }
         />
       ))}

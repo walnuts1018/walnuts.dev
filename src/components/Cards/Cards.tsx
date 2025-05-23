@@ -5,7 +5,7 @@ export default function Cards({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "flex flex-wrap justify-center lg:justify-start gap-8 w-full",
+        "flex w-full flex-wrap justify-center gap-8 lg:justify-start",
         className
       )}
     >

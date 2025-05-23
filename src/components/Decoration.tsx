@@ -16,7 +16,7 @@ export function UpperDecoration({
     <div className={className}>
       <div className={`relative left-0 w-full ${innerClassName}`}>
         <div
-          className={`w-[219.49px] h-[52.99px] left-[33.21px] top-0 absolute origin-top-left rotate-[25.98deg] rounded-[20px] opacity-75`}
+          className={`absolute top-0 left-[33.21px] h-[52.99px] w-[219.49px] origin-top-left rotate-[25.98deg] rounded-[20px] opacity-75`}
           style={{
             backgroundColor: primaryColor,
             boxShadow:
@@ -24,7 +24,7 @@ export function UpperDecoration({
           }}
         />
         <div
-          className={`w-[200.27px] h-[50.54px] left-0 top-[134.70px] absolute origin-top-left rotate-[-42.27deg] rounded-[20px] opacity-75`}
+          className={`absolute top-[134.70px] left-0 h-[50.54px] w-[200.27px] origin-top-left rotate-[-42.27deg] rounded-[20px] opacity-75`}
           style={{
             backgroundColor: primaryColor,
             boxShadow:
@@ -32,7 +32,7 @@ export function UpperDecoration({
           }}
         />
         <div
-          className={`w-[219.49px] h-[52.99px] left-[58px] top-0 absolute origin-top-left rotate-[64.93deg] rounded-[20px] opacity-75`}
+          className={`absolute top-0 left-[58px] h-[52.99px] w-[219.49px] origin-top-left rotate-[64.93deg] rounded-[20px] opacity-75`}
           style={{
             backgroundColor: secondaryColor,
             boxShadow:
@@ -60,8 +60,8 @@ export function LowerDecoration({
 
   return (
     <div className={className}>
-      <div className={`h-full w-full relative ${innerClassName}`}>
-        <div className="absolute scale-[0.3] right-1 bottom-12">
+      <div className={`relative h-full w-full ${innerClassName}`}>
+        <div className="absolute right-1 bottom-12 scale-[0.3]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="56"
@@ -78,24 +78,24 @@ export function LowerDecoration({
         </div>
 
         <div
-          className="absolute bottom-[3rem] right-[2.6rem] w-[22px] h-[22px] origin-top-left rotate-[6.77deg] opacity-75"
+          className="absolute right-[2.6rem] bottom-[3rem] h-[22px] w-[22px] origin-top-left rotate-[6.77deg] opacity-75"
           style={{
             border: `6px solid ${secondaryColor}`,
           }}
         />
         <div
-          className="absolute bottom-[1.5rem] right-[4.2rem] w-[17px] h-[17px] rounded-full opacity-75"
+          className="absolute right-[4.2rem] bottom-[1.5rem] h-[17px] w-[17px] rounded-full opacity-75"
           style={{
             backgroundColor: primaryColor,
           }}
         />
         <div
-          className="absolute bottom-[1.35rem] right-[4rem] w-[9.2px] h-[9.2px] rounded-full opacity-75"
+          className="absolute right-[4rem] bottom-[1.35rem] h-[9.2px] w-[9.2px] rounded-full opacity-75"
           style={{
             backgroundColor: secondaryColor,
           }}
         />
-        <div className="absolute scale-[0.32] right-[-4.12rem] bottom-[-4.15rem]">
+        <div className="absolute right-[-4.12rem] bottom-[-4.15rem] scale-[0.32]">
           <svg
             width="194"
             height="195"
@@ -125,7 +125,7 @@ export function LowerDecoration({
             />
           </svg>
         </div>
-        <div className="absolute scale-[0.32] right-[-3.49rem] bottom-[-3.5rem]">
+        <div className="absolute right-[-3.49rem] bottom-[-3.5rem] scale-[0.32]">
           <svg
             width="164"
             height="165"
@@ -155,7 +155,7 @@ export function LowerDecoration({
             />
           </svg>
         </div>
-        <div className="absolute scale-[0.32] right-[-3.05rem] bottom-[-3.15rem]">
+        <div className="absolute right-[-3.05rem] bottom-[-3.15rem] scale-[0.32]">
           <svg
             width="143"
             height="148"

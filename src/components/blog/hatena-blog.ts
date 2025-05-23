@@ -13,16 +13,13 @@ export default async function hatenaBlogItems(): Promise<BlogItem[]> {
     return [];
   }
 
-
-  const feeds: BlogItem[] = feed.items.map((item) => (
-    {
-      title: item.title || "",
-      href: item.link || "",
-      date: (item.pubDate ? new Date(item.pubDate) : undefined),
-      imageSrc: item.enclosure?.url,
-      type: "hatena",
-    }
-  ));
+  const feeds: BlogItem[] = feed.items.map((item) => ({
+    title: item.title || "",
+    href: item.link || "",
+    date: item.pubDate ? new Date(item.pubDate) : undefined,
+    imageSrc: item.enclosure?.url,
+    type: "hatena",
+  }));
 
   return feeds;
 }

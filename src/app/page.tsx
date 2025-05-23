@@ -35,12 +35,12 @@ export default function Home() {
           description: description,
         }}
       />
-      <main className="min-h-[100dvh] w-full flex justify-center">
-        <div className="w-full md:w-10/12 h-full px-6 md:px-0 flex items-center justify-start lg:items-start lg:justify-center flex-col lg:flex-row gap-8">
+      <main className="flex min-h-[100dvh] w-full justify-center">
+        <div className="flex h-full w-full flex-col items-center justify-start gap-8 px-6 md:w-10/12 md:px-0 lg:flex-row lg:items-start lg:justify-center">
           <div className="w-min-[24rem] lg:w-min-[20rem] 2xl:w-min-[24rem]">
             <Profile />
           </div>
-          <div className="flex flex-col gap-20 w-full pb-24">
+          <div className="flex w-full flex-col gap-20 pb-24">
             <div className="flex flex-col gap-8">
               <ContentHeader initialText="Projects" finalText="作品" />
               <Cards className="" />
@@ -61,10 +61,10 @@ export default function Home() {
                   loading="lazy"
                 />
               </Suspense>
-              <div className="flex justify-end w-full pr-16 lg:pr-24">
+              <div className="flex w-full justify-end pr-16 lg:pr-24">
                 <Link
                   href="/blogs"
-                  className="flex items-center justify-center font-ZenMaruGothic font-bold text-md text-gray-500 hover:text-gray-700 hover:scale-110 duration-200 transition-all cursor-pointer active:scale-100 gap-1"
+                  className="font-ZenMaruGothic text-md flex cursor-pointer items-center justify-center gap-1 font-bold text-gray-500 transition-all duration-200 hover:scale-110 hover:text-gray-700 active:scale-100"
                 >
                   もっと見る
                   <FaArrowRight />
@@ -74,7 +74,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <QR className="fixed bottom-0 right-0 z-10 p-4" />
+      <QR className="fixed right-0 bottom-0 z-10 p-4" />
     </>
   );
 }

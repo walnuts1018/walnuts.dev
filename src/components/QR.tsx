@@ -29,7 +29,7 @@ export default function QR({ className }: { className?: string }) {
       <button
         onClick={() => setIsShown(true)}
         title="show QR"
-        className="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-1 shadow-lg bg-linear-to-br from-red-400 to-red-600  flex items-center justify-center hover:from-red-500 hover:to-red-600 hover:shadow-lg transition-all duration-200 outline-hidden focus:from-red-500 focus:to-red-600 focus:shadow-lg text-4xl sm:text-5xl cursor-pointer"
+        className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-linear-to-br from-red-400 to-red-600 p-1 text-4xl shadow-lg outline-hidden transition-all duration-200 hover:from-red-500 hover:to-red-600 hover:shadow-lg focus:from-red-500 focus:to-red-600 focus:shadow-lg sm:h-16 sm:w-16 sm:text-5xl"
       >
         <MdQrCode2 fontSize="inherit" className="text-white" />
       </button>
@@ -40,24 +40,24 @@ export default function QR({ className }: { className?: string }) {
             setIsShown(false);
             setIsRotated(false);
           }}
-          className="fixed h-[100svh] w-screen bg-black/50 flex flex-col items-center justify-center overflow-hidden"
+          className="fixed flex h-[100svh] w-screen flex-col items-center justify-center overflow-hidden bg-black/50"
           overlayClassName="fixed inset-0 bg-black/50 z-10"
           appElement={document.body}
         >
           <div
-            className="fixed h-full w-full -z-10"
+            className="fixed -z-10 h-full w-full"
             onClick={() => {
               setIsShown(false);
               setIsRotated(false);
             }}
-          ></div>
-          <div className="flex justify-between items-center w-2/3 sm:w-3/4 md:w-1/2 xl:w-1/3 flex-col ">
+          />
+          <div className="flex w-2/3 flex-col items-center justify-between sm:w-3/4 md:w-1/2 xl:w-1/3">
             <div
-              className={`rounded-3xl bg-white p-4 shadow-md flex flex-col justify-center items-center transition-all duration-500 container z-30 ${
+              className={`z-30 container flex flex-col items-center justify-center rounded-3xl bg-white p-4 shadow-md transition-all duration-500 ${
                 isRotated ? "rotate-180" : "rotate-0"
               }`}
             >
-              <div className="flex justify-center items-center">
+              <div className="flex items-center justify-center">
                 <Image
                   src="/walnuts.png"
                   alt="favicon"
@@ -65,12 +65,12 @@ export default function QR({ className }: { className?: string }) {
                   height={50}
                   className="rounded-full object-contain"
                 />
-                <p className="bg-white text-black font-bold font-Nunito text-2xl px-1 text-center">
+                <p className="font-Nunito bg-white px-1 text-center text-2xl font-bold text-black">
                   Walnuts.dev
                 </p>
               </div>
 
-              <div className="flex justify-center items-center sm:w-2/3">
+              <div className="flex items-center justify-center sm:w-2/3">
                 <Image
                   src="/QR-walnuts.dev.svg"
                   alt="walnuts.dev QR"
@@ -80,15 +80,15 @@ export default function QR({ className }: { className?: string }) {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex items-center justify-center">
             <button
               type="button"
               title="rotate QR"
-              className="bg-white rounded-full border-white p-3 border-4 shadow-neumorphism-button active:shadow-neumorphism-button-pressed mt-10 w-[72px] h-[72px] outline-hidden cursor-pointer"
+              className="shadow-neumorphism-button active:shadow-neumorphism-button-pressed mt-10 h-[72px] w-[72px] cursor-pointer rounded-full border-4 border-white bg-white p-3 outline-hidden"
               onClick={() => setIsRotated((prev) => !prev)}
             >
               <div
-                className={`text-[#83dbd6] flex justify-center items-center transition-all duration-500 ease-in-out ${
+                className={`flex items-center justify-center text-[#83dbd6] transition-all duration-500 ease-in-out ${
                   isRotated ? "rotate-[360deg]" : "rotate-0"
                 }`}
               >

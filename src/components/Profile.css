@@ -1,4 +1,5 @@
 .profile-list {
-  box-shadow: -3px -3px 10px 5px rgba(255, 255, 255, 0.185),
+  box-shadow:
+    -3px -3px 10px 5px rgba(255, 255, 255, 0.185),
     5px 5px 10px 5px rgba(216, 216, 216, 0.082);
 }

@@ -59,7 +59,7 @@ export default function SwapText({
   return (
     <div
       {...props}
-      className={cn("relative overflow-hidden text-foreground z-0", className)}
+      className={cn("text-foreground relative z-0 overflow-hidden", className)}
     >
       <div
         className={cn("group cursor-default text-3xl font-bold", textClassName)}

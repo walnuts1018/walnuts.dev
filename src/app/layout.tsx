@@ -4,9 +4,9 @@ import AppleTouchIcon from "../../public/favicons/apple-touch-icon.png";
 import Favicon16 from "../../public/favicons/favicon-16x16.png";
 import Favicon32 from "../../public/favicons/favicon-32x32.png";
 import Favicon from "../../public/favicons/favicon.ico";
+import Footer from "@/components/Footer/footer";
 import Header from "@/components/Header/header";
 import "./globals.css";
-import Footer from "@/components/Footer/footer";
 
 const defaultTitle = "Walnuts (@walnuts1018)";
 const defaultDescription =

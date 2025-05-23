@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsGithub } from "react-icons/bs";
 import { LowerDecoration, UpperDecoration } from "../Decoration";
-import CardImage from "./Image";
-import { cn } from "@/lib/utils";
 import hatenaBlogIcon from "../icons/hatenablog-logo.svg";
 import zennIcon from "../icons/zenn.svg";
+import CardImage from "./Image";
+import { cn } from "@/lib/utils";
 import "./Card.css";
 
 export type CardTheme = {
@@ -67,7 +67,7 @@ export function Card({
 }) {
   const iconComponent = {
     github: (
-      <div className="text-3xl items-center justify-center flex">
+      <div className="flex items-center justify-center text-3xl">
         <BsGithub fontSize="inherit" />
       </div>
     ),
@@ -86,10 +86,10 @@ export function Card({
   const parsedDate = date ? format(date, "yyyy年MM月dd日") : "";
 
   return (
-    <div className="w-80 aspect-20/11 hover:scale-105  duration-200 transition-all active:scale-100 font-Noto">
+    <div className="font-Noto aspect-20/11 w-80 transition-all duration-200 hover:scale-105 active:scale-100">
       <Link
         href={href}
-        className="flex h-full rounded-2xl focus:scale-105 relative bg-[#f6f7fa] cursor-pointer active:bg-[#e2e2e2] duration-200 outline-hidden transition-all card-shadow overflow-hidden"
+        className="card-shadow relative flex h-full cursor-pointer overflow-hidden rounded-2xl bg-[#f6f7fa] outline-hidden transition-all duration-200 focus:scale-105 active:bg-[#e2e2e2]"
         target="_blank"
       >
         <UpperDecoration
@@ -100,10 +100,10 @@ export function Card({
           primaryColor={theme?.primaryColor}
           secondaryColor={theme?.secondaryColor}
         />
-        <div className="flex justify-center items-center px-5 gap-1">
+        <div className="flex items-center justify-center gap-1 px-5">
           <div className="flex flex-col gap-1">
             <div
-              className={cn("flex justify-center items-center gap-2 pr-2", {
+              className={cn("flex items-center justify-center gap-2 pr-2", {
                 "pl-8": description,
               })}
             >
@@ -114,16 +114,16 @@ export function Card({
                   countTextLength(title || "") < 20
                     ? "text-xl"
                     : countTextLength(title || "") < 30
-                    ? "text-lg"
-                    : "text-base"
+                      ? "text-lg"
+                      : "text-base"
                 )}
               >
                 {title}
               </h2>
             </div>
-            {parsedDate && <p className="text-gray-500 px-5">{parsedDate}</p>}
+            {parsedDate && <p className="px-5 text-gray-500">{parsedDate}</p>}
             {description && (
-              <div className="w-full pr-11 pt-1">
+              <div className="w-full pt-1 pr-11">
                 <p
                   className={cn(
                     "text-gray-500",
@@ -140,7 +140,7 @@ export function Card({
           )}
         </div>
         <LowerDecoration
-          className="absolute bottom-0 right-0"
+          className="absolute right-0 bottom-0"
           innerClassName={cn(
             decorationSize === "medium" ? "scale-[0.9]" : "scale-[0.7]"
           )}

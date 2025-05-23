@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --font-*: initial;
@@ -11,15 +11,16 @@
   --ease-minor-spring: cubic-bezier(0.18, 0.89, 0.82, 1.04);
 
   --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
-  --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%,
-      var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
 
-  --shadow-neumorphism-button:
-    15px 10px 15px -7px rgba(70, 70, 70, 0.1) inset,
+  --shadow-neumorphism-button: 15px 10px 15px -7px rgba(70, 70, 70, 0.1) inset,
     10px 10px 25px 0px rgba(0, 0, 0, 0.25),
     0px 0px 8px 1px rgba(255, 255, 255, 0.3);
-  --shadow-neumorphism-button-pressed:
-    15px 10px 15px -7px rgba(70, 70, 70, 0.3) inset,
+  --shadow-neumorphism-button-pressed: 15px 10px 15px -7px rgba(70, 70, 70, 0.3)
+      inset,
     10px 10px 25px 0px rgba(0, 0, 0, 0.25),
     0px 0px 8px 1px rgba(255, 255, 255, 0.3);
 

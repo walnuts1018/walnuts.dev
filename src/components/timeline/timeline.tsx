@@ -36,7 +36,7 @@ function ExperienceTimelineItem({
   const child = (
     <>
       <h3 className="text-base lg:text-lg">{title}</h3>
-      <p className="text-gray-500 text-xs lg:text-sm">{content}</p>
+      <p className="text-xs text-gray-500 lg:text-sm">{content}</p>
     </>
   );
 
@@ -48,7 +48,7 @@ function ExperienceTimelineItem({
       href={href}
       className={cn(
         baseClassName,
-        "cursor-pointer hover:bg-gray-200 hover:shadow-lg hover:scale-[1.02]  duration-200 transition-all active:scale-100"
+        "cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:bg-gray-200 hover:shadow-lg active:scale-100"
       )}
     >
       {child}
@@ -58,17 +58,17 @@ function ExperienceTimelineItem({
   );
 
   return (
-    <div className="grid grid-cols-[2rem_1fr] grid-rows-[2rem_1fr] min-h-20">
-      <div className="w-full h-full col-start-1 col-end-2 row-start-1 row-end-2 flex justify-center items-center">
-        <FaCircle className="w-3 h-3 text-[#bdbdbd] " />
+    <div className="grid min-h-20 grid-cols-[2rem_1fr] grid-rows-[2rem_1fr]">
+      <div className="col-start-1 col-end-2 row-start-1 row-end-2 flex h-full w-full items-center justify-center">
+        <FaCircle className="h-3 w-3 text-[#bdbdbd]" />
       </div>
       {withConnector && (
-        <div className="w-full h-full col-start-1 col-end-2 row-start-2 row-end-3 flex justify-center items-center">
-          <span className="w-[2px] rounded-full h-full bg-[#bdbdbd]" />
+        <div className="col-start-1 col-end-2 row-start-2 row-end-3 flex h-full w-full items-center justify-center">
+          <span className="h-full w-[2px] rounded-full bg-[#bdbdbd]" />
         </div>
       )}
-      <div className="flex flex-wrap items-start font-Nunito col-start-2 col-end-3 row-start-1 row-end-3 pt-[0.4rem] pl-2">
-        <p className="text-sm text-gray-500 min-w-64 lg:w-72">
+      <div className="font-Nunito col-start-2 col-end-3 row-start-1 row-end-3 flex flex-wrap items-start pt-[0.4rem] pl-2">
+        <p className="min-w-64 text-sm text-gray-500 lg:w-72">
           {format(from, pattern)} - {toStr}
         </p>
         {timelineContent}
@@ -79,7 +79,7 @@ function ExperienceTimelineItem({
 
 export default function ExperienceTimeline() {
   return (
-    <div className="font-Noto w-full flex flex-col justify-between">
+    <div className="font-Noto flex w-full flex-col justify-between">
       <ExperienceTimelineItem
         from={new Date("2024-9-6")}
         to={new Date("2024-9-20")}

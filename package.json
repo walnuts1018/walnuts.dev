@@ -6,8 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build && next-sitemap --config next-sitemap.config.js",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix"
+    "lint:eslint": "next lint",
+    "lint:eslint:fix": "next lint --fix",
+    "lint:prettier": "prettier --check .",
+    "lint:prettier:fix": "prettier --write ."
   },
   "dependencies": {
     "@opentelemetry/api-logs": "^0.201.1",
@@ -31,6 +33,7 @@
     "@eslint/compat": "^1.2.9",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.27.0",
+    "@hatena/eslint-config-hatena": "github:hatena/eslint-config-hatena#v3.3.0",
     "@next/bundle-analyzer": "^15.3.2",
     "@tailwindcss/postcss": "^4.1.7",
     "@types/body-scroll-lock": "^3.1.2",
@@ -46,6 +49,7 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^16.1.0",
     "next-sitemap": "^4.2.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "react-schemaorg": "^2.0.0",
     "schema-dts": "^1.1.5",
     "sharp": "^0.34.2",

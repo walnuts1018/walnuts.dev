@@ -10,14 +10,14 @@ export default function Header() {
 
   return (
     <header>
-      <div className="flex justify-center w-full ">
-        <div className="w-10/12 flex items-center justify-left h-12 md:h-16 text-black font-bold font-Nunito text-xl sm:text-2xl px-3 relative">
+      <div className="flex w-full justify-center">
+        <div className="justify-left font-Nunito relative flex h-12 w-10/12 items-center px-3 text-xl font-bold text-black sm:text-2xl md:h-16">
           <h1>
             <Link className="logo outline-hidden" href="/">
               Walnuts.dev
             </Link>
           </h1>
-          <div className="absolute right-3 top-0 h-full  items-center justify-center flex">
+          <div className="absolute top-0 right-3 flex h-full items-center justify-center">
             <div className="hidden md:flex">
               <NormalHeaderLinks headerLinks={headerLinks} />
             </div>
@@ -27,8 +27,8 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center w-full  border-0 pb-2">
-        <div className="w-10/12 h-[4px] rounded-full px-20 bg-gray-200"></div>
+      <div className="flex w-full justify-center border-0 pb-2">
+        <div className="h-[4px] w-10/12 rounded-full bg-gray-200 px-20" />
       </div>
     </header>
   );
@@ -45,9 +45,9 @@ function NormalHeaderLinks({
         <Link
           key={link.href}
           href={link.href}
-          className="flex items-center justify-center hover:scale-105 duration-200 transition-all hover:bg-gray-200 rounded-lg p-2 px-4"
+          className="flex items-center justify-center rounded-lg p-2 px-4 transition-all duration-200 hover:scale-105 hover:bg-gray-200"
         >
-          <span className="text-lg md:text-xl font-Nunito font-semibold">
+          <span className="font-Nunito text-lg font-semibold md:text-xl">
             {link.name}
           </span>
         </Link>

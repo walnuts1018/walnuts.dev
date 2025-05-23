@@ -38,7 +38,7 @@ export default function MobileHeaderLinks({
         onClick={() => setIsOpen((open) => !open)}
         title="Menu"
         type="button"
-        className="focus:outline-hidden transform hover:scale-110 active:scale-100 duration-200 transition-all"
+        className="transform transition-all duration-200 hover:scale-110 focus:outline-hidden active:scale-100"
         ref={ref}
       >
         {isOpen ? (
@@ -52,7 +52,7 @@ export default function MobileHeaderLinks({
         onRequestClose={() => {
           setIsOpen(false);
         }}
-        className="bg-transparent duration-200 transition-all"
+        className="bg-transparent transition-all duration-200"
         overlayClassName="fixed bg-transparent inset-0"
         style={{
           overlay: {
@@ -63,20 +63,20 @@ export default function MobileHeaderLinks({
           },
         }}
       >
-        <div className="absolute mt-10 min-w-max top-0 right-0 will-change-auto backdrop-blur-md shadow-md bg-white/2 flex flex-col items-center justify-center bg-transparent">
+        <div className="absolute top-0 right-0 mt-10 flex min-w-max flex-col items-center justify-center bg-transparent bg-white/2 shadow-md backdrop-blur-md will-change-auto">
           {headerLinks.map((link) => (
-            <div key={link.href} className="px-2 overflow-hidden w-full">
+            <div key={link.href} className="w-full overflow-hidden px-2">
               <Link
                 onClick={() => setIsOpen(false)}
                 href={link.href}
-                className="flex items-center justify-center hover:scale-105 duration-200 transition-all hover:bg-gray-200 rounded-lg p-2 px-4"
+                className="flex items-center justify-center rounded-lg p-2 px-4 transition-all duration-200 hover:scale-105 hover:bg-gray-200"
               >
-                <span className="text-lg md:text-xl font-Nunito font-semibold text-black">
+                <span className="font-Nunito text-lg font-semibold text-black md:text-xl">
                   {link.name}
                 </span>
               </Link>
               {headerLinks.indexOf(link) !== headerLinks.length - 1 && (
-                <div className="w-full h-[3px] rounded-full bg-gray-200"></div>
+                <div className="h-[3px] w-full rounded-full bg-gray-200" />
               )}
             </div>
           ))}
