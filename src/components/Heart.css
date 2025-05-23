@@ -21,7 +21,8 @@
   width: 60px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       var(--r1) var(--r2) at top,
       #0000 79.5%,
       rgb(239 68 68 / var(--tw-text-opacity)) 80%
