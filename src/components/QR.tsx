@@ -29,7 +29,7 @@ export default function QR({ className }: { className?: string }) {
       <button
         onClick={() => setIsShown(true)}
         title="show QR"
-        className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-linear-to-br from-red-400 to-red-600 p-1 text-4xl shadow-lg outline-hidden transition-all duration-200 hover:from-red-500 hover:to-red-600 hover:shadow-lg focus:from-red-500 focus:to-red-600 focus:shadow-lg sm:h-16 sm:w-16 sm:text-5xl"
+        className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-linear-to-br from-red-400 to-red-600 p-1 text-4xl shadow-lg outline-hidden hover:from-red-500 hover:to-red-600 hover:shadow-lg focus:from-red-500 focus:to-red-600 focus:shadow-lg sm:h-16 sm:w-16 sm:text-5xl"
       >
         <MdQrCode2 fontSize="inherit" className="text-white" />
       </button>
