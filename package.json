@@ -12,9 +12,9 @@
     "lint:prettier:fix": "prettier --write ."
   },
   "dependencies": {
-    "@opentelemetry/api-logs": "^0.201.1",
-    "@opentelemetry/instrumentation": "^0.201.1",
-    "@opentelemetry/sdk-logs": "^0.201.1",
+    "@opentelemetry/api-logs": "^0.202.0",
+    "@opentelemetry/instrumentation": "^0.202.0",
+    "@opentelemetry/sdk-logs": "^0.202.0",
     "@vercel/otel": "^1.13.0",
     "body-scroll-lock": "4.0.0-beta.0",
     "clsx": "^2.1.1",
