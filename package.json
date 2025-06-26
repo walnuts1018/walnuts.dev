@@ -35,7 +35,7 @@
     "@eslint/js": "^9.28.0",
     "@hatena/eslint-config-hatena": "github:hatena/eslint-config-hatena#v3.3.0",
     "@next/bundle-analyzer": "^15.3.4",
-    "@tailwindcss/postcss": "^4.1.10",
+    "@tailwindcss/postcss": "^4.1.11",
     "@types/body-scroll-lock": "^3.1.2",
     "@types/node": "^20.19.1",
     "@types/react": "^19.1.8",
@@ -54,7 +54,7 @@
     "react-schemaorg": "^2.0.0",
     "schema-dts": "^1.1.5",
     "sharp": "^0.34.2",
-    "tailwindcss": "^4.1.10",
+    "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3"
   },
   "pnpm": {
