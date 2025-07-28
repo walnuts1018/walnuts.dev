@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { MdFavorite } from "react-icons/md";
 import "./Heart.css";
 import useSWR from "swr";
+import { cn } from "@/lib/utils";
 
 const fetchInterval = 10 * 1000;
 
@@ -48,7 +49,10 @@ export default function Heart() {
         <MdFavorite fontSize="inherit" className="heart text-red-500" />
       </Link>
       <div
-        className={`pointer-events-none absolute top-10 left-0 flex h-full w-full items-center justify-center text-2xl font-bold text-black transition-all duration-200 ${showDetail ? "opacity-100" : "opacity-0"}`}
+        className={cn(
+          "pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full text-2xl font-bold text-nowrap text-black transition-all duration-200",
+          showDetail ? "opacity-100" : "opacity-0"
+        )}
       >
         {heartRate}
       </div>
