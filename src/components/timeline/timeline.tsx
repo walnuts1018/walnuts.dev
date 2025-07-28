@@ -99,7 +99,7 @@ export default function ExperienceTimeline() {
       <ExperienceTimelineItem
         from={new Date("2023-12-01")}
         to={new Date("2026-03-31")}
-        title="株式会社 はてな サービスプラットフォームチーム アルバイト"
+        title="株式会社はてな サービスプラットフォームチーム アルバイト"
         content="Perl/Goを用いたバックエンド開発・サービスのKubernetes移行など"
       />
       <ExperienceTimelineItem
