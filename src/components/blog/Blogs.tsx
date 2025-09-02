@@ -1,3 +1,4 @@
+"use client";
 import { Card, hatenaTheme, qiitaTheme, zennTheme } from "../Cards/Card";
 import hatenaBlogItems from "./hatena-blog";
 import { cn } from "@/lib/utils";
