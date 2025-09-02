@@ -2,6 +2,8 @@ import { Card, hatenaTheme, qiitaTheme, zennTheme } from "../Cards/Card";
 import hatenaBlogItems from "./hatena-blog";
 import { cn } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+
 export default async function Blogs({
   maxItems,
   className,
