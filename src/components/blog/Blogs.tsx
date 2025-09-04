@@ -65,7 +65,8 @@ const blogItems: BlogItem[] = [
     date: new Date("2023-09-13"),
   },
   {
-    title: "はてなブログやGigaViewerで使われている画像変換プロキシをEC2からEKSに移行しました",
+    title:
+      "はてなブログやGigaViewerで使われている画像変換プロキシをEC2からEKSに移行しました",
     href: "https://developer.hatenastaff.com/entry/2024/08/29/124236",
     type: "hatena",
     date: new Date("2024-08-29"),
