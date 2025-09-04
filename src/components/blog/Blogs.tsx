@@ -1,4 +1,3 @@
-"use client";
 import { Card, hatenaTheme, qiitaTheme, zennTheme } from "../Cards/Card";
 import hatenaBlogItems from "./hatena-blog";
 import { cn } from "@/lib/utils";
@@ -101,5 +100,11 @@ const blogItems: BlogItem[] = [
     date: new Date("2024-11-13"),
     imageSrc:
       "https://tech.preferred.jp/wp-content/uploads/2024/11/2b530e80c7d0de90885e285c5d798063.png",
+  },
+  {
+    title: "OpenCostを使ってEKSクラスタのコストを可視化しました",
+    href: "https://developer.hatenastaff.com/entry/2025/09/04/100000",
+    type: "hatena",
+    date: new Date("2025-09-04"),
   },
 ];
