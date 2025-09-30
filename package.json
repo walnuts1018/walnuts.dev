@@ -38,7 +38,7 @@
     "@tailwindcss/postcss": "^4.1.13",
     "@types/body-scroll-lock": "^3.1.2",
     "@types/node": "^20.19.18",
-    "@types/react": "^19.1.15",
+    "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
     "@types/react-modal": "^3.16.3",
     "@typescript-eslint/parser": "^8.38.0",
