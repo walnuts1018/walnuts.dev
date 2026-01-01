@@ -72,7 +72,7 @@ importers:
         version: 9.39.2
       '@hatena/eslint-config-hatena':
         specifier: github:hatena/eslint-config-hatena#v3.3.0
-        version: https://codeload.github.com/hatena/eslint-config-hatena/tar.gz/53f846e7210efee39c6db210ece1d7005076b7d6(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
+        version: https://codeload.github.com/hatena/eslint-config-hatena/tar.gz/ed7cdb050c62e9b1466362a18b1668b6b661f5ad(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       '@next/bundle-analyzer':
         specifier: 16.0.10
         version: 16.0.10
@@ -113,8 +113,8 @@ importers:
         specifier: ^4.3.0
         version: 4.3.0(@typescript-eslint/eslint-plugin@8.49.0(@typescript-eslint/parser@8.49.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))
       globals:
-        specifier: ^16.5.0
-        version: 16.5.0
+        specifier: ^17.0.0
+        version: 17.0.0
       next-sitemap:
         specifier: ^4.2.3
         version: 4.2.3(next@16.0.10(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
@@ -280,8 +280,8 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@hatena/eslint-config-hatena@https://codeload.github.com/hatena/eslint-config-hatena/tar.gz/53f846e7210efee39c6db210ece1d7005076b7d6':
-    resolution: {tarball: https://codeload.github.com/hatena/eslint-config-hatena/tar.gz/53f846e7210efee39c6db210ece1d7005076b7d6}
+  '@hatena/eslint-config-hatena@https://codeload.github.com/hatena/eslint-config-hatena/tar.gz/ed7cdb050c62e9b1466362a18b1668b6b661f5ad':
+    resolution: {tarball: https://codeload.github.com/hatena/eslint-config-hatena/tar.gz/ed7cdb050c62e9b1466362a18b1668b6b661f5ad}
     version: 3.3.0
     peerDependencies:
       eslint: ^8.57.0 || ^9.10.0
@@ -1460,8 +1460,8 @@ packages:
     resolution: {integrity: sha512-ob/2LcVVaVGCYN+r14cnwnoDPUufjiYgSqRhiFD0Q1iI4Odora5RE8Iv1D24hAz5oMophRGkGz+yuvQmmUMnMw==}
     engines: {node: '>=18'}
 
-  globals@16.5.0:
-    resolution: {integrity: sha512-c/c15i26VrJ4IRt5Z89DnIzCGDn9EcebibhAOjw5ibqEHsE1wLUgkPn9RDmNcUKyU87GeaL633nyJ+pplFR2ZQ==}
+  globals@17.0.0:
+    resolution: {integrity: sha512-gv5BeD2EssA793rlFWVPMMCqefTlpusw6/2TbAVMy0FzcG8wKJn4O+NqJ4+XWmmwrayJgw5TzrmWjFgmz1XPqw==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -2614,7 +2614,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@hatena/eslint-config-hatena@https://codeload.github.com/hatena/eslint-config-hatena/tar.gz/53f846e7210efee39c6db210ece1d7005076b7d6(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)':
+  '@hatena/eslint-config-hatena@https://codeload.github.com/hatena/eslint-config-hatena/tar.gz/ed7cdb050c62e9b1466362a18b1668b6b661f5ad(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)':
     dependencies:
       '@eslint/config-helpers': 0.1.0
       '@eslint/js': 9.39.2
@@ -3887,7 +3887,7 @@ snapshots:
 
   globals@16.4.0: {}
 
-  globals@16.5.0: {}
+  globals@17.0.0: {}
 
   globalthis@1.0.4:
     dependencies:
