@@ -42,7 +42,7 @@
     "@types/react-dom": "19.2.3",
     "@types/react-modal": "^3.16.3",
     "@typescript-eslint/parser": "^8.49.0",
-    "eslint": "^9.39.2",
+    "eslint": "^9.39.3",
     "eslint-config-next": "16.0.10",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-perfectionist": "^4.15.1",
