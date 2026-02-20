@@ -125,8 +125,8 @@ importers:
         specifier: ^0.7.2
         version: 0.7.2(prettier-plugin-organize-imports@4.1.0(prettier@3.7.4)(typescript@5.9.3))(prettier@3.7.4)
       react-schemaorg:
-        specifier: ^2.0.0
-        version: 2.0.0(react@19.2.4)(schema-dts@1.1.5)(typescript@5.9.3)
+        specifier: ^2.0.1
+        version: 2.0.1(react@19.2.4)(schema-dts@1.1.5)(typescript@5.9.3)
       schema-dts:
         specifier: ^1.1.5
         version: 1.1.5
@@ -2076,8 +2076,8 @@ packages:
       react: ^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18 || ^19
       react-dom: ^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18 || ^19
 
-  react-schemaorg@2.0.0:
-    resolution: {integrity: sha512-UqciFKA203ewNjn0zC09uYKuJSvMD8L75L1s/cW4rc7cS64w8l7vaI3SYkuoI/nwCBkJRmOkSJedWDUZBlYZwg==}
+  react-schemaorg@2.0.1:
+    resolution: {integrity: sha512-3mS63dmMFYgKmmaBB2TWtQ9MHCzy/YJfDKxyCMUmJ2V3VzFMwVqCCagazsRA93BnOAkXfX0t29GTJx+2CoaL+Q==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       react: '>=16.3.0'
@@ -4414,7 +4414,7 @@ snapshots:
       react-lifecycles-compat: 3.0.4
       warning: 4.0.3
 
-  react-schemaorg@2.0.0(react@19.2.4)(schema-dts@1.1.5)(typescript@5.9.3):
+  react-schemaorg@2.0.1(react@19.2.4)(schema-dts@1.1.5)(typescript@5.9.3):
     dependencies:
       react: 19.2.4
       schema-dts: 1.1.5
