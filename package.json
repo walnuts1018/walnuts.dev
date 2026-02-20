@@ -32,7 +32,7 @@
   "devDependencies": {
     "@eslint/compat": "^1.4.1",
     "@eslint/eslintrc": "^3.3.3",
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "^9.39.3",
     "@hatena/eslint-config-hatena": "github:hatena/eslint-config-hatena#v3.3.0",
     "@next/bundle-analyzer": "16.0.10",
     "@tailwindcss/postcss": "^4.1.18",
