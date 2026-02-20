@@ -51,7 +51,7 @@
     "next-sitemap": "^4.2.3",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "react-schemaorg": "^2.0.0",
+    "react-schemaorg": "^2.0.1",
     "schema-dts": "^1.1.5",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
