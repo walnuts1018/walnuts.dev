@@ -1,14 +1,10 @@
 import { chocoMintTheme, githubTheme, Card } from "./Card";
 import { cn } from "@/lib/utils";
+import "./CardGrid.css";
 
 export default function Cards({ className }: { className?: string }) {
   return (
-    <div
-      className={cn(
-        "flex w-full flex-wrap justify-center gap-8 lg:justify-start",
-        className
-      )}
-    >
+    <div className={cn("card-grid", className)}>
       <Card
         title="walnuts1018/infra"
         description="Kubernetesのインフラ構成を管理するリポジトリです。"

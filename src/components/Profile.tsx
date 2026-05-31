@@ -7,8 +7,8 @@ import SwapText from "./SwapText";
 
 export function Profile() {
   return (
-    <div className="font-Nunito flex flex-col items-center justify-center space-y-4">
-      <div className="relative h-48 w-48 sm:h-60 sm:w-60">
+    <div className="font-Nunito flex min-w-0 flex-col items-center justify-center space-y-4">
+      <div className="relative h-48 w-48 sm:h-60 sm:w-60 lg:h-[clamp(11rem,65cqi,15rem)] lg:w-[clamp(11rem,65cqi,15rem)]">
         <ProfileImage />
         <div className="absolute right-0 bottom-4">
           <Heart />
@@ -26,7 +26,7 @@ export function Profile() {
             disableClick={false}
           />
         </div>
-        <div className="space-y-1 sm:space-y-2">
+        <div className="w-full min-w-0 space-y-1 sm:space-y-2">
           <ProfileItem
             src="/icons/twitter-x-line.svg"
             alt="X(Twitter)"
@@ -106,14 +106,14 @@ function ProfileItem({
         height={40}
         className="max-w-[36px] min-w-[36px] object-contain sm:max-w-[40px] sm:min-w-[40px]"
       />
-      <p className="leading-7">{children}</p>
+      <p className="min-w-0 leading-7 break-words">{children}</p>
     </>
   );
   return (
     <>
       {link === undefined ? (
         <div
-          className={`flex items-center space-x-3 font-bold text-[#7f7f7f] ${fontSize} profile-list flex w-full rounded-full px-4 py-1 sm:outline-hidden`}
+          className={`flex min-w-0 items-center space-x-3 font-bold text-[#7f7f7f] ${fontSize} profile-list w-full rounded-full px-4 py-1 sm:outline-hidden`}
         >
           {content}
         </div>
@@ -121,7 +121,7 @@ function ProfileItem({
         <Link
           target="_blank"
           rel="noopener noreferrer"
-          className={`flex items-center space-x-3 font-bold text-[#7f7f7f] ${fontSize} profile-list flex w-full rounded-full px-4 py-1 transition-all duration-50 hover:border-gray-600 hover:bg-gray-50 hover:shadow-xl focus:border-gray-600 focus:bg-gray-50 focus:shadow-xl active:scale-100 sm:outline-hidden sm:hover:scale-105 sm:focus:scale-105`}
+          className={`flex min-w-0 items-center space-x-3 font-bold text-[#7f7f7f] ${fontSize} profile-list w-full rounded-full px-4 py-1 transition-all duration-50 hover:border-gray-600 hover:bg-gray-50 hover:shadow-xl focus:border-gray-600 focus:bg-gray-50 focus:shadow-xl active:scale-100 sm:outline-hidden sm:hover:scale-105 sm:focus:scale-105`}
           href={link}
         >
           {content}

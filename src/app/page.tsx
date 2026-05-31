@@ -12,6 +12,7 @@ import ExperienceTimeline from "../components/timeline/timeline";
 import Blogs from "@/components/blog/Blogs";
 import Talks from "@/components/talk/Talks";
 import { person } from "@/lib/jsonld";
+import "./home.css";
 
 const title = "Walnuts (@walnuts1018)";
 const description = "Walnuts (@walnuts1018) です。";
@@ -36,33 +37,33 @@ export default function Home() {
           description: description,
         }}
       />
-      <main className="flex min-h-dvh w-full justify-center">
-        <div className="flex h-full w-full flex-col items-center justify-start gap-8 px-6 md:w-10/12 md:px-0 lg:flex-row lg:items-start lg:justify-center">
-          <div className="w-min-[24rem] lg:w-min-[20rem] 2xl:w-min-[24rem]">
+      <main className="home-main flex min-h-dvh justify-center">
+        <div className="home-shell">
+          <div className="home-profile">
             <Profile />
           </div>
-          <div className="flex w-full flex-col gap-20 pb-24">
-            <div className="flex flex-col gap-8">
+          <div className="home-content flex w-full flex-col gap-20 pb-24">
+            <div className="home-section">
               <ContentHeader initialText="Projects" finalText="作品" />
-              <Cards className="" />
+              <Cards className="card-grid--home" />
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="home-section">
               <ContentHeader
                 initialText="Education & Work Experience"
                 finalText="学歴・職歴"
               />
               <ExperienceTimeline />
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="home-section">
               <ContentHeader initialText="Blog" finalText="ブログ" />
               <Suspense fallback={<h2>Loading...</h2>}>
                 <Blogs
-                  className="lg:justify-start"
+                  className="card-grid--home"
                   maxItems={6}
                   loading="lazy"
                 />
               </Suspense>
-              <div className="flex w-full justify-end pr-16 lg:pr-24">
+              <div className="home-more-link flex w-full justify-end">
                 <Link
                   href="/blogs"
                   className="font-ZenMaruGothic text-md flex cursor-pointer items-center justify-center gap-1 font-bold text-gray-500 transition-all duration-200 hover:scale-110 hover:text-gray-700 active:scale-100"
@@ -72,16 +73,16 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="home-section">
               <ContentHeader initialText="Talks" finalText="登壇" />
               <Suspense fallback={<h2>Loading...</h2>}>
                 <Talks
-                  className="lg:justify-start"
+                  className="card-grid--home"
                   maxItems={3}
                   loading="lazy"
                 />
               </Suspense>
-              <div className="flex w-full justify-end pr-16 lg:pr-24">
+              <div className="home-more-link flex w-full justify-end">
                 <Link
                   href="/talks"
                   className="font-ZenMaruGothic text-md flex cursor-pointer items-center justify-center gap-1 font-bold text-gray-500 transition-all duration-200 hover:scale-110 hover:text-gray-700 active:scale-100"

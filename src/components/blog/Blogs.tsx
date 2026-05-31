@@ -1,6 +1,7 @@
 import { Card, hatenaTheme, qiitaTheme, zennTheme } from "../Cards/Card";
 import hatenaBlogItems from "./hatena-blog";
 import { cn } from "@/lib/utils";
+import "../Cards/CardGrid.css";
 
 export default async function Blogs({
   maxItems,
@@ -17,7 +18,7 @@ export default async function Blogs({
   );
 
   return (
-    <div className={cn("flex flex-wrap justify-center gap-8", className)}>
+    <div className={cn("card-grid", className)}>
       {items.slice(0, maxItems).map((item, index) => (
         <Card
           key={index}

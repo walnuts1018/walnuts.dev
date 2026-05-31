@@ -86,10 +86,10 @@ export function Card({
   const parsedDate = date ? format(date, "yyyy年MM月dd日") : "";
 
   return (
-    <div className="font-Noto aspect-20/11 w-80 transition-all duration-200 hover:scale-105 active:scale-100">
+    <div className="content-card card-grid-item font-Noto transition-all duration-200 hover:scale-105 active:scale-100">
       <Link
         href={href}
-        className="card-shadow relative flex h-full cursor-pointer overflow-hidden rounded-2xl bg-[#f6f7fa] outline-hidden transition-all duration-200 focus:scale-105 active:bg-[#e2e2e2]"
+        className="content-card-link card-shadow relative flex h-full cursor-pointer overflow-hidden rounded-2xl bg-[#f6f7fa] outline-hidden transition-all duration-200 focus:scale-105 active:bg-[#e2e2e2]"
         target="_blank"
       >
         <UpperDecoration
@@ -100,36 +100,18 @@ export function Card({
           primaryColor={theme?.primaryColor}
           secondaryColor={theme?.secondaryColor}
         />
-        <div className="flex items-center justify-center gap-1 px-5">
-          <div className="flex flex-col gap-1">
-            <div
-              className={cn("flex items-center justify-center gap-2 pr-2", {
-                "pl-8": description,
-              })}
-            >
+        <div className="content-card-body">
+          <div className="content-card-copy flex flex-col gap-1">
+            <div className="content-card-title-row flex items-center justify-center gap-2">
               {iconComponent}
-              <h2
-                className={cn(
-                  "line-clamp-4",
-                  countTextLength(title || "") < 20
-                    ? "text-xl"
-                    : countTextLength(title || "") < 30
-                      ? "text-lg"
-                      : "text-base"
-                )}
-              >
-                {title}
-              </h2>
+              <h2 className="content-card-title line-clamp-4">{title}</h2>
             </div>
-            {parsedDate && <p className="px-5 text-gray-500">{parsedDate}</p>}
+            {parsedDate && (
+              <p className="content-card-date text-gray-500">{parsedDate}</p>
+            )}
             {description && (
-              <div className="w-full pt-1 pr-11">
-                <p
-                  className={cn(
-                    "text-gray-500",
-                    countTextLength(description) < 50 ? "text-sm" : "text-xs"
-                  )}
-                >
+              <div className="content-card-description w-full">
+                <p className="content-card-description-text text-gray-500">
                   {description}
                 </p>
               </div>
@@ -150,9 +132,4 @@ export function Card({
       </Link>
     </div>
   );
-}
-
-function countTextLength(text: string) {
-  const segmenter = new Intl.Segmenter("ja", { granularity: "grapheme" });
-  return [...segmenter.segment(text)].length;
 }

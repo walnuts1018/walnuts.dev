@@ -41,7 +41,7 @@ function ExperienceTimelineItem({
   );
 
   const baseClassName =
-    "flex flex-col gap-1 items-start font-Noto w-full md:w-[calc(100%-18rem-1rem)] rounded-xl min-w-72 p-2 px-4 pb-6";
+    "flex min-w-0 flex-1 basis-80 flex-col gap-1 items-start font-Noto rounded-xl p-2 px-4 pb-6";
 
   const timelineContent = href ? (
     <Link
@@ -58,7 +58,7 @@ function ExperienceTimelineItem({
   );
 
   return (
-    <div className="grid min-h-20 grid-cols-[2rem_1fr] grid-rows-[2rem_1fr]">
+    <div className="grid min-h-20 min-w-0 grid-cols-[2rem_minmax(0,1fr)] grid-rows-[2rem_1fr]">
       <div className="col-start-1 col-end-2 row-start-1 row-end-2 flex h-full w-full items-center justify-center">
         <FaCircle className="h-3 w-3 text-[#bdbdbd]" />
       </div>
@@ -67,8 +67,8 @@ function ExperienceTimelineItem({
           <span className="h-full w-0.5 rounded-full bg-[#bdbdbd]" />
         </div>
       )}
-      <div className="font-Nunito col-start-2 col-end-3 row-start-1 row-end-3 flex flex-wrap items-start pt-[0.4rem] pl-2">
-        <p className="min-w-64 text-sm text-gray-500 lg:w-72">
+      <div className="font-Nunito col-start-2 col-end-3 row-start-1 row-end-3 flex min-w-0 flex-wrap items-start gap-x-4 pt-[0.4rem] pl-2">
+        <p className="min-w-0 flex-[0_1_17rem] text-sm text-gray-500">
           {format(from, pattern)} - {toStr}
         </p>
         {timelineContent}

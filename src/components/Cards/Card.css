@@ -3,3 +3,65 @@
     5px 5px 15px 2px #00000050,
     -4px -4px 10px 5px #ffffff90;
 }
+
+.content-card {
+  aspect-ratio: 20 / 11;
+  inline-size: 100%;
+  max-inline-size: 20rem;
+  min-block-size: 11rem;
+}
+
+.content-card-link {
+  container: content-card / inline-size;
+  min-inline-size: 0;
+}
+
+.content-card-body {
+  --content-card-padding: clamp(1rem, 5cqi, 1.5rem);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(0.5rem, 3cqi, 1rem);
+  inline-size: 100%;
+  padding: var(--content-card-padding);
+}
+
+.content-card-copy {
+  min-inline-size: 0;
+}
+
+.content-card-title-row {
+  min-inline-size: 0;
+}
+
+.content-card-title {
+  font-size: clamp(0.9rem, 5cqi, 1.1rem);
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+.content-card-date {
+  font-size: clamp(0.8rem, 4cqi, 1rem);
+}
+
+.content-card-description {
+  padding-block-start: 0.25rem;
+}
+
+.content-card-description-text {
+  font-size: clamp(0.75rem, 4.8cqi, 0.875rem);
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+.content-card-image {
+  inline-size: clamp(3rem, 24cqi, 5rem);
+  flex: none;
+}
+
+@container content-card (width < 20rem) {
+  .content-card-body {
+    min-block-size: 11rem;
+  }
+}

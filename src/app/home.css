@@ -1,0 +1,51 @@
+.home-main {
+  inline-size: 100%;
+}
+
+.home-shell {
+  display: grid;
+  inline-size: min(83.333333%, 88rem);
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  padding-block: clamp(1.5rem, 4vw, 3rem) 6rem;
+}
+
+.home-profile {
+  container: home-profile / inline-size;
+  inline-size: min(100%, 28rem);
+  justify-self: center;
+}
+
+.home-content {
+  min-inline-size: 0;
+}
+
+.home-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-inline-size: 0;
+}
+
+.home-more-link {
+  padding-inline-end: clamp(0rem, 4vw, 6rem);
+}
+
+@media (width >= 64rem) {
+  .home-shell {
+    grid-template-columns: minmax(17rem, 22rem) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .home-profile {
+    position: sticky;
+    inset-block-start: clamp(1.5rem, 3vw, 3rem);
+    inline-size: 100%;
+  }
+}
+
+@media (width >= 96rem) {
+  .home-shell {
+    grid-template-columns: minmax(20rem, 24rem) minmax(0, 1fr);
+  }
+}
