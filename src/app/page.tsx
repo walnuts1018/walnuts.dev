@@ -10,6 +10,7 @@ import { Profile } from "../components/Profile";
 import QR from "../components/QR";
 import ExperienceTimeline from "../components/timeline/timeline";
 import Blogs from "@/components/blog/Blogs";
+import Talks from "@/components/talk/Talks";
 import { person } from "@/lib/jsonld";
 
 const title = "Walnuts (@walnuts1018)";
@@ -64,6 +65,25 @@ export default function Home() {
               <div className="flex w-full justify-end pr-16 lg:pr-24">
                 <Link
                   href="/blogs"
+                  className="font-ZenMaruGothic text-md flex cursor-pointer items-center justify-center gap-1 font-bold text-gray-500 transition-all duration-200 hover:scale-110 hover:text-gray-700 active:scale-100"
+                >
+                  もっと見る
+                  <FaArrowRight />
+                </Link>
+              </div>
+            </div>
+            <div className="flex flex-col gap-8">
+              <ContentHeader initialText="Talks" finalText="登壇" />
+              <Suspense fallback={<h2>Loading...</h2>}>
+                <Talks
+                  className="lg:justify-start"
+                  maxItems={3}
+                  loading="lazy"
+                />
+              </Suspense>
+              <div className="flex w-full justify-end pr-16 lg:pr-24">
+                <Link
+                  href="/talks"
                   className="font-ZenMaruGothic text-md flex cursor-pointer items-center justify-center gap-1 font-bold text-gray-500 transition-all duration-200 hover:scale-110 hover:text-gray-700 active:scale-100"
                 >
                   もっと見る

@@ -5,6 +5,7 @@ export default function Header() {
   const headerLinks = [
     { name: "Home", href: "/" },
     { name: "Blogs", href: "/blogs" },
+    { name: "Talks", href: "/talks" },
     { name: "Payment", href: "/payment" },
   ];
 
