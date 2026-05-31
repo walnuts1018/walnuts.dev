@@ -86,7 +86,10 @@ export function Card({
   const parsedDate = date ? format(date, "yyyy年MM月dd日") : "";
 
   return (
-    <div className="content-card card-grid-item font-Noto transition-all duration-200 hover:scale-105 active:scale-100">
+    <div
+      className="content-card card-grid-item font-Noto transition-all duration-200 hover:scale-105 active:scale-100"
+      data-decoration-size={decorationSize}
+    >
       <Link
         href={href}
         className="content-card-link card-shadow relative flex h-full cursor-pointer overflow-hidden rounded-2xl bg-[#f6f7fa] outline-hidden transition-all duration-200 focus:scale-105 active:bg-[#e2e2e2]"

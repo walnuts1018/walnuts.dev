@@ -32,7 +32,14 @@
 }
 
 .content-card-title-row {
+  --content-card-decoration-safe-inline: clamp(1.25rem, 7cqi, 2rem);
+
   min-inline-size: 0;
+  padding-inline-start: var(--content-card-decoration-safe-inline);
+}
+
+.content-card[data-decoration-size="small"] .content-card-title-row {
+  --content-card-decoration-safe-inline: clamp(0.5rem, 4cqi, 1rem);
 }
 
 .content-card-title {
@@ -61,6 +68,14 @@
 }
 
 @container content-card (width < 20rem) {
+  .content-card-title-row {
+    --content-card-decoration-safe-inline: 1.25rem;
+  }
+
+  .content-card[data-decoration-size="small"] .content-card-title-row {
+    --content-card-decoration-safe-inline: 0.5rem;
+  }
+
   .content-card-body {
     min-block-size: 11rem;
   }
