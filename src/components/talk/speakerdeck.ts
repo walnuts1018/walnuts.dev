@@ -31,11 +31,6 @@ type SpeakerDeckRssItem = {
 };
 
 const talkEvents: Record<string, TalkItem["event"]> = {
-  // Add optional event links by Speaker Deck URL.
-  // "https://speakerdeck.com/walnuts1018/example": {
-  //   title: "Example Event",
-  //   href: "https://example.com/events/1",
-  // },
   "https://speakerdeck.com/walnuts1018/pasukidee2ean-hao-hua-in-android-apps-prf-extension":
     {
       title: "Mobile Act OSAKA 18",
