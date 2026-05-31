@@ -35,7 +35,7 @@ export default function Home() {
           description: description,
         }}
       />
-      <main className="flex min-h-[100dvh] w-full justify-center">
+      <main className="flex min-h-dvh w-full justify-center">
         <div className="flex h-full w-full flex-col items-center justify-start gap-8 px-6 md:w-10/12 md:px-0 lg:flex-row lg:items-start lg:justify-center">
           <div className="w-min-[24rem] lg:w-min-[20rem] 2xl:w-min-[24rem]">
             <Profile />

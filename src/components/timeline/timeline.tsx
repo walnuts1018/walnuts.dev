@@ -64,7 +64,7 @@ function ExperienceTimelineItem({
       </div>
       {withConnector && (
         <div className="col-start-1 col-end-2 row-start-2 row-end-3 flex h-full w-full items-center justify-center">
-          <span className="h-full w-[2px] rounded-full bg-[#bdbdbd]" />
+          <span className="h-full w-0.5 rounded-full bg-[#bdbdbd]" />
         </div>
       )}
       <div className="font-Nunito col-start-2 col-end-3 row-start-1 row-end-3 flex flex-wrap items-start pt-[0.4rem] pl-2">
@@ -80,6 +80,17 @@ function ExperienceTimelineItem({
 export default function ExperienceTimeline() {
   return (
     <div className="font-Noto flex w-full flex-col justify-between">
+      <ExperienceTimelineItem
+        from={new Date("2026-04-01")}
+        title="株式会社はてな アプリケーションエンジニア"
+        href="https://hatena.co.jp/recruit"
+      />
+      <ExperienceTimelineItem
+        from={new Date("2025-04-01")}
+        to={new Date("2026-03-31")}
+        title="京都大学大学院情報学研究科 通信情報システムコース 大木研究室（知的通信網分野）"
+        href="https://icn.cce.i.kyoto-u.ac.jp/"
+      />
       <ExperienceTimelineItem
         from={new Date("2024-9-6")}
         to={new Date("2024-9-20")}
