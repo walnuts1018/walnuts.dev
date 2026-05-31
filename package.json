@@ -59,20 +59,9 @@
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@tailwindcss/oxide",
-      "sharp",
-      "unrs-resolver"
-    ],
-    "overrides": {
-      "@types/react": "19.2.15",
-      "@types/react-dom": "19.2.3"
-    }
-  },
   "engines": {
-    "node": "v22.21.1",
-    "pnpm": "10.27.0"
+    "node": "v24.16.0",
+    "pnpm": "11.5.0"
   },
-  "packageManager": "pnpm@10.27.0"
+  "packageManager": "pnpm@11.5.0"
 }

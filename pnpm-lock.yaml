@@ -129,7 +129,7 @@ importers:
         version: 3.8.3
       prettier-plugin-tailwindcss:
         specifier: ^0.8.0
-        version: 0.8.0(prettier-plugin-organize-imports@4.1.0(prettier@3.8.3)(typescript@6.0.3))(prettier@3.8.3)
+        version: 0.8.0(prettier@3.8.3)
       react-schemaorg:
         specifier: ^2.0.1
         version: 2.0.1(react@19.2.6)(schema-dts@2.0.0(typescript@6.0.3))(typescript@6.0.3)
@@ -291,7 +291,7 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@hatena/eslint-config-hatena@https://codeload.github.com/hatena/eslint-config-hatena/tar.gz/ed7cdb050c62e9b1466362a18b1668b6b661f5ad':
-    resolution: {tarball: https://codeload.github.com/hatena/eslint-config-hatena/tar.gz/ed7cdb050c62e9b1466362a18b1668b6b661f5ad}
+    resolution: {gitHosted: true, integrity: sha512-OYdBVQ1AJIw70KkHAFeYWFTGCXMGzOG4Pb7iIVBq5AQN93JcMqYzz6+Ma+Y9Mw1hZOLxMSu4GI+UZRW/M8zZbQ==, tarball: https://codeload.github.com/hatena/eslint-config-hatena/tar.gz/ed7cdb050c62e9b1466362a18b1668b6b661f5ad}
     version: 3.3.0
     peerDependencies:
       eslint: ^8.57.0 || ^9.10.0
@@ -2043,16 +2043,6 @@ packages:
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
-
-  prettier-plugin-organize-imports@4.1.0:
-    resolution: {integrity: sha512-5aWRdCgv645xaa58X8lOxzZoiHAldAPChljr/MT0crXVOWTZ+Svl4hIWlz+niYSlO6ikE5UXkN1JrRvIP2ut0A==}
-    peerDependencies:
-      prettier: '>=2.0'
-      typescript: '>=2.9'
-      vue-tsc: ^2.1.0
-    peerDependenciesMeta:
-      vue-tsc:
-        optional: true
 
   prettier-plugin-tailwindcss@0.8.0:
     resolution: {integrity: sha512-V8ITGH87yuBDF6JpEZTOVlUz/saAwqb8f3HRgUj8Lh+tGCcrmorhsLpYqzygwFwK0PE2Ib6Mv3M7T/uE2tZV1g==}
@@ -4460,17 +4450,9 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-organize-imports@4.1.0(prettier@3.8.3)(typescript@6.0.3):
+  prettier-plugin-tailwindcss@0.8.0(prettier@3.8.3):
     dependencies:
       prettier: 3.8.3
-      typescript: 6.0.3
-    optional: true
-
-  prettier-plugin-tailwindcss@0.8.0(prettier-plugin-organize-imports@4.1.0(prettier@3.8.3)(typescript@6.0.3))(prettier@3.8.3):
-    dependencies:
-      prettier: 3.8.3
-    optionalDependencies:
-      prettier-plugin-organize-imports: 4.1.0(prettier@3.8.3)(typescript@6.0.3)
 
   prettier@3.8.3: {}
 
