@@ -34,7 +34,7 @@
   "devDependencies": {
     "@eslint/compat": "^2.1.0",
     "@eslint/eslintrc": "^3.3.6",
-    "@eslint/js": "^9.39.4",
+    "@eslint/js": "^9.39.5",
     "@hatena/eslint-config-hatena": "github:hatena/eslint-config-hatena#v3.3.0",
     "@next/bundle-analyzer": "16.2.9",
     "@tailwindcss/postcss": "^4.3.2",
@@ -44,7 +44,7 @@
     "@types/react-dom": "19.2.3",
     "@types/react-modal": "^3.16.3",
     "@typescript-eslint/parser": "^8.60.1",
-    "eslint": "^9.39.4",
+    "eslint": "^9.39.5",
     "eslint-config-next": "16.2.9",
     "eslint-import-resolver-typescript": "^4.4.5",
     "eslint-plugin-perfectionist": "^5.10.0",
