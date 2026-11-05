@@ -1,4 +1,4 @@
-FROM node:24.16.0-trixie-slim AS base
+FROM node:24.22.2-trixie-slim@sha256:0820eaa85e07d0490446dd01d14707e17e6108a36988cf374899cd057eb3812d AS base
 
 # Install dependencies only when needed
 FROM base AS deps
